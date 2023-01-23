@@ -19,6 +19,7 @@ Two samples are provided, both importing `vimrdf.py`, creating an instance of `V
 
 ---
 **Open issues:**
+* for a minimally serious development, a licence will need to be added
 * scope: only ch 1 or more? (up to the entire VIM)
 * primitives: how to deal with concepts whose superordinate is a primitive?
     * subclasses of external superclasses when known 
