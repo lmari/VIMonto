@@ -19,7 +19,6 @@ Two samples are provided, both importing `vimrdf.py`, creating an instance of `V
 
 ---
 **Open issues:**
-* for a minimally serious development, a licence will need to be added
 * scope: only ch 1 or more? (up to the entire VIM)
 * primitives: how to deal with concepts whose superordinate is a primitive?
     * subclasses of external superclasses when known 
@@ -28,3 +27,5 @@ Two samples are provided, both importing `vimrdf.py`, creating an instance of `V
     * ...
 * relational properties other than subClassOf: how to deal with them?
 * should VIMRDF methods better return the reference to an entry as its subject or its term?
+* for a minimally serious development, a licence will need to be added
+* a third sample could be added exposing an API, for example through a <a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a> server
