@@ -1,0 +1,5 @@
+[
+    {"kind": "length", "symbol": "l"},
+    {"kind": "mass", "symbol": "m"},
+    {"kind": "duration", "symbol": "t"}
+]

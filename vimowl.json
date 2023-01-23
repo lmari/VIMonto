@@ -1,0 +1,23 @@
+[
+    {"class": "GeneralQuantity", "sclass": "GeneralProperty", "entry":
+        {"ch": 1, "it": 1, "term": "quantity <general>", "definition": "property for which comparability by ratio, or by difference, or by order applies"}
+    },
+    {"class": "IndividualQuantity", "sclass": "IndividualProperty", "entry":
+        {"ch": 1, "it": 1, "term": "quantity <individual>", "definition": "property for which comparability by ratio, or by difference, or by order applies"}
+    },
+    {"class": "BaseQuantity", "sclass": "GeneralQuantity", "entry":
+        {"ch": 1, "it": 3, "term": "base quantity", "definition": "la nuova definizione"}
+    },
+    {"class": "ReferenceQuantity", "sclass": "IndividualQuantity", "entry":
+        {"ch": 1, "it": 11, "term": "reference quantity", "definition": "quantity identified and adopted by convention for empirically comparing it with other quantities of the same kind"}
+    },
+    {"class": "MeasurementUnit", "sclass": "ReferenceQuantity", "entry":
+        {"ch": 1, "it": 12, "term": "measurement unit", "definition": "reference quantity with which any other quantity of the same kind can be compared by ratio, resulting in a number"}
+    },
+    {"class": "BaseUnit", "sclass": "MeasurementUnit", "entry":
+        {"ch": 1, "it": 13, "term": "base unit", "definition": "measurement unit that is adopted by convention for a base quantity"}
+    },
+    {"class": "DerivedUnit", "sclass": "MeasurementUnit", "entry":
+        {"ch": 1, "it": 14, "term": "derived unit", "definition": "measurement unit for a derived quantity"}
+    }
+]
