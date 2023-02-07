@@ -5,9 +5,6 @@ from rdflib.namespace._RDFS import RDFS
 import json
 
 class VIMRDF:
-    '''
-    
-    '''
     def __init__(self, namespace:str='http://test.vimrdf.org/', prefix:str='vim'):
         self.namespace = namespace
         self._g = Graph()                               # a triple store as the main data structure
@@ -221,3 +218,5 @@ class VIMRDF:
 
     def serialize(self, format:str='turtle') -> str:
         return self._g.serialize(format=format)
+
+# %%
