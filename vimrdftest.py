@@ -2,9 +2,9 @@
 import vimrdf
 
 vimrdf = vimrdf.VIMRDF()
-vimrdf.load_entries()
-vimrdf.load_kinds()
-vimrdf.load_units()
+vimrdf.load_entries_from_JSON()
+#vimrdf.load_kinds()
+#vimrdf.load_units()
 
 desc = '''
 ***********************************************************************************
@@ -37,7 +37,7 @@ while x != 0:
     if x == 1:
         subject = vimrdf.get_subject_by_term(the_term)
         entry = vimrdf.get_entry_by_subject(subject)
-        print(f'{entry[vimrdf.ch]}.{entry[vimrdf.it]}: {entry[vimrdf.term]}')
+        print(f'{entry[vimrdf.chapter]}.{entry[vimrdf.item]}: {entry[vimrdf.term]}')
 
     elif x == 2:
         entry = vimrdf.get_entry_by_term(the_term)

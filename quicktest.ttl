@@ -68,6 +68,8 @@ vim:MeasurementUnit a rdfs:Class ;
     rdfs:subClassOf vim:ReferenceQuantity .
 
 vim:QuantityDimension a rdfs:Class ;
+    vim:admitted_terms "dimension"@en,
+        "dimension of a quantity"@en ;
     vim:chapter 1 ;
     vim:definition "relation of a quantity to the base quantities of a system of quantities as a product of the base quantities each raised to a power, omitting any proportionality factor"@en ;
     vim:item 7 ;
