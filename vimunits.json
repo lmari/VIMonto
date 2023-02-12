@@ -1,5 +1,5 @@
 [
     {"unit": "metre", "symbol": "m", "kind": "length"},
-    {"unit": "kilogram", "symbol": "m", "kind": "mass"},
+    {"unit": "kilogram", "symbol": "kg", "kind": "mass"},
     {"unit": "second", "symbol": "s", "kind": "duration"}
 ]

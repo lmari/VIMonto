@@ -1,5 +1,5 @@
 # %%
-from rdflib import Graph, URIRef, Literal
+from rdflib import Graph, URIRef, Literal # see https://rdflib.readthedocs.io/en/stable
 from rdflib.namespace._RDF import RDF
 from rdflib.namespace._RDFS import RDFS
 import json
@@ -95,7 +95,7 @@ class VIMRDF:
 
 
     def load_entries_from_JSON(self, data_file:str='./vimrdf.json'):
-        ''' Populate the db from the specified JSON file. '''
+        ''' [ok] Populate the db from the specified JSON file. '''
         data = json.load(open(data_file))
         for x in data:
             a = self.set_URI(x['class'])
@@ -112,11 +112,11 @@ class VIMRDF:
                         self._g.add((a, self.admitted_terms, Literal(adm_term, lang=lang)))
             for lang in x['definition'].keys():
                 self._g.add((a, self.definition, Literal(x['definition'][lang], lang=lang)))
-
         self.log('VIM RDF: json loaded.\n')
 
 
     def load_entries_from_TTL(self, data_file:str='./vimrdf.ttl'):
+        ''' [ok] Populate the db from the specified TTL file. '''
         self._g.parse(data_file)
         self.log('VIM RDF: ttl loaded.\n')
 
@@ -151,16 +151,38 @@ class VIMRDF:
         self.log('VIM RDF units: json loaded.\n')
 
 
-    def get_subject_by_term(self, _term:str) -> URIRef:
-        ''' Return the URIRef with the given term. '''
-        x = list(self._g.subjects(self.term, Literal(_term)))
-        if len(x) != 1: return None # type: ignore
+    def list_subjects(self):
+        ''' [ok] Return the list of URIRefs of all subjects. '''
+        return list(self._g.subjects(self.term, unique=True))
+
+
+    def list_terms(self, lang:str='en'):
+        ''' [ok] Return the list of all terms as strings of the given language. '''
+        res = []
+        for subject in self.list_subjects():
+            objects = self._g.objects(subject, self.term)
+            for object in objects:
+                if object.language == lang: # type: ignore
+                    res.append(str(object))
+        return res
+
+
+    def get_subject_by_term(self, term:str, lang:str='en') -> URIRef:
+        ''' [ok] Return the URIRef of the subject with the given term in the given language,
+            or None if the term is not found. '''
+        x = list(self._g.subjects(self.term, Literal(term, lang=lang)))
+        if len(x) == 0: return None # type: ignore
         return x[0] # type: ignore
 
 
-    def get_term_by_subject(self, _subject:URIRef) -> str:
-        ''' Return the term of the given URIRef. '''
-        return str(self._g.value(_subject, self.term))
+    def get_term_by_subject(self, subject:URIRef, lang:str='en') -> str:
+        ''' [ok] Return the term in the given language of the subject with the given URIRef,
+            or an empty string if the subject is not found. '''
+        objects = self._g.objects(subject, self.term)
+        for object in objects:
+            if object.language == lang: # type: ignore
+                return str(object)
+        return ''
 
 
     def get_term_by_id(self, _ch:int, _it:int) -> str:
@@ -180,7 +202,6 @@ class VIMRDF:
     def get_entry_by_subject(self, _subject:URIRef) -> dict:
         ''' Read all triples with the given subject
             and return them as a dictionary {predicate: object}. '''
-        #return dict(self._g.predicate_objects(_subject))
         temp = list(self._g.predicate_objects(_subject))
         entry = {}
         for item in temp:
@@ -224,7 +245,7 @@ class VIMRDF:
     def to_string(self, _entry:dict) -> str:
         ''' Return a formatted string with the content of the given entry. '''
         t = ' (' + '; '.join([str(term) for term in _entry[self.admitted_terms]]) + ')' if self.admitted_terms in _entry else ''
-        return f'{_entry[self.chapter]}.{_entry[self.it]} {_entry[self.term]}{t}: {_entry[self.definition]}'
+        return f'{_entry[self.chapter]}.{_entry[self.item]} {_entry[self.term]}{t}: {_entry[self.definition]}'
 
 
     def to_file(self, format:str='turtle', destination:str='./vimrdf.ttl'):
@@ -234,5 +255,6 @@ class VIMRDF:
 
     def serialize(self, format:str='turtle') -> str:
         return self._g.serialize(format=format)
+
 
 # %%
