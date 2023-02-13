@@ -139,6 +139,3 @@ while x != 0:
     print('\n')
 
 print('End...')
-
-
-# %%

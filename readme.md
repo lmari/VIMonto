@@ -20,6 +20,9 @@ At the moment two samples are provided, both importing `vimrdf.py`, creating an 
 ---
 **Changes with respect to the previous version:**
 
+***13 Feb 23:***
+* revised all query methods for handling terms and definitions in multiple languages.
+
 ***12 Feb 23:***
 * some query methods adapted for handling terms and definitions in multiple languages.
 

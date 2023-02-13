@@ -70,6 +70,18 @@ class VIMRDF:
         return self._g
 
 
+    def get_local(self, objects:list, lang:str='en') -> str:
+        ''' Utility method: return the text in the given language from the given list of Literals. '''
+        if type(objects) == list:
+            for object in objects:
+                if object.language == lang: # type: ignore
+                    return str(object)
+            return ''
+        if objects.language == lang: # type: ignore
+            return str(objects)
+        return ''
+
+
     def init_graph(self):
         ''' Populate the db with some primitives. '''
         VIMEntity = self.set_URI('VIMEntity')
@@ -95,7 +107,7 @@ class VIMRDF:
 
 
     def load_entries_from_JSON(self, data_file:str='./vimrdf.json'):
-        ''' [ok] Populate the db from the specified JSON file. '''
+        ''' Populate the db from the specified JSON file. '''
         data = json.load(open(data_file))
         for x in data:
             a = self.set_URI(x['class'])
@@ -116,13 +128,13 @@ class VIMRDF:
 
 
     def load_entries_from_TTL(self, data_file:str='./vimrdf.ttl'):
-        ''' [ok] Populate the db from the specified TTL file. '''
+        ''' Populate the db from the specified TTL file. '''
         self._g.parse(data_file)
         self.log('VIM RDF: ttl loaded.\n')
 
 
     def load_kinds(self, data_file:str='./vimkinds.json'):
-        ''' Sample loader of kind instances. '''
+        ''' [to be revised] Sample loader of kind instances. '''
         entity = self.get_subject_by_term('quantity <general>')
         self.kind_name = self.set_URI('kind_name')
         self.kind_symbol = self.set_URI('kind_symbol')
@@ -136,7 +148,7 @@ class VIMRDF:
 
 
     def load_units(self, data_file:str='./vimunits.json'):
-        ''' Sample loader of unit instances. '''
+        ''' [to be revised] Sample loader of unit instances. '''
         entity = self.get_subject_by_term('measurement unit')
         self.unit_name = self.set_URI('unit_name')
         self.unit_symbol = self.set_URI('unit_symbol')
@@ -151,13 +163,15 @@ class VIMRDF:
         self.log('VIM RDF units: json loaded.\n')
 
 
+    # ************************* list methods *************************
+
     def list_subjects(self):
-        ''' [ok] Return the list of URIRefs of all subjects. '''
+        ''' Return the list of URIRefs of all subjects. '''
         return list(self._g.subjects(self.term, unique=True))
 
 
     def list_terms(self, lang:str='en'):
-        ''' [ok] Return the list of all terms as strings of the given language. '''
+        ''' Return the list of all terms as strings of the given language. '''
         res = []
         for subject in self.list_subjects():
             objects = self._g.objects(subject, self.term)
@@ -167,42 +181,32 @@ class VIMRDF:
         return res
 
 
+    # ************************* get_subject_by_* methods *************************
+
     def get_subject_by_term(self, term:str, lang:str='en') -> URIRef:
-        ''' [ok] Return the URIRef of the subject with the given term in the given language,
+        ''' Return the URIRef of the subject of the given term in the given language,
             or None if the term is not found. '''
         x = list(self._g.subjects(self.term, Literal(term, lang=lang)))
         if len(x) == 0: return None # type: ignore
         return x[0] # type: ignore
 
 
-    def get_term_by_subject(self, subject:URIRef, lang:str='en') -> str:
-        ''' [ok] Return the term in the given language of the subject with the given URIRef,
-            or an empty string if the subject is not found. '''
-        objects = self._g.objects(subject, self.term)
-        for object in objects:
-            if object.language == lang: # type: ignore
-                return str(object)
-        return ''
+    def get_subject_by_id(self, chapter:int, item:int) -> URIRef:
+        ''' Return the URIRef of the subject of the given id (chapter and item),
+            or None if the id is not found. '''
+        for subject in self._g.subjects(self.item, Literal(item)):
+            for object in self._g.objects(subject, self.chapter):
+                if int(object) == chapter: # type: ignore
+                    return subject # type: ignore
+        return None # type: ignore
 
 
-    def get_term_by_id(self, _ch:int, _it:int) -> str:
-        ''' Return the term of the given chapter and item. '''
-        query = f"""
-            SELECT ?term
-            WHERE {{
-                ?s vim:term ?term .
-                ?s vim:ch {_ch} .
-                ?s vim:it {_it} .
-            }} """
-        result = self._g.query(query)
-        if len(result) != 1: return ''
-        return str(list(result)[0].term) # type: ignore
+   # ************************* get_entry_by_* methods *************************
 
-
-    def get_entry_by_subject(self, _subject:URIRef) -> dict:
-        ''' Read all triples with the given subject
-            and return them as a dictionary {predicate: object}. '''
-        temp = list(self._g.predicate_objects(_subject))
+    def get_entry_by_subject(self, subject:URIRef) -> dict:
+        ''' Return all triples, for all languages, with the given subject,
+            as a dictionary {predicate: object}. '''
+        temp = list(self._g.predicate_objects(subject))
         entry = {}
         for item in temp:
             if item[0] not in entry:
@@ -214,38 +218,57 @@ class VIMRDF:
         return entry
 
 
-    def get_entry_by_term(self, _term:str) -> dict:
-        ''' Read all triples whose subject has the given term
-            and return them as a dictionary {predicate: object}. '''
-        subject = self.get_subject_by_term(_term)
-        if subject is None: return {}
+    def get_entry_by_term(self, term:str, lang:str='en') -> dict:
+        ''' Return all triples, for all languages,
+            whose subject has the given term in the given language,
+            as a dictionary {predicate: object}. '''
+        subject = self.get_subject_by_term(term, lang=lang)
+        if subject is None:
+            return {}
         return self.get_entry_by_subject(subject)
 
 
-    def get_superordinate(self, _subject:URIRef) -> URIRef:
-        ''' Return the URIRef superordinate of the given URIRef. '''
-        return self._g.value(_subject, RDFS.subClassOf) # type: ignore
+    def get_entry_by_id(self, chapter:int, item:int) -> dict:
+        ''' Return all triples, for all languages,
+            whose subject has the given given id (chapter and item),
+            as a dictionary {predicate: object}. '''
+        subject = self.get_subject_by_id(chapter, item)
+        if subject is None:
+            return {}
+        return self.get_entry_by_subject(subject)
 
 
-    def get_superordinates(self, _subject:URIRef) -> list:
+   # ************************* get_super/subordinates methods *************************
+
+    def get_superordinate(self, subject:URIRef) -> URIRef:
+        ''' Return the URIRef of the subject superordinate of the given URIRef. '''
+        return self._g.value(subject, RDFS.subClassOf) # type: ignore
+
+
+    def get_direct_subordinates(self, subject:URIRef) -> list:
+        ''' Return the list of the URIRef direct subordinates of the given URIRef. '''
+        return list(self._g.subjects(RDFS.subClassOf, subject))
+
+
+    def get_superordinates(self, subject:URIRef) -> list:
         ''' Return the sorted list of the URIRefs superordinate of the given URIRef. '''
         res = []
-        sup = self.get_superordinate(_subject)
+        sup = self.get_superordinate(subject)
         while int(self._g.value(sup, self.chapter)) != 0: # type: ignore
             res.append(sup)
             sup = self.get_superordinate(sup)
         return res
 
 
-    def get_direct_subordinates(self, _subject:URIRef) -> list:
-        ''' Return the list of the URIRef direct subordinates of the given URIRef. '''
-        return list(self._g.subjects(RDFS.subClassOf, _subject))
+   # ************************* output methods *************************
 
-
-    def to_string(self, _entry:dict) -> str:
-        ''' Return a formatted string with the content of the given entry. '''
-        t = ' (' + '; '.join([str(term) for term in _entry[self.admitted_terms]]) + ')' if self.admitted_terms in _entry else ''
-        return f'{_entry[self.chapter]}.{_entry[self.item]} {_entry[self.term]}{t}: {_entry[self.definition]}'
+    def to_string(self, entry:dict, lang:str='en') -> str:
+        ''' Return a formatted string with the content of the given entry in the given language. '''
+        term = self.get_local(entry[self.term], lang=lang)
+        # [to be revised] empty lists are displayed as '(; )'
+        admitted_terms = ' (' + '; '.join([self.get_local(t, lang=lang) for t in entry[self.admitted_terms]]) + ')' if self.admitted_terms in entry else ''
+        definition = self.get_local(entry[self.definition], lang=lang)
+        return f'{entry[self.chapter]}.{entry[self.item]} {term}{admitted_terms}: {definition}'
 
 
     def to_file(self, format:str='turtle', destination:str='./vimrdf.ttl'):

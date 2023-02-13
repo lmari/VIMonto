@@ -51,7 +51,8 @@ while x != 0:
             print('there are no admitted terms')
 
     elif x == 4:
-        print(vimrdf.get_term_by_id(the_ch, the_it))
+        #print(vimrdf.get_term_by_id(the_ch, the_it))
+        pass
 
     elif x == 5:
         subject = vimrdf.get_subject_by_term(the_term)
@@ -63,11 +64,11 @@ while x != 0:
 
     elif x == 11:
         subject = vimrdf.get_subject_by_term(the_term)
-        print([vimrdf.get_term_by_subject(e) for e in vimrdf.get_superordinates(subject)])
+        #print([vimrdf.get_term_by_subject(e) for e in vimrdf.get_superordinates(subject)])
 
     elif x == 12:
         subject = vimrdf.get_subject_by_term(the_term)
-        print([vimrdf.get_term_by_subject(e) for e in vimrdf.get_direct_subordinates(subject)])
+        #print([vimrdf.get_term_by_subject(e) for e in vimrdf.get_direct_subordinates(subject)])
 
     elif x == 21:
         print(vimrdf.serialize())
@@ -85,5 +86,3 @@ while x != 0:
     print('\n')
 
 print('End...')
-
-# %%
