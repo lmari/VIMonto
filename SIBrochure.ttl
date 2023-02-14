@@ -1,0 +1,1004 @@
+@prefix : <http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology> a owl:Ontology ;
+    rdfs:comment "A first trial of an ontology for SI units / the SI Brochure",
+        """Developed by J. Miles, R. Coulon, G. Dudle
+Coded by GD""" ;
+    owl:versionInfo "Version: 1.0" .
+
+:10th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1954 .
+
+:18th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1987 .
+
+:20th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1995 .
+
+:21st_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1999 .
+
+:22nd_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 2003 .
+
+:23rd_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 2007 ;
+    :hasConfStartDate "2007-11-12"^^xsd:date,
+        "2007-11-16"^^xsd:date .
+
+:24th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 2011 ;
+    :hasConfEndDate "2011-10-21"^^xsd:date ;
+    :hasConfStartDate "2011-10-17"^^xsd:date .
+
+:25th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 2014 ;
+    :hasConfEndDate "2014-11-20"^^xsd:date ;
+    :hasConfStartDate "2014-11-18"^^xsd:date .
+
+:2nd_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1895 .
+
+:4th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1907 .
+
+:5th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1913 .
+
+:6th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1921 .
+
+:8th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1933 .
+
+:ConfYear a owl:DatatypeProperty ;
+    rdfs:range xsd:int .
+
+:CurrentDefinition a owl:Class ;
+    rdfs:subClassOf :Definition ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :Definition [ a owl:Class ;
+                        owl:complementOf [ a owl:Restriction ;
+                                owl:onProperty :hasEndValidity ;
+                                owl:someValuesFrom xsd:date ] ] ) ] .
+
+:DefiningConstant a owl:Class .
+
+:SIPrefixDivider a owl:Class ;
+    rdfs:subClassOf :SIPrefix ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :SIPrefix [ a owl:Restriction ;
+                        owl:onProperty :hasScalingFactor ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:double ;
+                                owl:withRestrictions ( [ xsd:maxExclusive 1e+00 ] ) ] ] ) ] .
+
+:SIPrefixMultipliers a owl:Class ;
+    rdfs:subClassOf :SIPrefix ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :SIPrefix [ a owl:Restriction ;
+                        owl:onProperty :hasScalingFactor ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:double ;
+                                owl:withRestrictions ( [ xsd:minExclusive 1e+00 ] ) ] ] ) ] .
+
+:SIPrefixedUnit a owl:Class ;
+    rdfs:subClassOf :SIBaseUnit .
+
+:Superseded a owl:Class ;
+    rdfs:subClassOf :Definition ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( :Definition [ a owl:Restriction ;
+                        owl:onProperty :hasEndValidity ;
+                        owl:someValuesFrom xsd:date ] ) ] .
+
+:UnitProperty a owl:DatatypeProperty ;
+    rdfs:range xsd:string .
+
+:ValidityStatus a owl:Class .
+
+:ampere a :SIBaseUnit,
+        owl:NamedIndividual ;
+    :hasDefinition :ampere1948,
+        :ampere2018 ;
+    :hasSymbol "A"^^xsd:string ;
+    :isUnitOfQuantityKind :electric_current .
+
+:angle_minute a owl:NamedIndividual ;
+    :hasSymbol "'"^^xsd:string .
+
+:angle_second a owl:NamedIndividual ;
+    :hasSymbol "''"^^xsd:string .
+
+:astronomical_unit a :NonSIUnit,
+        owl:NamedIndividual ;
+    :hasSymbol "au"^^xsd:string ;
+    :isUnitOfQuantityKind :length .
+
+:atto a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :atto1964 ;
+    :hasScalingFactor 1e-18 ;
+    :hasSymbol "a"^^xsd:string .
+
+:candela a :SIBaseUnit,
+        owl:NamedIndividual ;
+    :hasDefinition :candela1979,
+        :candela2018 ;
+    :hasSymbol "cd"^^xsd:string ;
+    :isUnitOfQuantityKind :luminous_intensity .
+
+:centi a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :centi1960 ;
+    :hasScalingFactor 1e-02 ;
+    :hasSymbol "c"^^xsd:string .
+
+:dalton a owl:NamedIndividual ;
+    :hasSymbol "Da"^^xsd:string .
+
+:day a :NonSIUnit,
+        owl:NamedIndividual ;
+    :hasSymbol "d"^^xsd:string ;
+    :isUnitOfQuantityKind :time .
+
+:deca a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :deca1960 ;
+    :hasScalingFactor 1e+01 ;
+    :hasSymbol "da"^^xsd:string .
+
+:deci a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :deci1960 ;
+    :hasScalingFactor 1e-01 ;
+    :hasSymbol "d"^^xsd:string .
+
+:degree a owl:NamedIndividual ;
+    :hasSymbol "°"^^xsd:string .
+
+:degree_Celsius a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "°C"^^xsd:string .
+
+:dependsOnSIBaseQuantity a owl:ObjectProperty .
+
+:electronvolt a :NonSIUnit,
+        owl:NamedIndividual ;
+    :hasSymbol "eV"^^xsd:string ;
+    :isUnitOfQuantityKind :energy .
+
+:exa a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :exa1975 ;
+    :hasScalingFactor 1e+18 ;
+    :hasSymbol "E"^^xsd:string .
+
+:femto a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :femto1964 ;
+    :hasScalingFactor 1e-15 ;
+    :hasSymbol "f"^^xsd:string .
+
+:giga a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :giga1960 ;
+    :hasScalingFactor 1e+09 ;
+    :hasSymbol "G"^^xsd:string .
+
+:hasConfEndDate a owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+:hasConfStartDate a owl:DatatypeProperty ;
+    rdfs:range xsd:date .
+
+:hasDefiningAuthority a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain :Definition ;
+    rdfs:range :DefiningAuthority ;
+    owl:inverseOf :isDefininingAuthorityOf .
+
+:hasDefiningText a owl:DatatypeProperty ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf :DefinitionProperty .
+
+:hasDefinition a owl:ObjectProperty ;
+    owl:inverseOf :isDefinitionOf .
+
+:hasName a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :DefinitionProperty .
+
+:hasStartValidity a owl:DatatypeProperty ;
+    rdfs:range xsd:date ;
+    rdfs:subPropertyOf :DefinitionProperty .
+
+:hasSymbol a owl:DatatypeProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :MeasurementUnit :SIPrefix ) ] ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf :DefinitionProperty .
+
+:hasUnit a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain :QuantityKind ;
+    rdfs:range :MeasurementUnit ;
+    owl:inverseOf :isUnitOfQuantityKind .
+
+:hectar a owl:NamedIndividual ;
+    :hasSymbol "ha"^^xsd:string .
+
+:hecto a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :hecto1960 ;
+    :hasScalingFactor 1e+02 ;
+    :hasSymbol "h"^^xsd:string .
+
+:hour a :NonSIUnit,
+        owl:NamedIndividual ;
+    :hasSymbol "h"^^xsd:string ;
+    :isUnitOfQuantityKind :time .
+
+:katal a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "kat"^^xsd:string ;
+    :isUnitOfQuantityKind :catalytic_activity .
+
+:kelvin a :SIBaseUnit,
+        owl:NamedIndividual ;
+    :hasDefinition :kelvin1967,
+        :kelvin2018 ;
+    :hasSymbol "K"^^xsd:string ;
+    :isUnitOfQuantityKind :thermodynamic_temperature .
+
+:kerma a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :gray .
+
+:kilo a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :kilo1960 ;
+    :hasScalingFactor 1e+03 ;
+    :hasSymbol "k"^^xsd:string .
+
+:kilogram a :SIBaseUnit,
+        owl:NamedIndividual ;
+    :hasDefinition :kilogram1901,
+        :kilogram2018 ;
+    :hasSymbol "kg"^^xsd:string ;
+    :isUnitOfQuantityKind :masse .
+
+:litre a owl:NamedIndividual ;
+    :hasSymbol "L"^^xsd:string,
+        "l"^^xsd:string .
+
+:mega a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :mega1960 ;
+    :hasScalingFactor 1e+06 ;
+    :hasSymbol "M"^^xsd:string .
+
+:micro a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :micro1960 ;
+    :hasScalingFactor 1e-06 ;
+    :hasSymbol "(µ)"^^xsd:string .
+
+:milli a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :milli1960 ;
+    :hasScalingFactor 1e-03 ;
+    :hasSymbol "m"^^xsd:string .
+
+:minute a :NonSIUnit,
+        owl:NamedIndividual ;
+    :hasSymbol "min"^^xsd:string ;
+    :isUnitOfQuantityKind :time .
+
+:mole a :SIBaseUnit,
+        owl:NamedIndividual ;
+    :hasDefinition :mole1971,
+        :mole2018 ;
+    :hasSymbol "mol"^^xsd:string ;
+    :isUnitOfQuantityKind :amount_of_substance .
+
+:nano a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :nano1960 ;
+    :hasScalingFactor 1e-09 ;
+    :hasSymbol "n"^^xsd:string .
+
+:peta a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :peta1975 ;
+    :hasScalingFactor 1e+15 ;
+    :hasSymbol "P"^^xsd:string .
+
+:pico a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :pico1960 ;
+    :hasScalingFactor 1e-12 ;
+    :hasSymbol "p"^^xsd:string .
+
+:quecto a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :quecto2022 ;
+    :hasScalingFactor 1e-30 ;
+    :hasSymbol "q"^^xsd:string .
+
+:quetta a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :quetta2022 ;
+    :hasScalingFactor 1e+30 ;
+    :hasSymbol "Q"^^xsd:string .
+
+:ronna a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :ronna2022 ;
+    :hasScalingFactor 1e+27 ;
+    :hasSymbol "R"^^xsd:string .
+
+:ronto a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :ronto2022 ;
+    :hasScalingFactor 1e-27 ;
+    :hasSymbol "r"^^xsd:string .
+
+:second a :SIBaseUnit,
+        owl:NamedIndividual ;
+    rdfs:label "Sekunde"@de,
+        "second"@en,
+        "seconde"@fr ;
+    :hasDefinition :second1960,
+        :second1967,
+        :second2018 ;
+    :hasSymbol "s"^^xsd:string ;
+    :isUnitOfQuantityKind :time .
+
+:tera a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :tera1960 ;
+    :hasScalingFactor 1e+12 ;
+    :hasSymbol "T"^^xsd:string .
+
+:tonne a :NonSIUnit,
+        owl:NamedIndividual ;
+    :hasSymbol "t"^^xsd:string ;
+    :isUnitOfQuantityKind :masse .
+
+:yocto a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :yocto1991 ;
+    :hasScalingFactor 1e-24 ;
+    :hasSymbol "y"^^xsd:string .
+
+:yotta a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :yotta1991 ;
+    :hasScalingFactor 1e+24 ;
+    :hasSymbol "Y"^^xsd:string .
+
+:zepto a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :zepto1991 ;
+    :hasScalingFactor 1e-21 ;
+    :hasSymbol "z"^^xsd:string .
+
+:zetta a :SIPrefix,
+        owl:NamedIndividual ;
+    :hasDefinition :zetta1991 ;
+    :hasScalingFactor 1e+21 ;
+    :hasSymbol "Z"^^xsd:string .
+
+:14th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1971 .
+
+:16th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1979 .
+
+:17th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1983 .
+
+:1st_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1889 .
+
+:3rd_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1901 .
+
+:7th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1927 .
+
+:9th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1948 .
+
+:PrefixProperty a owl:DatatypeProperty .
+
+:absorbed_dose a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :gray .
+
+:activity_referred_to_a_radionuclide a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :becquerel .
+
+:amount_of_heat a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :joule .
+
+:amount_of_substance a :QuantityKind,
+        owl:NamedIndividual .
+
+:ampere1948 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :9th_CGPM ;
+    :hasDefiningText "The ampere is that constant current which, if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed 1 metre apart in vacuum, would produce between these conductors a force equal to 2 × 10−7 newton per metre of length."@en,
+        "L’ampère est l’intensité d’un courant constant qui, maintenu dans deux conducteurs parallèles, rectilignes, de longueur infinie, de section circulaire négligeable et placés à une distance de 1 mètre l’un de l’autre dans le vide, produirait entre ces conducteurs une force égale à 2 × 10−7 newton par mètre de longueur."@fr ;
+    :hasEndValidity "2019-05-19"^^xsd:date ;
+    :hasStartValidity "1948-05-20"^^xsd:date .
+
+:ampere2018 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :26th_CGPM ;
+    :hasDefiningText "The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge, e, to be 1.602 176 634 × 10−19 when expressed in the unit C, which is equal to A s, where the second is defined in terms of ∆νCs."@en,
+        "L’ampère, symbole A, est l’unité de courant électrique du SI. Il est défini en prenant la valeur numérique fixée de la charge élémentaire, e, égale à 1,602 176 634 × 10−19 lorsqu’elle est exprimée en C, unité égale à A s, la seconde étant définie en fonction de ∆νCs."@fr ;
+    :hasStartValidity "2019-05-20"^^xsd:date .
+
+:atto1964 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :12th_CGPM ;
+    :hasStartValidity "1964-05-20"^^xsd:date .
+
+:becquerel a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "Bq"^^xsd:string ;
+    :isUnitOfQuantityKind :activity_referred_to_a_radionuclide .
+
+:candela1979 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :16th_CGPM ;
+    :hasDefiningText "The candela is the luminous intensity, in a given direction, of a source that emits monochromatic radiation of frequency 540 × 10^12 hertz and that has a radiant intensity in that direction of 1/683 watt per steradian."@en,
+        "La candela est l’intensité lumineuse, dans une direction donnée, d’une source qui émet un rayonnement monochromatique de fréquence 540 × 1012 hertz et dont l’intensité énergétique dans cette direction est 1/683 watt par stéradian."@fr ;
+    :hasEndValidity "2019-05-19"^^xsd:date ;
+    :hasStartValidity "1979-05-20"^^xsd:date .
+
+:candela2018 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :26th_CGPM ;
+    :hasDefiningText "The candela, symbol cd, is the SI unit of luminous intensity in a given direction. It is defined by taking the fixed numerical value of the luminous efficacy of monochromatic radiation of frequency 540 × 1012 Hz, Kcd, to be 683 when expressed in the unit lm W−1, which is equal to cd sr W−1, or cd sr kg−1 m−2 s3, where the kilogram, metre and second are defined in terms of h, c and ∆νCs."@en,
+        "La candela, symbole cd, est l’unité du SI d’intensité lumineuse dans une direction donnée. Elle est définie en prenant la valeur numérique fixée de l’efficacité lumineuse d’un rayonnement monochromatique de fréquence 540 × 1012 Hz, Kcd, égale à 683 lorsqu’elle est exprimée en lm W−1, unité égale à cd sr W−1, ou cd sr kg−1 m−2 s3, le kilogramme, le mètre et la seconde étant définis en fonction de h, c et ∆νCs."@fr ;
+    :hasStartValidity "2019-05-20"^^xsd:date .
+
+:capacitance a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :farad .
+
+:catalytic_activity a :QuantityKind,
+        owl:NamedIndividual .
+
+:centi1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:coulomb a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "C"^^xsd:string ;
+    :isUnitOfQuantityKind :electric_charge .
+
+:deca1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:deci1960 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:dose_equivalent a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :sievert .
+
+:electric_charge a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :coulomb .
+
+:electric_conductance a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :siemens .
+
+:electric_current a :QuantityKind,
+        owl:NamedIndividual .
+
+:electric_potential_difference a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :volt ;
+    owl:sameAs :voltage .
+
+:electric_resistance a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :ohm .
+
+:electric_tension a :QuantityKind,
+        owl:NamedIndividual ;
+    owl:sameAs :voltage .
+
+:exa1975 a owl:NamedIndividual ;
+    :hasDefiningAuthority :15th_CGPM ;
+    :hasStartValidity "1975-05-20"^^xsd:date .
+
+:farad a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "F"^^xsd:string ;
+    :isUnitOfQuantityKind :capacitance .
+
+:femto1964 a owl:NamedIndividual ;
+    :hasDefiningAuthority :12th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:force a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :newton .
+
+:frequency a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :hertz .
+
+:giga1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:hecto1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:henry a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "H"^^xsd:string ;
+    :isUnitOfQuantityKind :inductance .
+
+:hertz a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "Hz"^^xsd:string ;
+    :isUnitOfQuantityKind :frequency .
+
+:illuminance a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :lux .
+
+:inductance a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :henry .
+
+:isDefininingAuthorityOf a owl:ObjectProperty .
+
+:isDefinitionOf a owl:ObjectProperty .
+
+:isUnitOfQuantityKind a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain :MeasurementUnit ;
+    rdfs:range :QuantityKind .
+
+:kelvin1967 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :13th_CGPM ;
+    :hasDefiningText "The kelvin, unit of thermodynamic temperature, is the fraction 1/273.16 of the thermodynamic temperature of the triple point of water."@en,
+        "Le kelvin, unité de température thermodynamique, est la fraction 1/273,16 de la température thermodynamique du point triple de l’eau."@fr ;
+    :hasEndValidity "2019-05-19"^^xsd:date ;
+    :hasStartValidity "1967-05-20"^^xsd:date .
+
+:kelvin2018 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :26th_CGPM ;
+    :hasDefiningText "The kelvin, symbol K, is the SI unit of thermodynamic temperature. It is defined by taking the fixed numerical value of the Boltzmann constant, k, to be 1.380 649 × 10−23 when expressed in the unit J K−1, which is equal to kg m2 s−2 K−1, where the kilogram, metre and second are defined in terms of h, c and ∆νCs."@en,
+        "Le kelvin, symbole K, est l’unité de température thermodynamique du SI. Il est défini en prenant la valeur numérique fixée de la constante de Boltzmann, k, égale à 1,380 649 × 10−23 lorsqu’elle est exprimée en J K−1, unité égale à kg m2 s−2 K−1, le kilogramme, le mètre et la seconde étant définis en fonction de h, c et ∆νCs."@fr ;
+    :hasStartValidity "2019-05-20"^^xsd:date .
+
+:kilo1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:kilogram1901 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :3rd_CGPM ;
+    :hasDefiningText "The kilogram is the unit of mass; it is equal to the mass of the international prototype of the kilogram."@en,
+        "Le kilogramme est l’unité de masse ; il est égal à la masse du prototype international du kilogramme."@fr ;
+    :hasEndValidity "2019-05-19"^^xsd:date ;
+    :hasStartValidity "1901-05-20"^^xsd:date .
+
+:kilogram2018 a owl:NamedIndividual ;
+    :hasDefiningAuthority :26th_CGPM ;
+    :hasDefiningText "The kilogram, symbol kg, is the SI unit of mass. It is defined by taking the fixed numerical value of the Planck constant, h, to be 6.626 070 15 × 10−34 when expressed in the unit J s, which is equal to kg m2 s−1, where the metre and the second are defined in terms of c and ∆νCs."@en,
+        "Le kilogramme, symbole kg, est l’unité de masse du SI. Il est défini en prenant la valeur numérique fixée de la constante de Planck, h, égale à 6,626 070 15 × 10−34 lorsqu’elle est exprimée en J s, unité égale à kg m2 s−1, le mètre et la seconde étant définis en fonction de c et ∆νCs."@fr ;
+    :hasStartValidity "2019-05-20"^^xsd:date .
+
+:lumen a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "lm"^^xsd:string ;
+    :isUnitOfQuantityKind :luminous_flux .
+
+:luminous_flux a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :lumen .
+
+:luminous_intensity a :QuantityKind,
+        owl:NamedIndividual .
+
+:lux a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "lx"^^xsd:string ;
+    :isUnitOfQuantityKind :illuminance .
+
+:magnetic_flux a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :weber .
+
+:magnetic_flux_density a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :tesla .
+
+:mega1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:metre a :SIBaseUnit,
+        owl:NamedIndividual ;
+    :hasDefinition :metre1889,
+        :metre1927,
+        :metre1960,
+        :metre1983,
+        :metre2018 ;
+    :hasSymbol "m"^^xsd:string ;
+    :isUnitOfQuantityKind :length .
+
+:metre1889 a owl:NamedIndividual ;
+    :hasDefiningAuthority :1st_CGPM ;
+    :hasDefiningText "The CGPM sanctions the Prototype of the metre chosen by the CIPM. This prototype, at the temperature of melting ice, shall henceforth represent the metric unit of length."@en ;
+    :hasEndValidity "1927-05-19"^^xsd:date ;
+    :hasStartValidity "1889-05-20"^^xsd:date .
+
+:metre1927 a owl:NamedIndividual ;
+    :hasDefiningAuthority :7th_CGPM ;
+    :hasDefiningText "The unit of length is the metre, defined by the distance, at 0°, between the axes of the two central lines marked on the bar of platinum-iridium kept at the Bureau International des Poids et Mesures and declared Prototype of the metre by the 1st Conférence Générale des Poids et Mesures, this bar being subject to standard atmospheric pressure and supported on two cylinders of at least one centimetre diameter, symmetrically placed in the same horizontal plane at a distance of 571 mm from each other."@en ;
+    :hasEndValidity "1960-10-19"^^xsd:date ;
+    :hasStartValidity "1927-05-20"^^xsd:date .
+
+:metre1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasDefiningText "The metre is the length equal to 1 650 763.73 wavelengths in vacuum of the radiation corresponding to the transition between the levels 2p10 and 5d5 of the krypton 86 atom."@en,
+        "Le metre est la longueur egale a1650763,73 longueurs d'onde dans le vide de la radiation correspondant ala transition entre les niveaux 2p10 et 5d5 de l'atome de krypton 86"@fr ;
+    :hasEndValidity "1983-05-19"^^xsd:date ;
+    :hasStartValidity "1960-10-20"^^xsd:date .
+
+:metre1983 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :17th_CGPM ;
+    :hasDefiningText "The metre is the length of the path travelled by light in vacuum during a time interval of 1/299 792 458 of a second."@en,
+        "Le mètre est la longueur du trajet parcouru dans le vide par la lumière pendant une durée de 1/299 792 458 de seconde."@fr ;
+    :hasEndValidity "2019-05-19"^^xsd:date ;
+    :hasStartValidity "1983-05-20"^^xsd:date .
+
+:metre2018 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :26th_CGPM ;
+    :hasDefiningText "The metre, symbol m, is the SI unit of length. It is defined by taking the fixed numerical value of the speed of light in vacuum, c, to be 299 792 458 when expressed in the unit m s−1, where the second is defined in terms of the caesium frequency ∆νCs."@en,
+        "Le mètre, symbole m, est l’unité de longueur du SI. Il est défini en prenant la valeur numérique fixée de la vitesse de la lumière dans le vide, c, égale à 299 792 458 lorsqu’elle est exprimée en m s−1, la seconde étant définie en fonction de ∆νCs."@fr ;
+    :hasStartValidity "2019-05-20"^^xsd:date .
+
+:micro1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:milli1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:mole1971 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :14th_CGPM ;
+    :hasDefiningText """1. The mole is the amount of substance of a system which contains as many elementary entities as there are atoms in 0.012 kilogram of carbon 12; its symbol is “mol”.
+2. When the mole is used, the elementary entities must be specified and may be atoms, molecules, ions, electrons, other particles, or specified groups of such particles."""@en,
+        """1. La mole est la quantité de matière d’un système contenant autant d’entités élémentaires qu’il y a d’atomes dans 0,012 kilogramme de carbone 12 ; son symbole est « mol ».
+2. Lorsqu’on emploie la mole, les entités élémentaires doivent être spécifiées et peuvent être des atomes, des molécules, des ions, des électrons, d’autres particules ou des groupements spécifiés de telles particules."""@fr ;
+    :hasEndValidity "2019-05-19"^^xsd:date ;
+    :hasStartValidity "1971-05-20"^^xsd:date .
+
+:mole2018 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :26th_CGPM ;
+    :hasDefiningText """The mole, symbol mol, is the SI unit of amount of substance. One mole contains exactly 6.022 140 76 × 1023 elementary entities. This number is the fixed numerical value of the Avogadro constant, NA, when expressed in the unit mol−1 and is called the Avogadro number.
+The amount of substance, symbol n, of a system is a measure of the number of specified elementary entities. An elementary entity may be an atom, a molecule, an ion, an electron, any other particle or specified group of particles."""@en,
+        """La mole, symbole mol, est l’unité de quantité de matière du SI. Une mole contient exactement 6,022 140 76 × 1023 entités élémentaires. Ce nombre, appelé «nombred’Avogadro», correspond à la valeur numérique fixée de la constante d’Avogadro, NA, lorsqu’elle est exprimée en mol−1.
+La quantité de matière, symbole n, d’un système est une représentation du nombre d’entités élémentaires spécifiées. Une entité élémentaire peut être un atome, une molécule, un ion, un électron, ou toute autre particule ou groupement spécifié de particules."""@fr ;
+    :hasStartValidity "2019-05-20"^^xsd:date .
+
+:nano1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:newton a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "N"^^xsd:string ;
+    :isUnitOfQuantityKind :force .
+
+:not_defined a owl:NamedIndividual .
+
+:ohm a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "ohm"^^xsd:string ;
+    :isUnitOfQuantityKind :electric_resistance .
+
+:peta1975 a owl:NamedIndividual ;
+    :hasDefiningAuthority :15th_CGPM ;
+    :hasStartValidity "1975-05-20"^^xsd:date .
+
+:pico1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:plane_angle a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :radian .
+
+:power a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :watt .
+
+:pressure a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :pascal .
+
+:quecto2022 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :27th_CGPM ;
+    :hasDefiningText "The quecto, symbol q, is the prefix with scaling factor 1.0E-30"^^xsd:string ;
+    :hasStartValidity "2022-11-19"^^xsd:date .
+
+:quetta2022 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :27th_CGPM ;
+    :hasDefiningText "The quetta, symbol Q, is the prefix with scaling factor 1.0E+30"^^xsd:string ;
+    :hasStartValidity "2022-11-17"^^xsd:date .
+
+:radian a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "rad"^^xsd:string ;
+    :isUnitOfQuantityKind :plane_angle .
+
+:radiant_flux a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :watt .
+
+:ronna2022 a owl:NamedIndividual ;
+    :hasDefiningAuthority :27th_CGPM ;
+    :hasStartValidity "2022-11-19"^^xsd:date .
+
+:ronto2022 a owl:NamedIndividual ;
+    :hasDefiningAuthority :27th_CGPM ;
+    :hasStartValidity "2022-11-19"^^xsd:date .
+
+:second1960 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasDefiningText "La seconde est la fraction 1/31556925,9747 de l'année tropique pour 1900 janvier 0 à 12 heures de temps des éphémérides"@fr ;
+    :hasEndValidity "1967-05-19"^^xsd:date ;
+    :hasStartValidity "1960-10-20"^^xsd:date .
+
+:second1967 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :13th_CGPM ;
+    :hasDefiningText "The second is the duration of 9192631770periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom."@en,
+        "La seconde est la durée de 9 192 631 770 périodes de la radiation correspondant à la transition entre les deux niveaux hyperfins de l’état fondamental de l’atome de césium 133."@fr ;
+    :hasEndValidity "2019-05-19"^^xsd:date ;
+    :hasStartValidity "1967-05-20"^^xsd:date .
+
+:second2018 a :Definition,
+        owl:NamedIndividual ;
+    :hasDefiningAuthority :26th_CGPM ;
+    :hasDefiningText "The second, symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency, ∆νCs, the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom, to be 9 192 631 770 when expressed in the unit Hz, which is equal to s−1."@en,
+        "La seconde, symbole s, est l’unité de temps du SI. Elle est définie en prenant la valeur numérique fixée de la fréquence du césium, Cs, la fréquence de la transition hyperfine de l’état fondamental de l’atome de césium 133 non perturbé, égale à 9 192 631 770 lorsqu’elle est exprimée en Hz, unité égale à s−1."@fr ;
+    :hasStartValidity "2019-05-20"^^xsd:date .
+
+:siemens a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "S"^^xsd:string ;
+    :isUnitOfQuantityKind :electric_conductance .
+
+:sievert a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "Sv"^^xsd:string ;
+    :isUnitOfQuantityKind :dose_equivalent .
+
+:solid_angle a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :steradian .
+
+:steradian a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "sr"^^xsd:string ;
+    :isUnitOfQuantityKind :solid_angle .
+
+:stress a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :pascal .
+
+:tera1960 a owl:NamedIndividual ;
+    :hasDefiningAuthority :11th_CGPM ;
+    :hasStartValidity "1960-05-20"^^xsd:date .
+
+:tesla a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasDefinition :tesla1875 ;
+    :hasSymbol "T"^^xsd:string ;
+    :isUnitOfQuantityKind :magnetic_flux_density .
+
+:tesla1875 a owl:NamedIndividual ;
+    :hasDefiningAuthority :not_defined ;
+    :hasDefiningText "The tesla, symbol T, is the SI unit for the magnetic flux density"^^xsd:string ;
+    :hasStartValidity "1875-05-20"^^xsd:date .
+
+:thermodynamic_temperature a :QuantityKind,
+        owl:NamedIndividual .
+
+:volt a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "V"^^xsd:string ;
+    :isUnitOfQuantityKind :electric_potential_difference,
+        :electric_tension,
+        :voltage .
+
+:weber a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "Wb"^^xsd:string ;
+    :isUnitOfQuantityKind :magnetic_flux .
+
+:work a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :joule .
+
+:yocto1991 a owl:NamedIndividual ;
+    :hasDefiningAuthority :19th_CGPM ;
+    :hasStartValidity "1991-05-20"^^xsd:date .
+
+:yotta1991 a owl:NamedIndividual ;
+    :hasDefiningAuthority :19th_CGPM ;
+    :hasStartValidity "1991-05-20"^^xsd:date .
+
+:zepto1991 a owl:NamedIndividual ;
+    :hasDefiningAuthority :19th_CGPM ;
+    :hasStartValidity "1991-05-20"^^xsd:date .
+
+:zetta1991 a owl:NamedIndividual ;
+    :hasDefiningAuthority :19th_CGPM ;
+    :hasStartValidity "1991-05-20"^^xsd:date .
+
+:12th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1964 .
+
+:13th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1968 .
+
+:15th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1975 .
+
+:energy a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :joule .
+
+:gray a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "Gy"^^xsd:string ;
+    :isUnitOfQuantityKind :absorbed_dose .
+
+:hasEndValidity a owl:DatatypeProperty ;
+    rdfs:subPropertyOf :DefinitionProperty .
+
+:hasScalingFactor a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:range xsd:double ;
+    rdfs:subPropertyOf :PrefixProperty .
+
+:length a :QuantityKind,
+        owl:NamedIndividual ;
+    :hasUnit :metre .
+
+:masse a :QuantityKind,
+        owl:NamedIndividual .
+
+:pascal a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "Pa"^^xsd:string ;
+    :isUnitOfQuantityKind :pressure,
+        :stress .
+
+:watt a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "W"^^xsd:string ;
+    :isUnitOfQuantityKind :power,
+        :radiant_flux .
+
+:joule a :SIUnitSpecialName,
+        owl:NamedIndividual ;
+    :hasSymbol "J"^^xsd:string ;
+    :isUnitOfQuantityKind :amount_of_heat,
+        :energy,
+        :work .
+
+:voltage a :QuantityKind,
+        owl:NamedIndividual .
+
+:19th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1991 .
+
+:27th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 2022 .
+
+:time a :QuantityKind,
+        owl:NamedIndividual .
+
+xsd:date a rdfs:Datatype .
+
+:DefinitionProperty a owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+:NonSIUnit a owl:Class ;
+    rdfs:subClassOf :MeasurementUnit ;
+    owl:disjointWith :SIBaseUnit,
+        :SIUnitSpecialName .
+
+:26th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 2018 ;
+    :hasConfEndDate "2018-11-16"^^xsd:date ;
+    :hasConfStartDate "2018-11-13"^^xsd:date .
+
+:MeasurementUnit a owl:Class ;
+    owl:disjointWith :SIPrefix .
+
+:SIBaseUnit a owl:Class ;
+    rdfs:subClassOf :MeasurementUnit ;
+    owl:disjointWith :SIUnitSpecialName .
+
+:11th_CGPM a :DefiningAuthority,
+        owl:NamedIndividual ;
+    :ConfYear 1960 .
+
+:Definition a owl:Class ;
+    owl:disjointWith :MeasurementUnit,
+        :SIPrefix .
+
+:SIUnitSpecialName a owl:Class ;
+    rdfs:subClassOf :MeasurementUnit .
+
+:DefiningAuthority a owl:Class .
+
+:SIPrefix a owl:Class .
+
+:QuantityKind a owl:Class .
+

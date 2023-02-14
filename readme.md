@@ -13,12 +13,16 @@ The core module is `vimrdf.py`, that depends only on [rdflib](https://rdflib.rea
 * reload the content of the db from a TTL/RDF-XML/JSON-LD/... file;
 * variously query the db, with Python or SPARQL calls.
 
-At the moment two samples are provided, both importing `vimrdf.py`, creating an instance of `VIMRDF`, creating a db and populating it from a JSON file:
+At the moment three samples are provided, all importing `vimrdf.py`, creating an instance of `VIMRDF`, creating a db and populating it from a JSON file:
+* `vimrdfapi.py`, to be run from the command line as `python vimrdfapi.py`, starts a local web server and exposes an API, whose Swagger documentation is accessible at `localhost:8080/docs`
 * `vimrdftest.py` displays a menu of exemplary Python calls and executes the chosen one;
 * `vimrdfquery.py` displays a menu of exemplary SPARQL calls and executes the chosen one.
 
 ---
 **Changes with respect to the previous version:**
+
+***14 Feb 23:***
+* added a preliminary version of the API via FastAPI.
 
 ***13 Feb 23:***
 * revised all query methods for handling terms and definitions in multiple languages.
@@ -41,4 +45,3 @@ At the moment two samples are provided, both importing `vimrdf.py`, creating an 
 * relational properties other than subClassOf: how to deal with them?
 * should VIMRDF methods better return the reference to an entry as its subject or its term?
 * for a minimally serious development, an appropriate namespace will need to be chosen and a licence will need to be added
-* a third sample could be added exposing an API, for example through a [FastAPI](https://fastapi.tiangolo.com) server

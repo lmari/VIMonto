@@ -66,19 +66,33 @@ class VIMRDF:
 
 
     def get_graph(self):
-        ''' Utility method (it should not be needed). '''
+        ''' Utility method: get the current triple store. '''
         return self._g
 
 
+    def get_name(self, ref:URIRef, full_URL:bool=False) -> str:
+        ''' Utility method: return the text of the given URIRef. '''
+        if full_URL:
+            return ref.n3()
+        return ref.n3(self._g.namespace_manager)
+
+
     def get_local(self, objects:list, lang:str='en') -> str:
-        ''' Utility method: return the text in the given language from the given list of Literals. '''
+        ''' Utility method: return the text in the given language
+            from the given list of Literals or other entities. '''
+        if type(objects) == URIRef:
+            return objects.n3(self._g.namespace_manager) # type: ignore
+        if type(objects) == Literal:
+            return str(objects)
         if type(objects) == list:
-            for object in objects:
-                if object.language == lang: # type: ignore
-                    return str(object)
+            x = [str(object) for object in objects if object.language == lang]
+            if len(x) > 1:
+                return x  # type: ignore
+            if len(x) == 1:
+                return x[0]
             return ''
         if objects.language == lang: # type: ignore
-            return str(objects)
+                return str(objects)
         return ''
 
 
@@ -165,20 +179,30 @@ class VIMRDF:
 
     # ************************* list methods *************************
 
-    def list_subjects(self):
-        ''' Return the list of URIRefs of all subjects. '''
-        return list(self._g.subjects(self.term, unique=True))
+    def list_subjects(self) -> dict:
+        ''' Return the dictionary with the list of URIRefs of all subjects. '''
+        return {'subjects': list(self._g.subjects(self.term, unique=True))}
 
 
-    def list_terms(self, lang:str='en'):
-        ''' Return the list of all terms as strings of the given language. '''
+    def list_terms(self, lang:str='en') -> dict:
+        ''' Return the dictionary with the list of all terms as strings of the given language. '''
         res = []
-        for subject in self.list_subjects():
+        for subject in self.list_subjects()['subjects']:
             objects = self._g.objects(subject, self.term)
             for object in objects:
                 if object.language == lang: # type: ignore
                     res.append(str(object))
-        return res
+        return {'terms': res}
+
+
+    def list_ids(self) -> dict:
+        ''' Return the dictionary with the list of all ids (chapter and item). '''
+        res = []
+        for subject in self.list_subjects()['subjects']:
+            chapter = next(self._g.objects(subject, self.chapter, unique=True))
+            item = next(self._g.objects(subject, self.item, unique=True))
+            res.append(str(chapter) + '.' + str(item))
+        return {'ids': res}
 
 
     # ************************* get_subject_by_* methods *************************
@@ -203,9 +227,10 @@ class VIMRDF:
 
    # ************************* get_entry_by_* methods *************************
 
-    def get_entry_by_subject(self, subject:URIRef) -> dict:
-        ''' Return all triples, for all languages, with the given subject,
-            as a dictionary {predicate: object}. '''
+    def get_entry_by_subject(self, subject:URIRef, as_string:bool=False, full_URL:bool=True, lang:str='en') -> dict:
+        ''' Return all triples with the given subject as a dictionary {predicate: object}.
+            If as_string is not specified or is false, the dictionary includes RDF entities for all languages;
+            else it includes strings in the given language. '''
         temp = list(self._g.predicate_objects(subject))
         entry = {}
         for item in temp:
@@ -215,27 +240,33 @@ class VIMRDF:
                 entry[item[0]] = [entry[item[0]], item[1]]
             else:
                 entry[item[0]].append(item[1])
-        return entry
+        if not as_string:
+            return entry
+        str_entry = {}
+        for key in entry.keys():
+            str_entry[self.get_name(key, full_URL=full_URL)] = self.get_local(entry[key], lang=lang)
+        return str_entry
 
 
-    def get_entry_by_term(self, term:str, lang:str='en') -> dict:
-        ''' Return all triples, for all languages,
-            whose subject has the given term in the given language,
-            as a dictionary {predicate: object}. '''
+    def get_entry_by_term(self, term:str, as_string:bool=False, full_URL:bool=True, lang:str='en') -> dict:
+        ''' Return all triples whose subject has the given term in the given language
+            as a dictionary {predicate: object}.
+            See :func:`vimrdf.VIMRDF.get_entry_by_subject`.
+            '''
         subject = self.get_subject_by_term(term, lang=lang)
         if subject is None:
             return {}
-        return self.get_entry_by_subject(subject)
+        return self.get_entry_by_subject(subject, as_string=as_string, full_URL=full_URL, lang=lang)
 
 
-    def get_entry_by_id(self, chapter:int, item:int) -> dict:
-        ''' Return all triples, for all languages,
-            whose subject has the given given id (chapter and item),
-            as a dictionary {predicate: object}. '''
+    def get_entry_by_id(self, chapter:int, item:int, as_string:bool=False, full_URL:bool=True, lang:str='en') -> dict:
+        ''' Return all triples whose subject has the given given id (chapter and item),
+            as a dictionary {predicate: object}.
+            See :func:`vimrdf.VIMRDF.get_entry_by_subject`. '''
         subject = self.get_subject_by_id(chapter, item)
         if subject is None:
             return {}
-        return self.get_entry_by_subject(subject)
+        return self.get_entry_by_subject(subject, as_string=as_string, full_URL=full_URL, lang=lang)
 
 
    # ************************* get_super/subordinates methods *************************

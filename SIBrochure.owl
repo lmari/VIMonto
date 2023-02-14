@@ -1,0 +1,2138 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#"
+     xml:base="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:units="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology">
+        <rdfs:comment>A first trial of an ontology for SI units / the SI Brochure</rdfs:comment>
+        <rdfs:comment>Developed by J. Miles, R. Coulon, G. Dudle
+Coded by GD</rdfs:comment>
+        <owl:versionInfo>Version: 1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#dependsOnSIBaseQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#dependsOnSIBaseQuantity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasDefiningAuthority -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasDefiningAuthority">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isDefininingAuthorityOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasDefinition">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isDefinitionOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasUnit">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isUnitOfQuantityKind"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isDefininingAuthorityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isDefininingAuthorityOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isDefinitionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isDefinitionOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isUnitOfQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#isUnitOfQuantityKind">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ConfYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ConfYear">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefinitionProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefinitionProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#PrefixProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#PrefixProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#UnitProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#UnitProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasConfEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasConfEndDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasConfStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasConfStartDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasDefiningText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasDefiningText">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefinitionProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasEndValidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasEndValidity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefinitionProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefinitionProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasScalingFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasScalingFactor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#PrefixProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasStartValidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasStartValidity">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefinitionProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasSymbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasSymbol">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefinitionProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#CurrentDefinition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#CurrentDefinition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasEndValidity"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningConstant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningConstant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefixDivider -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefixDivider">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasScalingFactor"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefixMultipliers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefixMultipliers">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasScalingFactor"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefixedUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefixedUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#MeasurementUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Superseded -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Superseded">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hasEndValidity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ValidityStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ValidityStatus"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#absorbed_dose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#absorbed_dose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#gray"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#activity_referred_to_a_radionuclide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#activity_referred_to_a_radionuclide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#becquerel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#amount_of_heat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#amount_of_heat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#joule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#amount_of_substance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#amount_of_substance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere1948"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere2018"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_current"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere1948 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere1948">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#9th_CGPM"/>
+        <hasDefiningText xml:lang="fr">L’ampère est l’intensité d’un courant constant qui, maintenu dans deux conducteurs parallèles, rectilignes, de longueur infinie, de section circulaire négligeable et placés à une distance de 1 mètre l’un de l’autre dans le vide, produirait entre ces conducteurs une force égale à 2 × 10−7 newton par mètre de longueur.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The ampere is that constant current which, if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed 1 metre apart in vacuum, would produce between these conductors a force equal to 2 × 10−7 newton per metre of length.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1948-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ampere2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM"/>
+        <hasDefiningText xml:lang="fr">L’ampère, symbole A, est l’unité de courant électrique du SI. Il est défini en prenant la valeur numérique fixée de la charge élémentaire, e, égale à 1,602 176 634 × 10−19 lorsqu’elle est exprimée en C, unité égale à A s, la seconde étant définie en fonction de ∆νCs.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge, e, to be 1.602 176 634 × 10−19 when expressed in the unit C, which is equal to A s, where the second is defined in terms of ∆νCs.</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#angle_minute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#angle_minute">
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#angle_second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#angle_second">
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;&apos;</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#astronomical_unit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#astronomical_unit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#length"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">au</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#atto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#atto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#atto1964"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-18</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#atto1964 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#atto1964">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#12th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1964-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#becquerel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#becquerel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#activity_referred_to_a_radionuclide"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bq</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela1979"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela2018"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#luminous_intensity"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cd</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela1979 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela1979">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#16th_CGPM"/>
+        <hasDefiningText xml:lang="fr">La candela est l’intensité lumineuse, dans une direction donnée, d’une source qui émet un rayonnement monochromatique de fréquence 540 × 1012 hertz et dont l’intensité énergétique dans cette direction est 1/683 watt par stéradian.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The candela is the luminous intensity, in a given direction, of a source that emits monochromatic radiation of frequency 540 × 10^12 hertz and that has a radiant intensity in that direction of 1/683 watt per steradian.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1979-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#candela2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM"/>
+        <hasDefiningText xml:lang="fr">La candela, symbole cd, est l’unité du SI d’intensité lumineuse dans une direction donnée. Elle est définie en prenant la valeur numérique fixée de l’efficacité lumineuse d’un rayonnement monochromatique de fréquence 540 × 1012 Hz, Kcd, égale à 683 lorsqu’elle est exprimée en lm W−1, unité égale à cd sr W−1, ou cd sr kg−1 m−2 s3, le kilogramme, le mètre et la seconde étant définis en fonction de h, c et ∆νCs.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The candela, symbol cd, is the SI unit of luminous intensity in a given direction. It is defined by taking the fixed numerical value of the luminous efficacy of monochromatic radiation of frequency 540 × 1012 Hz, Kcd, to be 683 when expressed in the unit lm W−1, which is equal to cd sr W−1, or cd sr kg−1 m−2 s3, where the kilogram, metre and second are defined in terms of h, c and ∆νCs.</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#capacitance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#capacitance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#farad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#catalytic_activity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#catalytic_activity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#centi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#centi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#centi1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#centi1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#centi1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#coulomb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#coulomb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_charge"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#dalton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#dalton">
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Da</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#day -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#day">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#time"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deca1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">da</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deca1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deca1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deci -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deci">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deci1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.1</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deci1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#deci1960">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#degree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#degree">
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">°</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#degree_Celsius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#degree_Celsius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">°C</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#dose_equivalent -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#dose_equivalent">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#sievert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_charge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_charge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#coulomb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_conductance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_conductance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#siemens"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_current -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_current">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_potential_difference -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_potential_difference">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#voltage"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#volt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_resistance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_resistance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ohm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_tension -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_tension">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#voltage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electronvolt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electronvolt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#energy"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eV</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#energy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#energy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#joule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#exa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#exa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#exa1975"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E18</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#exa1975 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#exa1975">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#15th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1975-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#farad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#farad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#capacitance"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#femto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#femto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#femto1964"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-15</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#femto1964 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#femto1964">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#12th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#force -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#force">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#newton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#frequency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#frequency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hertz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#giga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#giga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#giga1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E9</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#giga1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#giga1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#gray -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#gray">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#absorbed_dose"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gy</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hectar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hectar">
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hecto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hecto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hecto1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hecto1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hecto1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#henry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#henry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#inductance"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hertz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hertz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#frequency"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hz</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#hour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#time"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#illuminance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#illuminance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#lux"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#inductance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#inductance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#henry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#joule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#joule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#amount_of_heat"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#energy"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#work"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#katal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#katal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#catalytic_activity"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kat</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin1967"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin2018"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#thermodynamic_temperature"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin1967 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin1967">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#13th_CGPM"/>
+        <hasDefiningText xml:lang="fr">Le kelvin, unité de température thermodynamique, est la fraction 1/273,16 de la température thermodynamique du point triple de l’eau.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The kelvin, unit of thermodynamic temperature, is the fraction 1/273.16 of the thermodynamic temperature of the triple point of water.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kelvin2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM"/>
+        <hasDefiningText xml:lang="fr">Le kelvin, symbole K, est l’unité de température thermodynamique du SI. Il est défini en prenant la valeur numérique fixée de la constante de Boltzmann, k, égale à 1,380 649 × 10−23 lorsqu’elle est exprimée en J K−1, unité égale à kg m2 s−2 K−1, le kilogramme, le mètre et la seconde étant définis en fonction de h, c et ∆νCs.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The kelvin, symbol K, is the SI unit of thermodynamic temperature. It is defined by taking the fixed numerical value of the Boltzmann constant, k, to be 1.380 649 × 10−23 when expressed in the unit J K−1, which is equal to kg m2 s−2 K−1, where the kilogram, metre and second are defined in terms of h, c and ∆νCs.</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kerma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kerma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#gray"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilo1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilo1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilo1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram1901"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram2018"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#masse"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kg</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram1901 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram1901">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#3rd_CGPM"/>
+        <hasDefiningText xml:lang="fr">Le kilogramme est l’unité de masse ; il est égal à la masse du prototype international du kilogramme.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The kilogram is the unit of mass; it is equal to the mass of the international prototype of the kilogram.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1901-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#kilogram2018">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM"/>
+        <hasDefiningText xml:lang="fr">Le kilogramme, symbole kg, est l’unité de masse du SI. Il est défini en prenant la valeur numérique fixée de la constante de Planck, h, égale à 6,626 070 15 × 10−34 lorsqu’elle est exprimée en J s, unité égale à kg m2 s−1, le mètre et la seconde étant définis en fonction de c et ∆νCs.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The kilogram, symbol kg, is the SI unit of mass. It is defined by taking the fixed numerical value of the Planck constant, h, to be 6.626 070 15 × 10−34 when expressed in the unit J s, which is equal to kg m2 s−1, where the metre and the second are defined in terms of c and ∆νCs.</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#length -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#length">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#litre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#litre">
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</hasSymbol>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#lumen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#lumen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#luminous_flux"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lm</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#luminous_flux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#luminous_flux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#lumen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#luminous_intensity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#luminous_intensity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#lux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#lux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#illuminance"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lx</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#magnetic_flux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#magnetic_flux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#weber"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#magnetic_flux_density -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#magnetic_flux_density">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tesla"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#masse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#masse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mega -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mega">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mega1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mega1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mega1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1889"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1927"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1960"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1983"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre2018"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#length"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1889 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1889">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#1st_CGPM"/>
+        <hasDefiningText xml:lang="en">The CGPM sanctions the Prototype of the metre chosen by the CIPM. This prototype, at the temperature of melting ice, shall henceforth represent the metric unit of length.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1927-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1889-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1927 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1927">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#7th_CGPM"/>
+        <hasDefiningText xml:lang="en">The unit of length is the metre, defined by the distance, at 0°, between the axes of the two central lines marked on the bar of platinum-iridium kept at the Bureau International des Poids et Mesures and declared Prototype of the metre by the 1st Conférence Générale des Poids et Mesures, this bar being subject to standard atmospheric pressure and supported on two cylinders of at least one centimetre diameter, symmetrically placed in the same horizontal plane at a distance of 571 mm from each other.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-10-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1927-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasDefiningText xml:lang="fr">Le metre est la longueur egale a1650763,73 longueurs d&apos;onde dans le vide de la radiation correspondant ala transition entre les niveaux 2p10 et 5d5 de l&apos;atome de krypton 86</hasDefiningText>
+        <hasDefiningText xml:lang="en">The metre is the length equal to 1 650 763.73 wavelengths in vacuum of the radiation corresponding to the transition between the levels 2p10 and 5d5 of the krypton 86 atom.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-10-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1983 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre1983">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#17th_CGPM"/>
+        <hasDefiningText xml:lang="fr">Le mètre est la longueur du trajet parcouru dans le vide par la lumière pendant une durée de 1/299 792 458 de seconde.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The metre is the length of the path travelled by light in vacuum during a time interval of 1/299 792 458 of a second.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#metre2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM"/>
+        <hasDefiningText xml:lang="fr">Le mètre, symbole m, est l’unité de longueur du SI. Il est défini en prenant la valeur numérique fixée de la vitesse de la lumière dans le vide, c, égale à 299 792 458 lorsqu’elle est exprimée en m s−1, la seconde étant définie en fonction de ∆νCs.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The metre, symbol m, is the SI unit of length. It is defined by taking the fixed numerical value of the speed of light in vacuum, c, to be 299 792 458 when expressed in the unit m s−1, where the second is defined in terms of the caesium frequency ∆νCs.</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#micro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#micro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#micro1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-6</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(µ)</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#micro1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#micro1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#milli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#milli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#milli1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#milli1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#milli1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#minute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#minute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#time"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">min</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole1971"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole2018"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#amount_of_substance"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mol</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole1971 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole1971">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#14th_CGPM"/>
+        <hasDefiningText xml:lang="fr">1. La mole est la quantité de matière d’un système contenant autant d’entités élémentaires qu’il y a d’atomes dans 0,012 kilogramme de carbone 12 ; son symbole est « mol ».
+2. Lorsqu’on emploie la mole, les entités élémentaires doivent être spécifiées et peuvent être des atomes, des molécules, des ions, des électrons, d’autres particules ou des groupements spécifiés de telles particules.</hasDefiningText>
+        <hasDefiningText xml:lang="en">1. The mole is the amount of substance of a system which contains as many elementary entities as there are atoms in 0.012 kilogram of carbon 12; its symbol is “mol”.
+2. When the mole is used, the elementary entities must be specified and may be atoms, molecules, ions, electrons, other particles, or specified groups of such particles.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1971-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#mole2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM"/>
+        <hasDefiningText xml:lang="fr">La mole, symbole mol, est l’unité de quantité de matière du SI. Une mole contient exactement 6,022 140 76 × 1023 entités élémentaires. Ce nombre, appelé «nombred’Avogadro», correspond à la valeur numérique fixée de la constante d’Avogadro, NA, lorsqu’elle est exprimée en mol−1.
+La quantité de matière, symbole n, d’un système est une représentation du nombre d’entités élémentaires spécifiées. Une entité élémentaire peut être un atome, une molécule, un ion, un électron, ou toute autre particule ou groupement spécifié de particules.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The mole, symbol mol, is the SI unit of amount of substance. One mole contains exactly 6.022 140 76 × 1023 elementary entities. This number is the fixed numerical value of the Avogadro constant, NA, when expressed in the unit mol−1 and is called the Avogadro number.
+The amount of substance, symbol n, of a system is a measure of the number of specified elementary entities. An elementary entity may be an atom, a molecule, an ion, an electron, any other particle or specified group of particles.</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#nano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#nano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#nano1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-9</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#nano1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#nano1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#newton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#newton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#force"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#not_defined -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#not_defined"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ohm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ohm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_resistance"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ohm</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pascal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pascal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pressure"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#stress"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#peta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#peta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#peta1975"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E15</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#peta1975 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#peta1975">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#15th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1975-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pico1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-12</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pico1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pico1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#plane_angle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#plane_angle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#radian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#power -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#power">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pressure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pressure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pascal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quecto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quecto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quecto2022"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-30</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quecto2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quecto2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#27th_CGPM"/>
+        <hasDefiningText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The quecto, symbol q, is the prefix with scaling factor 1.0E-30</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-11-19</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quetta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quetta2022"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E30</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quetta2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#quetta2022">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#27th_CGPM"/>
+        <hasDefiningText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The quetta, symbol Q, is the prefix with scaling factor 1.0E+30</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-11-17</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#radian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#radian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#plane_angle"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rad</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#radiant_flux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#radiant_flux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#watt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronna2022"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E27</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronna2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronna2022">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#27th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-11-19</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronto2022"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-27</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronto2022 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#ronto2022">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#27th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-11-19</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIBaseUnit"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second1960"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second1967"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second2018"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#time"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</hasSymbol>
+        <rdfs:label xml:lang="de">Sekunde</rdfs:label>
+        <rdfs:label xml:lang="en">second</rdfs:label>
+        <rdfs:label xml:lang="fr">seconde</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second1960">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasDefiningText xml:lang="fr">La seconde est la fraction 1/31556925,9747 de l&apos;année tropique pour 1900 janvier 0 à 12 heures de temps des éphémérides</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-10-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second1967 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second1967">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#13th_CGPM"/>
+        <hasDefiningText xml:lang="fr">La seconde est la durée de 9 192 631 770 périodes de la radiation correspondant à la transition entre les deux niveaux hyperfins de l’état fondamental de l’atome de césium 133.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The second is the duration of 9192631770periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium 133 atom.</hasDefiningText>
+        <hasEndValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-19</hasEndValidity>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1967-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#second2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#Definition"/>
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM"/>
+        <hasDefiningText xml:lang="fr">La seconde, symbole s, est l’unité de temps du SI. Elle est définie en prenant la valeur numérique fixée de la fréquence du césium, Cs, la fréquence de la transition hyperfine de l’état fondamental de l’atome de césium 133 non perturbé, égale à 9 192 631 770 lorsqu’elle est exprimée en Hz, unité égale à s−1.</hasDefiningText>
+        <hasDefiningText xml:lang="en">The second, symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency, ∆νCs, the unperturbed ground-state hyperfine transition frequency of the caesium 133 atom, to be 9 192 631 770 when expressed in the unit Hz, which is equal to s−1.</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#siemens -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#siemens">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_conductance"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#sievert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#sievert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#dose_equivalent"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sv</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#solid_angle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#solid_angle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#steradian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#steradian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#steradian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#solid_angle"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sr</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#stress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#stress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#pascal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tera1960"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E12</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tera1960 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tera1960">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1960-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tesla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tesla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tesla1875"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#magnetic_flux_density"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tesla1875 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tesla1875">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#not_defined"/>
+        <hasDefiningText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The tesla, symbol T, is the SI unit for the magnetic flux density</hasDefiningText>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1875-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#thermodynamic_temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#thermodynamic_temperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#time -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#time">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tonne -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#tonne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#NonSIUnit"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#masse"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#volt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#volt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_potential_difference"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#electric_tension"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#voltage"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#voltage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#voltage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#watt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#watt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#power"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#radiant_flux"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#weber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#weber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIUnitSpecialName"/>
+        <isUnitOfQuantityKind rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#magnetic_flux"/>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wb</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#work -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#work">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#QuantityKind"/>
+        <hasUnit rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#joule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yocto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yocto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yocto1991"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-24</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yocto1991 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yocto1991">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#19th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yotta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yotta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yotta1991"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E24</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yotta1991 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#yotta1991">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#19th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zepto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zepto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zepto1991"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-21</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zepto1991 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zepto1991">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#19th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zetta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#SIPrefix"/>
+        <hasDefinition rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zetta1991"/>
+        <hasScalingFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E21</hasScalingFactor>
+        <hasSymbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z</hasSymbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zetta1991 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#zetta1991">
+        <hasDefiningAuthority rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#19th_CGPM"/>
+        <hasStartValidity rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1991-05-20</hasStartValidity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#1st_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#1st_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1889</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#10th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#10th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1954</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#11th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1960</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#12th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#12th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1964</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#13th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#13th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#14th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#14th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#15th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#15th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#16th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#16th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1979</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#17th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#17th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1983</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#18th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#18th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1987</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#19th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#19th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1991</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#2nd_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#2nd_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1895</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#20th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#20th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#21st_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#21st_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#22nd_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#22nd_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#23rd_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#23rd_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</ConfYear>
+        <hasConfStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-11-12</hasConfStartDate>
+        <hasConfStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-11-16</hasConfStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#24th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#24th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ConfYear>
+        <hasConfEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-10-21</hasConfEndDate>
+        <hasConfStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-10-17</hasConfStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#25th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#25th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</ConfYear>
+        <hasConfEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-20</hasConfEndDate>
+        <hasConfStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-18</hasConfStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#26th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</ConfYear>
+        <hasConfEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-16</hasConfEndDate>
+        <hasConfStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-11-13</hasConfStartDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#27th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#27th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#3rd_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#3rd_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1901</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#4th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#4th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1907</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#5th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#5th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1913</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#6th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#6th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1921</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#7th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#7th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1927</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#8th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#8th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1933</ConfYear>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#9th_CGPM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#9th_CGPM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gregordudle/ontologies/2023/0/Units_ontology#DefiningAuthority"/>
+        <ConfYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1948</ConfYear>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
