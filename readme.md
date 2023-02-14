@@ -22,7 +22,7 @@ At the moment three samples are provided, all importing `vimrdf.py`, creating an
 **Changes with respect to the previous version:**
 
 ***14 Feb 23:***
-* added a preliminary version of the API via FastAPI.
+* added a preliminary version of the API via FastAPI, at the moment only generating JSON-formatted responses.
 
 ***13 Feb 23:***
 * revised all query methods for handling terms and definitions in multiple languages.
