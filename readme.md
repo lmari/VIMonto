@@ -22,7 +22,8 @@ At the moment three samples are provided, all importing `vimrdf.py`, creating an
 **Changes with respect to the previous version:**
 
 ***14 Feb 23:***
-* added a preliminary version of the API via FastAPI, at the moment only generating JSON-formatted responses.
+* added a preliminary version of the API via FastAPI, at the moment only generating JSON-formatted responses;
+* added to this readme the description of the procedure to set up the Python environment (see below) and the requirements.txt file.
 
 ***13 Feb 23:***
 * revised all query methods for handling terms and definitions in multiple languages.
@@ -45,3 +46,19 @@ At the moment three samples are provided, all importing `vimrdf.py`, creating an
 * relational properties other than subClassOf: how to deal with them?
 * should VIMRDF methods better return the reference to an entry as its subject or its term?
 * for a minimally serious development, an appropriate namespace will need to be chosen and a licence will need to be added
+
+---
+**The procedure to set up the Python environment**
+* create a directory and cd
+* create the virtual environment:  
+   `conda create -n vimonto python`
+* activate the virtual environment:  
+    `conda activate vimonto`
+* install the Python module for interactive management:
+    `pip install ipykernel`
+* install the Python module for requirements management:
+    `pip install pipreqs`
+* create requirements.txt:
+    `pipreqs`
+* install required modules:
+    `pip install -r requirements.txt`
