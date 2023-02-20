@@ -181,28 +181,28 @@ class VIMRDF:
 
     def list_subjects(self) -> dict:
         ''' Return the dictionary with the list of URIRefs of all subjects. '''
-        return {'subjects': list(self._g.subjects(self.term, unique=True))}
+        return {'subject': list(self._g.subjects(self.term, unique=True))}
 
 
     def list_terms(self, lang:str='en') -> dict:
         ''' Return the dictionary with the list of all terms as strings of the given language. '''
         res = []
-        for subject in self.list_subjects()['subjects']:
+        for subject in self.list_subjects()['subject']:
             objects = self._g.objects(subject, self.term)
             for object in objects:
                 if object.language == lang: # type: ignore
                     res.append(str(object))
-        return {'terms': res}
+        return {'term': res}
 
 
     def list_ids(self) -> dict:
         ''' Return the dictionary with the list of all ids (chapter and item). '''
         res = []
-        for subject in self.list_subjects()['subjects']:
+        for subject in self.list_subjects()['subject']:
             chapter = next(self._g.objects(subject, self.chapter, unique=True))
             item = next(self._g.objects(subject, self.item, unique=True))
             res.append(str(chapter) + '.' + str(item))
-        return {'ids': res}
+        return {'id': res}
 
 
     # ************************* get_subject_by_* methods *************************

@@ -13,6 +13,8 @@ The core module is `vimrdf.py`, that depends only on [rdflib](https://rdflib.rea
 * reload the content of the db from a TTL/RDF-XML/JSON-LD/... file;
 * variously query the db, with Python or SPARQL calls.
 
+(`vimrdf2.py` and `vimrdf2.json` are older versions of `vimrdf.py` and `vimrdf.json` respectively, with no handling of multiple languages)
+
 At the moment three samples are provided, all importing `vimrdf.py`, creating an instance of `VIMRDF`, creating a db and populating it from a JSON file:
 * `vimrdfapi.py`, to be run from the command line as `python vimrdfapi.py`, starts a local web server and exposes an API, whose Swagger documentation is accessible at `localhost:8080/docs`
 * `vimrdftest.py` displays a menu of exemplary Python calls and executes the chosen one;
@@ -20,6 +22,9 @@ At the moment three samples are provided, all importing `vimrdf.py`, creating an
 
 ---
 **Changes with respect to the previous version:**
+
+***20 Feb 23:***
+* slightly refined the structure of API-related functions, now generating either JSON- or XML-formatted responses.
 
 ***14 Feb 23:***
 * added a preliminary version of the API via FastAPI, at the moment only generating JSON-formatted responses;
@@ -37,7 +42,8 @@ At the moment three samples are provided, all importing `vimrdf.py`, creating an
 
 ---
 **Open issues:**
-* scope: only ch 1 or more? (up to the entire VIM)
+* scope: only VIM chapter 1 or more? (up to the entire VIM) and immediately the VIM3 or waiting for the VIM4?
+* API design: granularity of the endpoints?
 * primitives: how to deal with concepts whose superordinate is a primitive?
     * subclasses of external superclasses when known 
     * subclasses of VIMEntity
@@ -48,17 +54,18 @@ At the moment three samples are provided, all importing `vimrdf.py`, creating an
 * for a minimally serious development, an appropriate namespace will need to be chosen and a licence will need to be added
 
 ---
-**The procedure to set up the Python environment**
+**A procedure to set up a Python virtual environment**  
+(tested on a Linux machine with Anaconda)
 * create a directory and cd
 * create the virtual environment:  
    `conda create -n vimonto python`
 * activate the virtual environment:  
     `conda activate vimonto`
-* install the Python module for interactive management:
+* install the Python module for interactive management (optional):
     `pip install ipykernel`
-* install the Python module for requirements management:
+* install the Python module for requirements management (optional; alternatively the `requirements.txt` file in this repo can be used):
     `pip install pipreqs`
-* create requirements.txt:
+* create requirements.txt (optional; alternatively the `requirements.txt` file in this repo can be used):
     `pipreqs`
 * install required modules:
     `pip install -r requirements.txt`

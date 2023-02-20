@@ -6,7 +6,7 @@ sib = Namespace('http://test.sibrochurerdf.org/')
 g = Graph()
 g.bind('sib', sib, override=True)
 
-g.parse('./SIBrochure.owl')
-g.serialize(format='turtle', destination='./SIBrochure.ttl')
+g.parse('./***.owl') # name of the file with data about units and/or kinds
+g.serialize(format='turtle', destination='./***.ttl')
 
 # %%

@@ -5,7 +5,7 @@ import vimrdf
 vimrdf = vimrdf.VIMRDF()
 g = vimrdf.get_graph()
 vimrdf.load_entries_from_JSON()
-# vimrdf.to_file(format='turtle', destination='./quicktest.ttl')
+vimrdf.to_file(format='ttl', destination='./quicktest.ttl')
 
 # vimrdf.list_subjects()
 # vimrdf.list_terms()
@@ -19,6 +19,5 @@ vimrdf.load_entries_from_JSON()
 # vimrdf.get_superordinates(vimrdf.get_subject_by_term('derived unit'))
 # vimrdf.to_string(vimrdf.get_entry_by_id(1, 7), lang='en')
 
-vimrdf.list_ids()
 
 # %%
