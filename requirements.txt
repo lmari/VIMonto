@@ -1,4 +1,5 @@
 dict2xml==1.7.2
 fastapi==0.92.0
+python-multipart
 rdflib==6.2.0
 uvicorn==0.20.0

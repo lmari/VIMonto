@@ -64,6 +64,7 @@ SELECT ?t ?d WHERE {
     ?s vim:chapter 1 ;
        vim:term ?t ;
        vim:definition ?d .
+FILTER (lang(?t) = "en" && lang(?d) = "en")
 }
     </textarea>
     <br>format: <input type="text" name="f" value="json"><input type="submit" value="submit" />
@@ -74,9 +75,9 @@ SELECT ?t ?d WHERE {
 
 @app.post('/SPARQL_result')
 async def SPARQL_result(q:str=Form(), f:str=Form()):
-    res = [row.asdict() for row in vimrdf.get_graph().query(q)] # type: ignore
-    #return Response(content=json.dumps(res), media_type='application/json')
+    res = [row.asdict() for row in vimrdf.get_graph().query(q)]
     return format_chooser(res, format=f)
+
 
 if __name__ == '__main__':
     uvicorn.run('vimrdfapi:app', port=8080, reload=True)
