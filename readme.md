@@ -24,7 +24,8 @@ At the moment three samples are provided, all importing `vimrdf.py`, creating an
 **Changes with respect to the previous version:**
 
 ***20 Feb 23:***
-* slightly refined the structure of API-related functions, now generating either JSON- or XML-formatted responses.
+* slightly refined the structure of API-related functions, now generating either JSON- or XML-formatted responses;
+* added an API endpoint for generic SPARQL calls.
 
 ***14 Feb 23:***
 * added a preliminary version of the API via FastAPI, at the moment only generating JSON-formatted responses;
