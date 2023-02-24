@@ -1,0 +1,119 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vim: <http://test.vimrdf.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+vim:BaseQuantity a rdfs:Class ;
+    vim:chapter 1 ;
+    vim:definition "quantity that in a given system of quantities is not defined in terms of the others"@en ;
+    vim:item 3 ;
+    vim:term "base quantity"@en,
+        "grandeur de base"@fr,
+        "grandezza di base"@it ;
+    rdfs:subClassOf vim:GeneralQuantity .
+
+vim:BaseUnit a rdfs:Class ;
+    vim:chapter 1 ;
+    vim:definition "measurement unit that is adopted by convention for a base quantity"@en,
+        "unité de mesure adoptée par convention pour une grandeur de base"@fr,
+        "unità di misura adottata convenzionalmente per una grandezza di base"@it ;
+    vim:item 13 ;
+    vim:term "base unit"@en,
+        "unité de base"@fr,
+        "unità di base"@it ;
+    rdfs:subClassOf vim:MeasurementUnit .
+
+vim:DerivedUnit a rdfs:Class ;
+    vim:chapter 1 ;
+    vim:definition "measurement unit for a derived quantity"@en,
+        "unité de mesure d'une grandeur dérivée"@fr,
+        "unità di misura di una grandezza derivata"@it ;
+    vim:item 14 ;
+    vim:term "derived unit"@en,
+        "unité dérivée"@fr,
+        "unità derivata"@it ;
+    rdfs:subClassOf vim:MeasurementUnit .
+
+vim:GeneralProperty a rdfs:Class ;
+    vim:chapter 0 ;
+    vim:definition "(primitive)"@en ;
+    rdfs:subClassOf vim:VIMEntity .
+
+vim:GeneralQuantity a rdfs:Class ;
+    vim:chapter 1 ;
+    vim:definition "property for which comparability by ratio, or by difference, or by order applies"@en ;
+    vim:item 1 ;
+    vim:term "quantity <general>"@en ;
+    rdfs:subClassOf vim:GeneralProperty .
+
+vim:IndividualProperty a rdfs:Class ;
+    vim:chapter 0 ;
+    vim:definition "(primitive)"@en ;
+    rdfs:subClassOf vim:VIMEntity .
+
+vim:IndividualQuantity a rdfs:Class ;
+    vim:chapter 1 ;
+    vim:definition "property for which comparability by ratio, or by difference, or by order applies"@en ;
+    vim:item 1 ;
+    vim:term "quantity <individual>"@en ;
+    rdfs:subClassOf vim:IndividualProperty .
+
+vim:MeasurementUnit a rdfs:Class ;
+    vim:chapter 1 ;
+    vim:definition "reference quantity with which any other quantity of the same kind can be compared by ratio, resulting in a number"@en ;
+    vim:item 12 ;
+    vim:term "measurement unit"@en,
+        "unité de mesure"@fr,
+        "unità di misura"@it ;
+    rdfs:subClassOf vim:ReferenceQuantity .
+
+vim:QuantityDimension a rdfs:Class ;
+    vim:admitted_terms "dimension"@en,
+        "dimension of a quantity"@en ;
+    vim:chapter 1 ;
+    vim:definition "relation of a quantity to the base quantities of a system of quantities as a product of the base quantities each raised to a power, omitting any proportionality factor"@en ;
+    vim:item 7 ;
+    vim:term "quantity dimension"@en,
+        "dimensione di una grandezza"@it ;
+    rdfs:subClassOf vim:VIMEntity .
+
+vim:ReferenceQuantity a rdfs:Class ;
+    vim:chapter 1 ;
+    vim:definition "quantity identified and adopted by convention for empirically comparing it with other quantities of the same kind"@en ;
+    vim:item 11 ;
+    vim:term "reference quantity"@en ;
+    rdfs:subClassOf vim:IndividualQuantity .
+
+vim:VIMEntity a rdfs:Class ;
+    vim:chapter 0 ;
+    vim:definition "(primitive)",
+        "(primitive)"@en ;
+    vim:item 0 ;
+    vim:term "VIM Entity" ;
+    rdfs:subClassOf rdfs:Resource .
+
+vim:admitted_terms a rdf:Property ;
+    rdfs:label "The optional dictionary of the list of zero or more admitted terms of the entry for each language" ;
+    rdfs:domain vim:VIMEntity ;
+    rdfs:range rdf:Seq .
+
+vim:chapter a rdf:Property ;
+    rdfs:label "The id of the chapter in which the entry is included" ;
+    rdfs:domain vim:VIMEntity ;
+    rdfs:range rdfs:Literal .
+
+vim:definition a rdf:Property ;
+    rdfs:label "The dictionary of the definition of the entry for each language" ;
+    rdfs:domain vim:VIMEntity ;
+    rdfs:range rdfs:Literal .
+
+vim:item a rdf:Property ;
+    rdfs:label "The id of the entry in the chapter" ;
+    rdfs:domain vim:VIMEntity ;
+    rdfs:range rdfs:Literal .
+
+vim:term a rdf:Property ;
+    rdfs:label "The dictionary of the first / preferred term of the entry for each language" ;
+    rdfs:domain vim:VIMEntity ;
+    rdfs:range rdfs:Literal .
+

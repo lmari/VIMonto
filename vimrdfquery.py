@@ -14,7 +14,7 @@ to a YASGUI interface, and by adding
 '''
 
 vimrdf = vimrdf.VIMRDF()
-vimrdf.load_entries()
+vimrdf.load_entries_from_JSON()
 vimrdf.load_kinds()
 vimrdf.load_units()
 
@@ -139,6 +139,3 @@ while x != 0:
     print('\n')
 
 print('End...')
-
-
-# %%
