@@ -1,5 +1,2069 @@
 [
-    {"kind": "length", "symbol": "l"},
-    {"kind": "mass", "symbol": "m"},
-    {"kind": "duration", "symbol": "t"}
-]
+  {
+    "URI": "qty:coordinates",
+    "label": { "en": "Cartesian coordinates", "de": "kartesische Koordinaten", "fr": "coordonnées cartésiennes", "pt": "coordenadas cartesianas", "it": "coordinate cartesiane", "cs": "Kartézská soustava souřadnic; Kartézské souřadnice", "tr": "kartezyen koordinatları", "fa": "مختصات دکارتی", "zh": "直角坐标系", "ms": "Koordiant Kartesius" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "(x,y,z)",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:length",
+    "label": { "en": "length", "de": "Länge", "fr": "longueur", "es": "longitud", "pt": "comprimento", "it": "lunghezza", "ro": "lungime", "bg": "Дължина", "sl": "dolžina", "cs": "Délka", "pl": "długość", "ru": "Длина", "hu": "hossz", "tr": "uzunluk", "el": "Μήκος", "he": "אורך", "ar": "طول", "fa": "طول", "hi": "लम्बाई", "zh": "长度", "ja": "長さ", "ms": "Panjang", "la": "longitudo" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["L", "l"],
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:length_height",
+    "label": { "en": "height", "de": "Höhe", "fr": "hauteur", "es": "altura", "pt": "altura", "it": "altezza", "ro": "Înălțime", "cs": "Výška", "ru": "высота", "tr": "yükseklik", "fa": "ارتفاع", "zh": "高度", "ms": "Ketinggian" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "h",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:length_breadth",
+    "label": { "en": "breadth", "de": "Breite", "fr": "largeur", "es": "ancho", "pt": "largura", "it": "larghezza", "sl": "širina", "cs": "šířka", "pl": "szerokość", "ru": "ширина", "tr": "genişliği", "ar": "العرض", "fa": "عرض", "zh": "寬度", "ja": "幅", "ms": "lebar" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "b",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:length_diameter",
+    "label": { "en": "diameter", "de": "Durchmesser", "fr": "diamètre", "es": "diámetro", "pt": "diâmetro", "it": "diametro", "sl": "premer", "cs": "průměr", "pl": "średnica", "ru": "диаметр", "tr": "çap", "ar": "قطر", "fa": "قطر", "zh": "直径", "ja": "直径" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["d", "D"],
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:length_distance",
+    "label": { "en": "distance", "de": "Entfernung", "fr": "distance", "es": "distancia", "pt": "distância", "it": "distanza", "cs": "Vzdálenost", "tr": "uzaklık", "fa": "مسافت", "zh": "距离", "ms": "Jarak" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["d", "r"],
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:length_path",
+    "label": { "en": "length of path; (linear) displacement vector", "de": "Weglänge", "fr": "déplacement", "es": "desplazamiento", "pt": "deslocamento", "it": "spostamento", "cs": "Délka dráhy", "tr": "yol uzunluğu; (doğrusal) yer değiştirme vektörü", "fa": "جابجایی", "zh": "位移矢量", "ms": "Jarak laluan; (linear) vektor anjakan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "s",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:wavelength",
+    "label": { "en": "wavelength", "de": "Wellenlänge", "fr": "longueur d'onde", "es": "longitud de onda", "pt": "comprimento de onda", "it": "lunghezza d'onda", "cs": "Vlnové délka", "ru": "длина волны", "tr": "dalga boyu", "fa": "طول موج", "zh": "波长", "ms": "Jarak gelombang" },
+    "definition": { "en": "for a monochromatic wave, propagating in a medium, λ = c/ν where ν is the frequency (item 7-1) of that wave and c is the phase speed (ISO 80000-3:2006, item 3-8.2) of electromagnetic radiation of a specified frequency. for a sinusoidal wave and in a direction perpendicular to the wavefront, distance between two successive points where at a given instant the phase ... differs by 2 π" },
+    "remarks": { "en": "See ISO 80000-3:2006, item 3-17. For a monochromatic wave, wavelength is the distance between two successive points in a direction perpendicular to the wavefront where at a given instant the phase differs by 2π. λ = 1/σ where σ is the wavenumber in medium (item 7-2.2). In a medium with refractive index n (item 7-5), λ = λ0/n. In an anisotropic medium, the direction of light propagation must be defined." },
+    "symbol": "λ",
+    "formula": "λ = c / ν",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:wavelength_vacuum",
+    "label": { "en": "wavelength in vacuum", "de": "Wellenlänge im Vakuum", "fr": "longueur d'onde dans le vide", "es": "longitud de onda en el vacío", "pt": "comprimento de onda no vácuo", "it": "lunghezza d'onda nel vuoto", "cs": "Vlnová délka ve vakuu", "tr": "vakumda dalga boyu", "fa": "طول موج در خلاء", "zh": "真空波长", "ms": "Jarak gelombang dalam vakum" },
+    "definition": { "en": "for a monochromatic wave, λ0 = c0/ν where ν is the frequency (item 7-1) of that wave and c0 is the speed of light in vacuum (item 7-4.1)" },
+    "remarks": { "en": "In a medium with refractive index n (item 7-5), λ0 = nλ" },
+    "symbol": "λ_0",
+    "formula": "λ_0 = c_0 / ν",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:wavelength_Compton",
+    "label": { "en": "Compton wavelength", "de": "Compton-Wellenlänge", "fr": "longueur d'onde de Compton", "es": "Longitud de onda Compton", "pt": "comprimento de onda Compton", "it": "Lunghezza d'onda Compton", "ro": "lungime de undă Compton", "pl": "długość fali Comptona", "ru": "Комптоновская длина волны", "tr": "Compton Dalgaboyu", "ar": "طول موجة كومبتون", "fa": "طول موج کامپتون", "hi": "काम्पटोन वेवलेन्थ", "zh": "康普頓波長", "ja": "コンプトン波長" },
+    "definition": { "de": "C  h mc0 dabei bezeichnet h die Planck-Konstante (Nr. 10-6.1), m die Ruhemasse (Nr. 10-2) des Teilchens und c0 die Vakuumlichtgeschwindigkeit (ISO 80000-7:2008, Nr. 7-4.1)" },
+    "remarks": { "de": "Die Wellenlänge der elektromagnetischen Strahlung, die an freien Elektronen gestreut wurde (Compton-Streuung), ist maximal 2C größer als die Wellenlänge der einfallenden Strahlung" },
+    "symbol": "λ_C",
+    "formula": "λ_C = h / (m · c_0)",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "qty:mass",
+    "label": { "en": "mass", "de": "Masse", "fr": "masse", "es": "masa", "pt": "massa", "it": "massa", "ro": "masă", "bg": "Маса", "sl": "masa", "cs": "Hmotnost", "pl": "masa", "ru": "Масса", "hu": "tömeg", "tr": "kütle", "el": "Μάζα", "he": "מסה", "ar": "كتلة", "fa": "جرم", "hi": "भार", "zh": "质量", "ja": "質量", "ms": "Jisim", "la": "massa" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "qty:mass_rest",
+    "label": { "en": "rest mass", "de": "Ruhemasse; träge Masse", "fr": "masse au repos; masse propre; masse invariante", "es": "masa invariante", "pt": "massa de repouso", "it": "massa a riposo", "ro": "masa invariantă", "sl": "Mirovna masa; lastna masa; invariantna masa", "cs": "Klidová hmotnost", "pl": "masa spoczynkowa; masa niezmiennicza", "ru": "инвариантная масса; масса покоя", "tr": "dinlenme kütlesi", "ar": "كتلة ساكنة", "fa": "جرم سکون", "hi": "निश्चर द्रव्यमान", "zh": "静止质量", "ja": "不変質量", "ms": "Jisim rehat" },
+    "definition": { "de": "für eine Teilchenart X die Masse des Teilchens (ISO 80000-4:2006, Nr. 4-1) in Ruhe" },
+    "remarks": { "de": "Insbesondere, für das Elektron: me  9,109 382 15(45) . 10-31 kg; für das Proton: mp  1,672 621 637(83) . 10-27 kg; für das Neutron: mn  1,674 927 211(84) . 10-27 kg; [2006 CODATA recommended values]. N2) Die Ruhemasse wird häufig mit m0 bezeichnet." },
+    "symbol": ["m(X)", "m_X"],
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "qty:time",
+    "label": { "en": "time", "de": "Zeit", "fr": "temps", "es": "tiempo", "pt": "tempo", "it": "tempo", "ro": "timp", "bg": "Време", "sl": "čas", "cs": "Čas", "pl": "czas", "ru": "Время", "hu": "idő", "tr": "zaman", "el": "Χρόνος", "he": "זמן", "ar": "زمن", "fa": "زمان", "hi": "समय", "zh": "时间", "ja": "時間", "ms": "Masa", "la": "tempus" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "t",
+    "dimensions": "T^1",
+    "has_unit": "unit:s"
+  },
+  {
+    "URI": "qty:time_halflife",
+    "label": { "en": "half-life", "de": "Halbwertszeit", "fr": "temps de demi-vie", "es": "semiperiodo", "pt": "meia-vida", "it": "tempo di dimezzamento; semivita", "cs": "Poločas rozpadu", "tr": "yarılanma süresi", "fa": "نیمه عمر", "zh": "半衰期", "ms": "Separuh hayat" },
+    "definition": { "de": "durchschnittliche Dauer (ISO 80000-3:2006, Nr. 3-7), für den Zerfall der Hälfte der Atome oder Atomkerne" },
+    "remarks": { "de": "Bei exponentiellem Zerfall gilt T1/2  (ln2) / ." },
+    "symbol": "T_½",
+    "dimensions": "T^1",
+    "has_unit": "unit:s"
+  },
+  {
+    "URI": "qty:time_meanlife",
+    "label": { "en": "mean life", "de": "mittlere Lebensdauer", "fr": "temps de vie moyen", "es": "vida media", "pt": "vida média", "it": "vita media", "cs": "Průměrná životnost", "tr": "ortalama ömür", "fa": "عمر متوسط", "zh": "平均寿命", "ms": "Min hayat" },
+    "definition": { "de": "  1  dabei bezeichnet  die Zerfallskonstante (Nr. 10-26)" },
+    "remarks": { "de": "Die mittlere Lebensdauer ist der Erwartungswert der Lebenszeit eines instabilen Teilchens oder eines angeregten Zustands eines Teilchens." },
+    "symbol": "τ",
+    "formula": "τ = 1 / λ",
+    "dimensions": "T^1",
+    "has_unit": "unit:s"
+  },
+  {
+    "URI": "qty:current_electric",
+    "label": { "en": "electric current", "de": "elektrische Stromstärke", "fr": "intensité de courant électrique", "es": "corriente eléctrica", "pt": "corrente elétrica", "it": "corrente elettrica", "ro": "curent electric", "bg": "Електрически ток", "sl": "električni tok", "cs": "Elektrický proud", "pl": "prąd elektryczny", "ru": "Сила электрического тока", "hu": "elektromos áramerősség", "tr": "elektrik akımı", "el": "Ένταση ηλεκτρικού ρεύματος", "he": "זרם חשמלי", "ar": "تيار كهربائي", "fa": "جریان الکتریکی", "hi": "विद्युत धारा", "zh": "电流", "ja": "電流", "ms": "Arus elektrik", "la": "fluxio electrica" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "I",
+    "formula": "I = dq / dt",
+    "dimensions": "I^1",
+    "has_unit": "unit:A"
+  },
+  {
+    "URI": "qty:temperature",
+    "label": { "en": "thermodynamic temperature", "de": "thermodynamische Temperatur", "fr": "température thermodynamique", "es": "temperatura", "pt": "temperatura", "it": "temperatura termodinamica; temperatura assoluta", "ro": "temperatură termodinamică", "bg": "Термодинамична температура", "sl": "temperatura", "cs": "Termodynamická teplota", "pl": "temperatura", "ru": "Термодинамическая температура", "hu": "abszolút hőmérséklet", "tr": "termodinamik sıcaklık", "el": "Απόλυτη; Θερμοδυναμική Θερμοκρασία", "he": "טמפרטורה מוחלטת", "ar": "درجة الحرارة المطلقة", "fa": "دمای ترمودینامیکی", "hi": "ऊष्मगतिकीय तापमान", "zh": "热力学温度", "ja": "熱力学温度", "ms": "Suhu termodinamik", "la": "temperatura thermodynamica absoluta" },
+    "definition": { "en": "one of the base quantities in the International System of Quantities, ISQ, on which the International System of Units, SI, is based", "de": "eine der Basisgrößen im Internationalen Größensystem (ISQ) auf dem das Internationale Einheitensystem (SI) basiert" },
+    "remarks": { "en": "Thermodynamic temperature is the quantity that is measured with a primary thermometer, examples of which are constant volume gas thermometers, acoustic thermometers, or total radiation thermometers.", "de": "Die thermodynamische Temperatur ist die Größe, die mit Primärthermometern, zum Beispiel Gasthermometern konstanten Volumens, akustischen Thermometern oder Gesamtstrahlungsthermometern, gemessen wird." },
+    "symbol": ["T", "(Θ)"],
+    "dimensions": "Θ^1",
+    "has_unit": "unit:K"
+  },
+  {
+    "URI": "qty:temperature_colour",
+    "label": { "en": "colour temperature", "de": "Farbtemperatur", "fr": "température de couleur", "es": "temperatura de color", "pt": "temperatura de cor", "it": "temperatura di colore", "ro": "temperatură de culoare", "cs": "Barevná teplota", "pl": "temperatura barwowa", "ru": "Цветовая температура", "tr": "Renk sıcaklığı", "ar": "درجة حرارة لونية", "fa": "دمای رنگ", "zh": "色温", "ja": "色温度" },
+    "definition": { "en": "temperature of a blackbody whose radiation has the same chromaticity coordinates (item 7-45)" },
+    "remarks": {},
+    "symbol": "T_c",
+    "dimensions": "Θ^1",
+    "has_unit": "unit:K"
+  },
+  {
+    "URI": "qty:temperature_Curie",
+    "label": { "en": "Curie temperature", "de": "Curie-Temperatur", "fr": "température de Curie", "es": "temperatura de Curie", "pt": "temperatura de Curie", "it": "punto di Curie", "ro": "Punct Curie", "cs": "Curieova teplota", "pl": "temperatura Curie", "ru": "Точка Кюри", "tr": "Curie sıcaklığı", "ar": "درجة حرارة كوري", "fa": "نقطه کوری", "hi": "क्यूरी ताप", "zh": "居里点", "ja": "キュリー温度", "ms": "Suhu Curie" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "T_C",
+    "dimensions": "Θ^1",
+    "has_unit": "unit:K"
+  },
+  {
+    "URI": "qty:qchem",
+    "label": { "en": "amount of substance; chemical amount; numerosity; enplethy; chemon", "de": "Stoffmenge", "fr": "quantité de matière", "es": "cantidad de sustancia", "pt": "quantidade de substância", "it": "quantità di sostanza; quantità di materia; quantità chimica; enpletia", "ro": "cantitate de substanță", "bg": "Количество вещество", "sl": "množina snovi", "cs": "Látkové množství", "pl": "liczność materii", "ru": "Количество вещества", "hu": "anyagmennyiség", "tr": "madde miktarı", "el": "Ποσότητα Ουσίας", "he": "כמות חומר", "ar": "كمية المادة", "fa": "مقدار ماده", "hi": "पदार्थ की मात्रा", "zh": "物质的量", "ja": "物質量", "ms": "Jumlah bahan; jumlah kimia; bilangan; enpleti; kimon", "la": "quantitas substantiae" },
+    "definition": { "de": "eine der sieben Basisgrößen im Internationalen Größensystem (ISQ), auf dem das Internationale Einheitensystem (SI) basiert" },
+    "remarks": { "de": "Die Stoffmenge einer reinen Probe ist eine Größe, die oft durch Messen der Masse und Teilen durch die molare Masse der Probe bestimmt werden kann. Wenn das Mol verwendet wird, müssen die Elementarobjekte angegeben warden, was Atome, Moleküle, Ionen, Elektronen, andere Objekte oder festgelegte Gruppen dieser sein können.Die Definition gilt für ungebundene Atome Kohlenstoff 12 im Ruheund Grundzustand.Das Mol wird auch für Objekte, wie Löcher (Defektelektronen) und andere Quasi-Teilchen, Doppelbindungen usw. verwendet." },
+    "symbol": "n",
+    "formula": "n = N_B / N_A",
+    "dimensions": "N^1",
+    "has_unit": "unit:mol"
+  },
+  {
+    "URI": "qty:intensity_light",
+    "label": { "en": "luminous intensity", "de": "Lichtstärke", "fr": "intensité lumineuse", "es": "intensidad luminosa", "pt": "intensidade luminosa", "it": "intensità luminosa", "ro": "intensitate luminoasă", "bg": "Интензитет на светлината", "sl": "svetilnost", "cs": "Svítivost", "pl": "światłość", "ru": "Сила света", "hu": "fényerősség", "tr": "ışık şiddeti", "el": "Ένταση Φωτεινότητας", "he": "עוצמת הארה", "ar": "شدة الإضاءة", "fa": "شدت نور", "hi": "प्रकाशीय तीव्रता", "zh": "发光强度", "ja": "光度", "ms": "Keamatan berluminositi", "la": "intensitas luminosa" },
+    "definition": { "en": "Luminous intensity is one of the base quantities in the International System of Quantities, ISQ, on which the International System of Units, SI, is based." },
+    "remarks": { "en": "Luminous intensity is measured by a photometer. In a given direction from a source, I = dΦv where dΦ is the v dΩ v luminous flux (item 7-32) leaving the source in an elementary cone containing the given direction with the solid angle dΩ. Iv = ∫ ∞Iλ(λ)K(λ) dλ 0 See item 7-31 for K(λ). See the Introduction, 0.5.1. For scotopic vision, see 0.5.4. For the analogous radiant quantity, see item 7-14. For the analogous photon quantity, see item 7-51." },
+    "symbol": ["I_v", "(I)"],
+    "dimensions": "J^1",
+    "has_unit": "unit:cd"
+  },
+  {
+    "URI": "qty:angle_plane",
+    "label": { "en": "plane angle", "de": "ebener Winkel", "fr": "angle plan", "es": "ángulo plano", "pt": "medida angular", "it": "angolo piano", "ro": "unghi plan", "bg": "Равнинен ъгъл", "sl": "ravninski kot", "cs": "Rovinný úhel", "pl": "kąt płaski", "ru": "Плоский угол", "hu": "szög", "tr": "düzlemsel açı", "el": "Επίπεδη γωνία", "he": "זווית", "ar": "الزاوية النصف قطرية", "fa": "زاویه مستوی", "hi": "क्षेत्र", "zh": "角度", "ja": "弧度", "ms": "Sudut satah", "la": "angulus planus" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["θ", "φ", "α", "β", "γ"],
+    "dimensions": "1",
+    "has_unit": "unit:rad"
+  },
+  {
+    "URI": "qty:angle_phase_difference",
+    "label": { "en": "phase difference", "de": "Phasenverschiebungswinkel", "fr": "différence de phase; déphasage", "es": "diferencia de fase", "pt": "diferença de fase; desfasagem", "it": "sfasamento angolare", "pl": "przesunięcie fazowe", "ar": "اختلاف طور", "ja": "位相差" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "φ",
+    "dimensions": "1",
+    "has_unit": "unit:rad"
+  },
+  {
+    "URI": "qty:angle_solid",
+    "label": { "en": "solid angle", "de": "Raumwinkel", "fr": "angle solide", "es": "ángulo sólido", "pt": "ângulo sólido", "it": "angolo solido", "ro": "unghi solid", "bg": "Пространствен ъгъл", "sl": "prostorski kot", "cs": "Prostorový úhel", "pl": "kąt bryłowy", "ru": "Телесный угол", "hu": "térszög", "tr": "katı cisimdeki açı", "el": "Στερεά γωνία", "he": "זווית מרחבית", "ar": "الزاوية الصلبة", "fa": "زاویه فضایی", "hi": "आयतन", "zh": "立体角度", "ja": "立体角", "ms": "Sudut padu", "la": "angulus solidus" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["Ω", "ω"],
+    "dimensions": "1",
+    "has_unit": "unit:sr"
+  },
+  {
+    "URI": "qty:frequency",
+    "label": { "en": "frequency", "de": "Frequenz", "fr": "fréquence", "es": "frecuencia", "pt": "frequência", "it": "frequenza", "ro": "frecvență", "bg": "Честота", "sl": "frekvenca", "cs": "Frekvence", "pl": "częstotliwość", "ru": "Частота", "hu": "frekvencia", "tr": "frekans", "el": "Συχνότητα", "he": "תדירות", "ar": "التردد لدى نظام الوحدات الدولي", "fa": "بسامد", "hi": "आवृत्ति", "zh": "频率", "ja": "周波数", "ms": "Frekuensi", "la": "frequentia" },
+    "definition": { "en": "ν = 1/T where T is the period (ISO 80000-3:2006, item 3-12)" },
+    "remarks": { "en": "See ISO 80000-3:2006, item 3-15.1, but in spectroscopy, ν is mostly used. Light passing through different media keeps its frequency, but not its wavelength or wavenumber." },
+    "symbol": ["ν", "f"],
+    "formula": "ν = 1 / T",
+    "dimensions": "T^-1",
+    "has_unit": "unit:Hz"
+  },
+  {
+    "URI": "qty:force",
+    "label": { "en": "force", "de": "Kraft", "fr": "force", "es": "fuerza", "pt": "força", "it": "forza", "ro": "forță", "bg": "сила", "sl": "sila", "cs": "Síla", "pl": "siła", "ru": "Сила", "hu": "erő", "tr": "kuvvet", "el": "Δύναμη", "he": "כוח", "ar": "وحدة القوة في نظام متر كيلوغرام ثانية", "fa": "نیرو", "hi": "बल; भार", "zh": "力", "ja": "力", "ms": "Daya", "la": "vis" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "F",
+    "dimensions": "L^1 * M^1 * T^-2",
+    "has_unit": "unit:N"
+  },
+  {
+    "URI": "qty:force_weight",
+    "label": { "en": "weight", "de": "Gewicht", "fr": "poids", "es": "peso", "pt": "peso", "it": "forza peso", "ro": "greutate", "cs": "tíha", "pl": "Siła ciężkości", "ru": "Вес", "tr": "Ağırlık", "ar": "وزن", "fa": "وزن", "zh": "重量", "ja": "重さ", "ms": "Berat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["F_g", "(G)", "(P)", "(W)"],
+    "dimensions": "L^1 * M^1 * T^-2",
+    "has_unit": "unit:N"
+  },
+  {
+    "URI": "qty:pressure",
+    "label": { "en": "pressure", "de": "Druck", "fr": "pression", "es": "presión", "pt": "pressão; tensão", "it": "pressione; tensione", "ro": "presiune; tensiune mecanică", "bg": "Налягане; механично напрежение", "sl": "tlak; pritisk", "cs": "Tlak", "pl": "ciśnienie; naprężenie", "ru": "Давление", "hu": "nyomás", "tr": "basınç", "el": "Πίεση - τάση", "he": "לחץ", "ar": "الضغط أو الإجهاد", "fa": "فشار، تنش", "hi": "दबाव; दाब", "zh": "压强、压力", "ja": "圧力", "ms": "Tekanan; tegasan", "la": "pressio" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "p",
+    "formula": "p = dF / dA",
+    "dimensions": "L^-1 * M^1 * T^-2",
+    "has_unit": "unit:Pal"
+  },
+  {
+    "URI": "qty:pressure_osmotic",
+    "label": { "en": "osmotic pressure", "de": "osmotischer Druck", "fr": "pression osmotique", "es": "presión osmótica", "pt": "pressão osmótica", "it": "pressione osmotica", "cs": "Osmotický tlak", "tr": "ozmotik basıç", "fa": "فشار اسمزی", "zh": "渗透压", "ms": "Tekanan osmotik" },
+    "definition": { "de": "erforderlicher Überdruck zum Aufrechterhalten des osmotischen Gleichgewichts zwischen einer Lösung und dem reinen Lösungsmittel, die durch eine nur für das Lösungsmittel durchlässige Membran getrennt sind" },
+    "remarks": {},
+    "symbol": "Π",
+    "dimensions": "L^-1 * M^1 * T^-2",
+    "has_unit": "unit:Pal"
+  },
+  {
+    "URI": "qty:fugacity",
+    "label": { "en": "fugacity", "de": "Fugazität", "fr": "fugacité", "es": "fugacidad", "pt": "fugacidade", "it": "fugacità", "ro": "fugacitate", "cs": "fugacita", "pl": "Lotność", "tr": "fügasite", "ar": "انفلاتية", "fa": "بی‌دوامی", "zh": "逸度", "ja": "フガシティー", "ms": "Fugasiti" },
+    "definition": { "de": "bei einem Gasgemisch ist~pB proportional zur absolutenAktivität B (Nr. '9-18), wobei derProportionalitätsfaktor, der nur eine Funktion der Temperatur ist, durch die Bedingung bestimmt wird, dass bei konstanter Temperatur undZusammensetzung pB / ~pB für einunendlich verdünntes Gas gegen 1 geht" },
+    "remarks": { "de": "~pB = B  lim pB / B p0dabei bezeichnet p den Gesamtdruck." },
+    "symbol": ["˜p_B", "(f_B)"],
+    "formula": "˜p_B = λ_B · \\lim_{p→0} p_B / λ_B",
+    "dimensions": "L^-1 * M^1 * T^-2",
+    "has_unit": "unit:Pal"
+  },
+  {
+    "URI": "qty:energy",
+    "label": { "en": "energy", "de": "Energie", "fr": "énergie", "es": "energia", "pt": "energia", "it": "energia", "ro": "energie", "bg": "Енергия", "sl": "energija", "cs": "Energie", "pl": "energia", "ru": "Энергия", "hu": "energia, munka, hő", "tr": "enerji", "el": "Έργο - Ενέργεια", "he": "אנרגיה ועבודה", "ar": "الطاقة", "fa": "انرژی", "hi": "ऊर्जा", "zh": "能量", "ja": "エネルギー", "ms": "Tenaga", "la": "energia" },
+    "definition": { "en": "for a closed thermodynamic system, quantity characterizing the ability of a system to do work (ISO 80000-4:2006, item 4-27.1)", "de": "Größe, die die Fähigkeit eines Systems zum Verrichten von Arbeit (ISO 80000-4:2006, Nr. 4-27.1) wiedergibt bei einem geschlossenen thermodynamischen System gilt: ΔU = Q + W dabei bezeichnet Q die Wärmemenge (Nr. 5-6), die auf das System übertragen wurde, und W die Arbeit (ISO 80000-4:2006, Nr. 4-27.1), die am System verrichtet wurde, vorausgesetzt, dass keine chemischen Reaktionen ablaufen" },
+    "remarks": { "en": "Energy exists in different forms that are mutually transformable", "de": "Energie tritt in verschiedenen Formen auf, die teilweise oder vollständig ineinander überführbar sind." },
+    "symbol": "E",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_enthalpy",
+    "label": { "en": "enthalpy", "de": "Enthalpie", "fr": "enthalpie", "es": "entalpía", "pt": "entalpia", "it": "entalpia", "ro": "Entalpie", "sl": "entalpija", "cs": "entalpie", "pl": "entalpia", "ru": "энтальпия", "tr": "Entalpi", "ar": "محتوى حراري", "fa": "آنتالپی", "hi": "पूर्ण ऊष्मा", "zh": "焓", "ja": "エンタルピー", "ms": "Entalpi" },
+    "definition": { "en": "H = U + pV where U is internal energy (item 5-20.2), p is pressure (ISO 80000-4:2006, item 4-15.1), and V is volume (ISO 80000-3:2006, item 3-4)", "de": "H = U + p V dabei bezeichnet U die innere Energie (Nr. 5-20.2), p den Druck (ISO 80000-4:2006, Nr. 4-15.1) und V das Volumen (ISO 80000-3:2006, Nr. 3-4)" },
+    "remarks": {},
+    "symbol": ["h", "(α)"],
+    "formula": "H = U + p · V = C_p · T",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_Gibbs",
+    "label": { "en": "Gibbs energy; Gibbs function", "de": "freie Enthalpie; Gibbs-Energie; Gibbs-Funktion", "fr": "enthalpie libre", "es": "Energía de Gibbs", "pt": "energia livre de Gibbs", "it": "energia libera di Gibbs", "ro": "Entalpie liberă", "sl": "Prosta entalpija", "cs": "Gibbsova volná energie", "pl": "entalpia swobodna", "ru": "энергия Гиббса", "tr": "Gibbs Serbest Enerjisi", "ar": "طاقة غيبس الحرة", "fa": "انرژی آزاد گیبس", "zh": "吉布斯自由能", "ja": "ギブズエネルギー", "ms": "Tenaga Gibbs; fungsi Gibbs" },
+    "definition": { "en": "G = H - TS where H is enthalpy (item 5-20.3), T is thermodynamic temperature (item 5-1), and S is entropy (item 5-18)", "de": "G = H – T S dabei bezeichnet H die Enthalpie (Nr. 5-20.3), T die thermodynamische Temperatur (Nr. 5-1) und S die Entropie (Nr. 5-18)" },
+    "remarks": { "en": "The name Gibbs free energy is also used.", "de": "Die Bezeichnung Gibbssche freie Energie wird auch verwendet." },
+    "symbol": "G",
+    "formula": "G = H - T · S",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_Helmholtz",
+    "label": { "en": "Helmholtz energy; Helmholtz function", "de": "freie Energie; Helmholtz-Energie; Helmholtz-Funktion", "fr": "énergie libre", "es": "Energía de Helmholtz", "pt": "energia livre de Helmholtz", "it": "energia libera di Helmholz", "sl": "Prosta energija", "cs": "Helmholtzova volná energie", "pl": "energia swobodna", "ru": "свободная энергия Гельмгольца", "tr": "Helmholtz enerjisi;  Helmholtz fonksiyonu", "ar": "طاقة هلمهولتز الحرة", "fa": "انرژی آزاد هلمولتز", "zh": "亥姆霍兹自由能", "ja": "ヘルムホルツの自由エネルギー", "ms": "Tenaga Helmholtz; fungsi Helmholtz" },
+    "definition": { "en": "A = U - TS where U is internal energy (item 5-20.2), T is thermodynamic temperature (item 5-1), and S is entropy (item 5-18)", "de": "A = U – T S dabei bezeichnet U die innere Energie (Nr. 5-20.2), T die thermodynamische Temperatur (Nr. 5-1) und S die Entropie (Nr. 5-18)" },
+    "remarks": { "en": "The name Helmholtz free energy is also used.", "de": "Die Bezeichnung Helmholtzsche (freie) Energie wird auch verwendet." },
+    "symbol": ["A", "F"],
+    "formula": "A = U - T · S",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_internal",
+    "label": { "en": "internal energy; thermodynamic energy", "de": "innere Energie; thermodynamische Energie", "fr": "énergie interne; énergie thermodynamique", "es": "energía interna", "pt": "energia interna", "it": "energia interna; energia termodinamica", "ro": "energie internă", "sl": "Notranja energija", "cs": "vnitřní energie", "pl": "energia wewnętrzna", "ru": "внутренняя энергия", "tr": "İç enerji", "ar": "طاقة داخلية", "fa": "انرژی درونی", "hi": "आन्तरिक ऊर्जा", "zh": "内能", "ja": "内部エネルギー", "ms": "Tenaga dalaman; tenaga termodinamik" },
+    "definition": { "en": "for a closed thermodynamic system, ∆U = Q + W, where is amount of heat (item 5-6) transferred to the system and is work (ISO 80000-4:2006, item 4-27.1) done on the system provided that no chemical reactions occur" },
+    "remarks": {},
+    "symbol": "U",
+    "formula": "U = C_v · T",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_kinetic",
+    "label": { "en": "kinetic energy", "de": "kinetische Energie", "fr": "énergie cinétique", "es": "energía cinética", "pt": "energia cinética", "it": "energia cinetica", "ro": "Energie cinetică", "cs": "kinetická energie", "pl": "energia kinetyczna", "ru": "кинетическая энергия", "tr": "Kinetik enerji", "ar": "طاقة حركية", "fa": "انرژی جنبشی", "hi": "गतिज ऊर्जा", "zh": "动能", "ja": "運動エネルギー", "ms": "Tenaga kinetik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["E_k", "T"],
+    "formula": "E_k = ½ · M · v^2",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_potential",
+    "label": { "en": "potential energy", "de": "potentielle Energie", "fr": "énergie potentielle", "es": "energía potencial", "pt": "energia potencial", "it": "energia potenziale", "ro": "Energie potențială", "cs": "potenciální energie", "pl": "Energia potencjalna", "ru": "потенциальная энергия", "tr": "Potansiyel enerji", "ar": "طاقة وضع", "fa": "انرژی پتانسیل", "hi": "स्थितिज ऊर्जा", "zh": "势能", "ja": "位置エネルギー", "ms": "Tenaga keupayaan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["E_p", "V", "Φ"],
+    "formula": "E_p = - ∫ F · dr",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_radiant",
+    "label": { "en": "radiant energy", "de": "Strahlungsenergie", "fr": "énergie rayonnante", "es": "energía radiante", "pt": "energia radiante", "it": "energia radiante", "cs": "energie záření", "pl": "energia promienista", "ru": "энергия излучения", "tr": "Işınım erkesi", "ar": "طاقة إشعاعية", "fa": "انرژی تابشی", "hi": "विकिरण ऊर्जा", "zh": "辐射能", "ja": "放射エネルギー", "ms": "Tenaga sinaran" },
+    "definition": { "en": "energy (ISO 80000-5:2007, item 5-20.1) emitted, transferred or received as radiation" },
+    "remarks": { "en": "Visible radiant energy is called luminous energy (item 7-34). Photonic energy may be" },
+    "symbol": ["Q", "W", "(U)", "(Q_e)"],
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_work",
+    "label": { "en": "work", "de": "Arbeit", "fr": "travail", "es": "trabajo", "pt": "trabalho", "it": "lavoro", "ro": "lucru mecanic", "sl": "delo", "cs": "práce", "pl": "praca", "tr": "iş", "fa": "کار", "hi": "कार्य", "zh": "功", "ja": "仕事量", "ms": "kerja" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["W", "(A)"],
+    "formula": "W = ∫ F · dr",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:energy_heat",
+    "label": { "en": "heat; amount of heat", "de": "Wärme; Wärmemenge", "fr": "quantité de chaleur; chaleur", "es": "calor", "pt": "quantidade de calor", "it": "calore; quantità di calore", "ro": "cantitate de căldură", "sl": "toplota", "cs": "jednotka tepla", "pl": "ciepło", "ru": "Теплота", "tr": "ısı miktarı", "ar": "حرارة", "fa": "کمیت گرما", "hi": "ऊष्मा", "zh": "热量", "ja": "熱量", "ms": "kuantiti haba Haba; jumlah haba", "la": "labor" },
+    "definition": { "en": "difference between the increase in the total energy (item 5-20.1) of a physical system and the work done on the system, provided that the amounts of substances within the system are not changed", "de": "Differenz zwischen dem Anstieg der Gesamtenergie (Nr. 5-20.1) eines physikalischen Systems und der am System verrichteten Arbeit, vorausgesetzt, dass die Stoffmengen im System unverändert bleiben" },
+    "remarks": { "en": "The heat transferred in an isothermal phase transformation", "de": "Die bei einer isothermen Phasenumwandlung übertragene Wärme sollte als Änderung in den jeweiligen thermodynamischen Funktionen ausgedrückt werden, z. B. T · ΔS, dabei bezeichnet T die thermodynamische Temperatur (Nr. 5-1) und S die Entropie (Nr. 5-18), oder ΔH, wobei H die Enthalpie (Nr. 5-20.3) ist." },
+    "symbol": "Q",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "qty:power",
+    "label": { "en": "power", "de": "Leistung", "fr": "puissance", "es": "potencia", "pt": "potência", "it": "potenza", "ro": "putere; flux energetic", "bg": "Мощност", "sl": "moč", "cs": "Výkon", "pl": "moc; strumień promieniowania", "ru": "Мощность", "hu": "teljesítmény, hőáramlás", "tr": "güç; ısı akış oranı", "el": "Ισχύς", "he": "הספק", "ar": "القدرة", "fa": "توان، نرخ جریان گرما", "hi": "शक्ति; विकिरणी बहाव", "zh": "功率、热流", "ja": "電力・仕事率", "ms": "Kuasa", "la": "potentia" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "P",
+    "formula": "P = dE / dt",
+    "dimensions": "L^2 * M^1 * T^-3",
+    "has_unit": "unit:W"
+  },
+  {
+    "URI": "qty:power_electric_active",
+    "label": { "en": "electric power", "de": "Wirkleistung", "fr": "puissance active", "es": "potencia activa", "pt": "potência activa", "it": "potenza attiva", "pl": "moc czynna", "ar": "القدرة الفعالة", "zh": "有功功率", "ja": "有効電力" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "P",
+    "dimensions": "L^2 * M^1 * T^-3",
+    "has_unit": "unit:W"
+  },
+  {
+    "URI": "qty:power_radiant",
+    "label": { "en": "radiant flux; radiant power", "de": "Strahlungsfluss; Strahlungsleistung", "fr": "flux énergétique; puissance rayonnante", "es": "potencia radiante; flujo radiante", "pt": "potência radiante; fluxo energético", "it": "flusso radiante; potenza radiante", "pl": "moc promieniowania; moc promienista", "ar": "قدرة إشعاعية", "ja": "放射パワー" },
+    "definition": { "en": "dQ Φ = dt where dQ is the radiant energy (item 7-6) emitted, transferred or received during a time interval of the duration dt (ISO 80000-3:2006, item 3-7)" },
+    "remarks": { "en": "Spectral radiant flux is the spectral concentration of radiant flux, Φ (λ) = dΦ , Φ = ∞∫ Φ (λ) d λ. λ dλ λ 0 Corresponding definitions apply for spectral concentration (spectral density) of similar radiometric quantities such as dI Iλ(λ) = dλ for items 7-14 and 7-13. They are denoted also simply Iλ and Φλ, respectively and called spectral quantities. Then, I = ∞∫ Iλ(λ)d λ = ∞∫ Iλ d λ etc. 0 0 Visible radiant flux is called luminous flux (item 7-32). Photonic flux may be expressed by photon numbers (see item 7-50)." },
+    "symbol": ["Φ", "P", "(Φ_e)"],
+    "formula": "Φ = dQ / dt",
+    "dimensions": "L^2 * M^1 * T^-3",
+    "has_unit": "unit:W"
+  },
+  {
+    "URI": "qty:power_sound",
+    "label": { "en": "sound power", "de": "Schallleistung", "fr": "puissance acoustique", "es": "potencie acústica", "pt": "potência acústica; potência sonora", "it": "potenza sonora", "pl": "moc akustyczna", "ru": "звуковая мощность", "ar": "القدرة الصوتية", "ja": "音源の音響出力" },
+    "definition": { "en": "through a surface, product of the sound pressure ... and the component of the particle velocity ... at a point on the surface in the direction normal to the surface, integrated over that surface" },
+    "remarks": {},
+    "symbol": ["P", "P_a"],
+    "dimensions": "L^2 * M^1 * T^-3",
+    "has_unit": "unit:W"
+  },
+  {
+    "URI": "qty:power_electric_apparent",
+    "label": { "en": "apparent power", "de": "Scheinleistung", "fr": "puissance apparente", "es": "potencia aparente", "pt": "potência aparente", "it": "potenza apparente", "pl": "moc pozorna", "ar": "القدرة الظاهرية", "zh": "视在功率; 表观功率", "ja": "皮相電力" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["S", "(P_S)"],
+    "formula": "S = U · I",
+    "dimensions": "L^2 * M^1 * T^-3",
+    "has_unit": "unit:V.A"
+  },
+  {
+    "URI": "qty:power_electric_reactive",
+    "label": { "en": "reactive power", "de": "Blindleistung", "fr": "puissance réactive", "es": "potencia reactiva", "pt": "potência reativa", "it": "potenza reattiva", "cs": "Jalový výkon", "pl": "moc bierna", "tr": "reaktif güç", "ar": "القدرة الكهربائية الردفعلية;الردية", "fa": "توان راکتیو", "zh": "无功功率", "ja": "無効電力", "ms": "Kuasa reaktif" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["Q", "P_Q"],
+    "dimensions": "L^2 * M^1 * T^-3",
+    "has_unit": "unit:var"
+  },
+  {
+    "URI": "qty:charge_electric",
+    "label": { "en": "electric charge", "de": "elektrische Ladung", "fr": "Charge électrique", "es": "carga eléctrica", "pt": "carga elétrica", "it": "carica elettrica", "ro": "sarcină electrică; cantitate de electricitate", "bg": "Електрически заряд", "sl": "električni naboj", "cs": "Elektrický náboj", "pl": "ładunek elektryczny", "ru": "Электрический заряд", "hu": "elektromos töltés", "tr": "elektrik yükü", "el": "Ηλεκτρικό φορτίο", "he": "מטען חשמלי", "ar": "الشحنة الكهربائية", "fa": "بار الکتریکی", "hi": "विद्युत आवेग या विद्युत बहाव", "zh": "电荷", "ja": "電荷", "ms": "Cas elektrik", "la": "onus electricum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["q", "Q"],
+    "dimensions": "T^1 * I^1",
+    "has_unit": "unit:C"
+  },
+  {
+    "URI": "qty:potential_electric",
+    "label": { "en": "electric potential", "de": "elektrisches Potenzial", "fr": "potentiel électrique", "es": "potencial eléctrico", "pt": "potencial elétrico", "it": "potenziale elettrico", "ro": "potențial electric", "bg": "Електрически потенциал", "sl": "električni potencial", "cs": "elektrický potenciál", "pl": "potencjał elektryczny", "ru": "электростатический потенциал", "hu": "elektromos feszültség, elektromos potenciálkülönbség", "tr": "elektrik potansiyeli", "he": "מתח חשמלי (הפרש פוטנציאלים)", "ar": "كمون كهربائي", "fa": "پتانسیل الکتریکی", "hi": "विद्युत विभव", "zh": "電勢", "ja": "電位", "ms": "Keupayaan elektrik", "la": "tensio electrica; vis electromotrix" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["V", "U"],
+    "formula": "V = E_p / q",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-1",
+    "has_unit": "unit:V"
+  },
+  {
+    "URI": "qty:potential_electric_difference",
+    "label": { "en": "electric potential difference; tension", "de": "elektrische Spannung", "fr": "tension électrique", "es": "tensión eléctrica", "pt": "tensão elétrica (diferença de potencial)", "it": "differenza di potenziale elettrico; tensione elettrica", "ro": "diferență de potențial electric; tensiune", "sl": "električna napetost", "cs": "elektrické napětí", "pl": "napięcie elektryczne", "ru": "электрическое напряжение", "tr": "gerilim", "ar": "جهد كهربائي", "fa": "ولتاژ/ اختلاف پتانسیل", "hi": "विभवांतर", "zh": "電壓", "ja": "電圧", "ms": "Voltan Perbezaan keupayaan elektrik; ketegangan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["U", "(V)"],
+    "dimensions": "L^2 * M^1 * T^-3 * I^-1",
+    "has_unit": "unit:V"
+  },
+  {
+    "URI": "qty:potential_electric_electromotive",
+    "label": { "en": "electromotive force", "de": "elektromotorische Kraft", "fr": "force électromotrice", "es": "fuerza electromotriz", "pt": "força eletromotriz", "it": "forza elettromotrice", "ro": "forță electromotoare", "sl": "elektromotorna sila", "cs": "Elektromotorické napětí", "pl": "siła elektromotoryczna", "ru": "электродвижущая сила", "tr": "Elektromotor kuvvet", "ar": "قوة محركة كهربائية", "fa": "نیروی محرک الکتریکی", "hi": "विद्युतवाहक बल", "zh": "電動勢", "ja": "起電力", "ms": "Daya gerak elektrik", "la": "calor" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "E",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-1",
+    "has_unit": "unit:V"
+  },
+  {
+    "URI": "qty:capacity_electric",
+    "label": { "en": "electric capacity; capacitance", "de": "elektrische Kapazität", "fr": "Capacité électrique", "es": "capacitancia eléctrica", "pt": "capacitância", "it": "capacità elettrica", "ro": "capacitate electrică", "bg": "Електрически капацитет", "sl": "kapacitivnost", "cs": "Elektrická kapacita", "pl": "pojemność elektryczna", "ru": "Электроёмкость", "hu": "kapacitás", "tr": "elektriksel sığa (kapasitans)", "he": "קיבול חשמלי", "ar": "السعة الكهربائية", "fa": "ظرفیت خازنی", "hi": "विद्युत धारिता", "zh": "电容", "ja": "静電容量", "ms": "Kapasiti elektrik; Kapasitans", "la": "capacitantia electrica" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "C",
+    "formula": "C = q / U",
+    "dimensions": "L^-2 * M^-1 * T^4 * I^2",
+    "has_unit": "unit:F"
+  },
+  {
+    "URI": "qty:impedance_electric",
+    "label": { "en": "electric impedance", "de": "elektrischer Wechselstromwiderstand; elektrische Impedanz", "fr": "impédance électrique", "es": "impedancia", "pt": "impedância elétrica", "it": "impedenza elettrica", "ro": "impedanță electrică", "sl": "impedanca", "cs": "Elektrická impedance", "pl": "impedancja", "ru": "электрический импеданс", "tr": "Empedans", "ar": "معاوقة", "fa": "امپدانس الکتریکی", "hi": "प्रतिबाधा", "zh": "阻抗", "ja": "インピーダンス", "ms": "Impedans elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "Z",
+    "formula": "Z = |Z|·e^{i·φ} = R + j·X",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-2",
+    "has_unit": "unit:Ohm"
+  },
+  {
+    "URI": "qty:reactance_electric",
+    "label": { "en": "electric reactance", "de": "elektrischer Blindwiderstand; Reaktanz", "fr": "réactance électrique", "es": "reactancia", "pt": "reactância", "it": "reattanza", "sl": "reaktanca", "cs": "Elektrická reaktance", "pl": "reaktancja", "tr": "elektrik reaktansı", "ar": "المفاعلة", "fa": "واکُنایی الکتریکی/راکتانس الکتریکی", "zh": "电抗", "ja": "リアクタンス", "ms": "Reaktansi elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "X",
+    "formula": "X = ω · L – 1 / (ω · C)",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-2",
+    "has_unit": "unit:Ohm"
+  },
+  {
+    "URI": "qty:resistance_electric",
+    "label": { "en": "electric resistance", "de": "elektrischer Wirkwiderstand; elektrische Resistanz", "fr": "Résistance électrique", "es": "resistencia eléctrica", "pt": "resistência", "it": "resistenza elettrica", "ro": "rezistență electrică", "bg": "Електрическо съпротивление", "sl": "električni upor; električna upornost", "cs": "Elektrický odpor", "pl": "rezystancja", "ru": "Сопротивление", "hu": "elektromos ellenállás", "tr": "elektriksel direnç", "he": "התנגדות חשמלית", "ar": "المقاومة", "fa": "مقاومت الکتریکی", "hi": "विद्युत प्रतिरोध; प्रतिबाधा; प्रतिघात", "zh": "电阻", "ja": "電気抵抗", "ms": "Rintangan elektrik", "la": "resistentia electrica" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "R",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-2",
+    "has_unit": "unit:Ohm"
+  },
+  {
+    "URI": "qty:admittance_electric",
+    "label": { "en": "electric admittance", "de": "komplexer Leitwert; Admittanz; elektrische Scheinleitwert", "fr": "admittance électrique", "es": "Admitancia", "pt": "admitância", "it": "ammettenza", "ro": "admitanță", "cs": "Admitance", "pl": "admitancja", "ru": "адмиттанс", "tr": "Admittans", "ar": "مسامحة كهربائية", "fa": "ادمیتانس", "zh": "导纳", "ja": "アドミタンス", "ms": "Admitansi elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "Y",
+    "formula": "Y = |Y|·e^{-i·φ} = G + j·B = {R - j·X} / |Z|^2",
+    "dimensions": "L^-2 * M^-1 * T^3 * I^2",
+    "has_unit": "unit:Sie"
+  },
+  {
+    "URI": "qty:conductance_electric",
+    "label": { "en": "electric conductance", "de": "elektrischer Wirkleitwert; elektrische Konduktanz", "fr": "Conductance électrique", "es": "conductancia eléctrica", "pt": "condutância elétrica", "it": "conduttanza elettrica", "ro": "conductanță electrică", "bg": "Електрическа проводимост", "sl": "električna prevodnost", "cs": "Elektrická vodivost; konduktance", "pl": "przewodność elektryczna", "ru": "Электрическая проводимость", "hu": "elektromos vezetőképesség", "tr": "İletkenlik", "he": "מוליכות חשמלית", "ar": "التوصيل الكهربائي", "fa": "رسانایی الکتریکی", "hi": "विद्युत चालकता", "zh": "电导", "ja": "コンダクタンス", "ms": "Kealiran elektrik", "la": "conductantia electrica" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "G",
+    "dimensions": "L^-2 * M^-1 * T^3 * I^2",
+    "has_unit": "unit:Sie"
+  },
+  {
+    "URI": "qty:susceptance_electric",
+    "label": { "en": "electric susceptance", "de": "elektrischer Blindleitwert; elektrische Suszeptanz", "fr": "susceptance électrique", "es": "susceptancia", "pt": "susceptância", "it": "suscettanza", "cs": "susceptance", "pl": "susceptancja", "tr": "susceptance", "ar": "مطاوعة كهربائية", "fa": "سوسپتانس", "zh": "电纳", "ja": "サセプタンス", "ms": "Susceptans elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "B",
+    "dimensions": "L^-2 * M^-1 * T^3 * I^2",
+    "has_unit": "unit:Sie"
+  },
+  {
+    "URI": "qty:fieldFlux_magnetic",
+    "label": { "en": "magnetic flux", "de": "magnetischer Flux", "fr": "Flux d'induction magnétique", "es": "flujo magnético", "pt": "fluxo magnético", "it": "flusso magnetico", "ro": "flux de inducție magnetică", "bg": "Магнитен поток", "sl": "magnetni pretok", "cs": "Magnetický tok", "pl": "strumień magnetyczny", "ru": "Магнитный поток", "hu": "mágneses fluxus", "tr": "manyetik akı", "he": "שטף מגנטי", "ar": "التدفق المغناطيسي", "fa": "شار مغناطیسی", "hi": "चुम्बकीय बहाव", "zh": "磁通量", "ja": "磁束", "ms": "Fluks magnet", "la": "fluxus magneticus" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "Φ_B",
+    "formula": "Φ_B = ∫ B dA",
+    "dimensions": "L^2 * M^1 * T^-2 * I^-1",
+    "has_unit": "unit:Wb"
+  },
+  {
+    "URI": "qty:fieldFluxDensity_magnetic",
+    "label": { "en": "magnetic flux density", "de": "magnetische Flussdichte; magnetische Induktion", "fr": "Densité de flux magnétique", "es": "Densidad de flujo magnético; inducción magnética", "pt": "densidade de fluxo magnético", "it": "densità di flusso magnetico", "ro": "inducție magnetică", "bg": "Магнитна индукция", "sl": "gostota magnetnega pretoka", "cs": "Magnetická indukce", "pl": "indukcja magnetyczna", "ru": "Магнитная индукция", "hu": "mágneses indukció", "tr": "manyetik akı yoğunluğu", "he": "צפיפות שטף מגנטי", "ar": "المجال المغناطيسي", "fa": "چگالی شار مغناطیسی", "hi": "चुम्बकीय क्षेत्र", "zh": "磁通量密度", "ja": "磁束密度", "ms": "Ketumpatan fluks magnet", "la": "densitas fluxus magnetici" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "B",
+    "dimensions": "M^1 * T^-2 * I^-1",
+    "has_unit": "unit:T"
+  },
+  {
+    "URI": "qty:inductance",
+    "label": { "en": "inductance; inductivity", "de": "Induktivität", "fr": "Inductance électrique", "es": "inductancia", "pt": "indutância", "it": "induttanza", "ro": "inductanță", "bg": "Индуктивност", "sl": "induktivnost", "cs": "Indukčnost", "pl": "indukcyjność", "ru": "Индуктивность", "hu": "induktivitás", "tr": "İndüktans", "he": "השראות", "ar": "المحاثة (التحريض)", "fa": "القاوری", "hi": "प्रेरकत्व", "zh": "电感", "ja": "インダクタンス・誘導係数", "ms": "Indukstans; Induktiviti", "la": "inductantia" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["L", "M"],
+    "formula": "L = V / (dI/dt)",
+    "dimensions": "L^2 * M^1 * T^-2 * I^-2",
+    "has_unit": "unit:H"
+  },
+  {
+    "URI": "qty:temperature_Celsius",
+    "label": { "en": "Celsius temperature", "de": "Celsius-Temperatur", "fr": "température Celsius", "es": "temperatura Celsius", "pt": "temperatura celsius", "it": "temperatura Celsius", "ro": "temperatură Celsius", "sl": "temperatura", "cs": "teplota", "pl": "temperatura", "ru": "Температура Цельсия", "tr": "Celsius sıcaklık", "he": "צלזיוס", "ar": "درجة الحرارة المئوية أو السيلسيوس", "fa": "دمای سلسیوس/سانتیگراد", "hi": "सेल्सियस तापमान", "zh": "温度", "ja": "温度", "ms": "Suhu Celsius" },
+    "definition": { "en": "t = T - T0 where T is thermodynamic temperature (item 5-1) and T0 := 273.15 K", "de": "t = T – T0 dabei bezeichnet T die thermodynamische Temperatur (Nr. 5-1) und T0 = 273.15 K" },
+    "remarks": { "en": "The thermodynamic temperature T0 is exactly 0.01 K below the thermodynamic temperature of the triple point of water.", "de": "Die thermodynamische Temperatur T0 ist genau 0.01 K unterhalb der thermodynamischen Temperatur des Tripelpunkts von Wasser." },
+    "symbol": ["t", "ϑ"],
+    "formula": "t = T - T_0",
+    "dimensions": "Θ^1",
+    "has_unit": "unit:Cel"
+  },
+  {
+    "URI": "qty:power_light",
+    "label": { "en": "luminous flux", "de": "Lichtstrom", "fr": "flux lumineux", "es": "flujo luminoso", "pt": "fluxo luminoso", "it": "flusso luminoso", "ro": "flux luminos", "bg": "Светлинен поток", "sl": "svetlobni tok", "cs": "Světelný tok", "pl": "strumień świetlny", "ru": "Световой поток", "hu": "fényáram", "tr": "işık akısı", "he": "שטף הארה", "ar": "التدفق الضوئي", "fa": "شار نوری", "hi": "प्रकाशीय बहाव", "zh": "光通量", "ja": "光束", "ms": "Fluks berluminositi", "la": "fluctús lucis" },
+    "definition": { "en": "Φv = Km∞∫ Φλ(λ) V (λ) dλ 0 where Km is the maximum spectral luminous efficacy (item 7-29), Φλ(λ) is the spectral radiant flux (item 7-13, Remarks 7-13), V (λ) is the spectral luminous efficiency (item 7-28) and λ is the wavelength (item 7-3.2)" },
+    "remarks": { "en": "Luminous flux evaluates the radiation by its visual response using the standard spectral luminous efficiency. See the Introduction, 0.5.1. For the analogous radiant quantity, see item 7-13. For the analogous photon quantity, see item 7-50. For scotopic vision, see 0.5.4." },
+    "symbol": ["Φ_v", "(Φ)"],
+    "formula": "Φ_v = K_m ∫_0^∞ Φ_λ(λ) V(λ) dλ",
+    "dimensions": "J^1",
+    "has_unit": "unit:lm"
+  },
+  {
+    "URI": "qty:illuminance",
+    "label": { "en": "illuminance", "de": "Beleuchtungsstärke", "fr": "éclairement lumineux; éclairement", "es": "luminosidad", "pt": "iluminamento", "it": "illuminamento", "ro": "iluminare", "bg": "Осветеност", "sl": "osvetljenost", "cs": "Intenzita osvětlení", "pl": "natężenie oświetlenia", "ru": "Освещённость", "hu": "megvilágítás", "tr": "aydınlanma şiddeti", "he": "הארה (שטף ליחידת שטח)", "ar": "شدة الضوء", "fa": "شدت روشنایی", "hi": "प्रदीपन", "zh": "照度", "ja": "照度", "ms": "Pencahayaan" },
+    "definition": { "en": "at a point on a surface, dΦ Ev = dA where dΦ is the luminous flux (item 7-32) incident on an element of the surface with area dA (ISO 80000-3:2006, item 3-3)" },
+    "remarks": { "en": "Ev = ∫ ∞Eλ(λ)K(λ) dλ 0 See item 7-31 for K(λ). See the Introduction, 0.5.1. For scotopic vision, see 0.5.4. For the analogous radiant quantity, see item 7-19. For the analogous photon quantity, see item 7-54." },
+    "symbol": ["E_v", "(E)"],
+    "formula": "E_v = dΦ / dA",
+    "dimensions": "L^-2 * J^1",
+    "has_unit": "unit:lx"
+  },
+  {
+    "URI": "qty:activity_radio",
+    "label": { "en": "activity of a radionuclide", "de": "Aktivität eines Radionuklids", "fr": "Activité d’un radionucléide", "es": "actividad radioactiva", "pt": "atividade de um radionuclídeo", "it": "attività di un radionuclide", "ro": "activitate (a unui radionuclid)", "bg": "Активност на радиоактивен източник", "sl": "aktivnost (radionuklida)", "cs": "Radioaktivní záření", "pl": "aktywność ciała promieniotwórczego", "ru": "Активность радиоактивного источника", "hu": "radioaktivitás", "tr": "radyoaktivite", "he": "פעילות גרעינית (התפרקוית לשנייה)", "ar": "النشاط الإشعاعي", "fa": "پرتوزایی", "hi": "रेडियोधर्मिता (क्षय प्रति इकाई समय)", "zh": "放射性活度", "ja": "壊変強度", "ms": "Aktiviti radionuklid", "la": "Activitas radioactiva" },
+    "definition": { "de": "Änderung dN der spontanen Anzahl von Atomkernen N in einem bestimmten Energiezustand in einer Probe eines Radionuklids aufgrund spontaner Kernübergänge aus diesem Zustand in einem infinitesimalen Zeitintervall, dividiert durch dessen Dauer dt (ISO 80000-3:2006, Nr. 3-7), somit gilt A  - dN dt" },
+    "remarks": { "de": "Bei exponentiellem Zerfall gilt A  N, dabei bezeichnet  die Zerfallskonstante (Nr. 10-26). N20) Nationale Fußnote: zu 10-29 Aktivität A In einer Menge eines bestimmten Radionuklids der Quotient aus dem Erwartungswert dN* der spontanen Übergänge aus einem bestimmten Energiezustand im Zeitintervall dt und diesem Zeitintervall. A  dN* / dt [QUELLE: DIN 6814-4:1980-03] ANMERKUNG Bei exponentiellem radioaktivem Zerfall gilt A   N; dabei ist N die Anzahl der Atome des Radionuklids und  die Zerfallskonstante (Nr. 10-26). Begründung für die Nationale Fußnote: Die Berücksichtigung des statistischen Charakters der radioaktiven Umwandlung und physikalische Korrektionen fehlen." },
+    "symbol": "A",
+    "formula": "A = - dN / dt",
+    "dimensions": "T^-1",
+    "has_unit": "unit:Bq"
+  },
+  {
+    "URI": "qty:dosis_absorbed",
+    "label": { "en": "absorbed dosis", "de": "Energiedosis", "fr": "dose absorbée", "es": "dosis de radiación absorbida", "pt": "dose absorvida", "it": "dose assorbita", "ro": "doză absorbită; energie masică comunicată masică", "bg": "Погълната доза (от йонизираща радиация)", "sl": "absorbirana doza (radiacije)", "cs": "Absorbovaná dávka", "pl": "dawka pochłonięta", "ru": "Поглощённая доза ионизирующего излучения", "hu": "elnyelt sugárdózis", "tr": "(iyonlaştırıcı radyasyonun) radyasyon dozu", "he": "קרינה מייננת (המנה המוחלטת שנספגה בגוף)", "ar": "الجرعة الإشعاعية", "fa": "دوز جذبی", "hi": "(आयनीकरण विकिरण की) अवशोषित मात्रा", "zh": "吸收剂量(?)", "ja": "吸収線量", "ms": "Dos diserap", "la": "Dosis radiationis absorptae" },
+    "definition": { "de": "für eine ionisierende Strahlung gilt D  d dm dabei bezeichnet d    die mittlere übertragene Energie (Nr. 10-83.2), die durch ionisierende Strahlung auf ein Massenelement dm (ISO 80000-4:2006, Nr. 4-1) eines bestrahlten Stoffes übergeht N39) für eine ionisierende Strahlung gilt z   m dabei bezeichnet  die übertragene" },
+    "remarks": { "de": "      D dm dabei bezeichnet dm das Massenelement des bestrahlten Stoffes. In einem kleinen Raumbereich ist die mittlere übertragene Energie z identisch mit der Energiedosis D. z ist eine stochastische Göße. In einem kleinen Raumbereich ist die mittlere übertragene Energie z identisch mit der" },
+    "symbol": "D",
+    "formula": "D = d\\bar ε / dm",
+    "dimensions": "L^2 * T^-2",
+    "has_unit": "unit:Gy"
+  },
+  {
+    "URI": "qty:dosis_equivalent",
+    "label": { "en": "equivalent dosis", "de": "Äquivalentdosis", "fr": "dose équivalente", "es": "dosis equivalente", "pt": "dose equivalente", "it": "dose equivalente", "ro": "echivalent al dozei absorbite‡ (ambiantă; direcțională; individuală)", "bg": "Еквивалентна доза (от йонизираща радиация)", "sl": "ekvivalentna doza", "cs": "Dávkový ekvivalent; ionizující záření", "pl": "równoważnik dawki pochłoniętej", "ru": "Эффективная доза ионизирующего излучения", "hu": "dózisegyenérték", "tr": "(iyonlaştırıcı radyasyonun) eşdeğer dozu", "he": "קרינה מייננת (המנה היחסית שנספגה בגוף)", "ar": "جرعة الإشعاع المكافئة", "fa": "دوز معادل", "hi": "(आयनीकरण विकिरण की) समान मात्रा", "zh": "等效剂量(?)", "ja": "線量当量", "ms": "Dos setara", "la": "Dosis aequivalens" },
+    "definition": { "de": "an einem betrachteten Punkt in gewebeäquivalenten Material gilt H  DQ dabei bezeichnet D die Energiedosis (Nr. 10-84.1) und Q den Qualitätsfaktor (Nr. 10-85) an diesem Punkt" },
+    "remarks": { "de": "Die Äquivalentdosis an einem Punkt in Gewebe ist gegeben durch  H  0 Q (L)DLdL dabei bezeichnet DL  dD / dL die Verteilung des Wertes L für die Energiedosis an dem betrachteten Punkt. Die Funktion Q(L) ist in der ICRP Publication 103 (ICRP, 2007) angegeben. N39) Nationale Fußnote: zur Definition Differentialquotient d  durch dm; dabei ist d  die mittlere durch ionisierende Strahlung auf ein Material übertragene Energie in einem Volumenelement dV und dm   dV die Masse des Materials mit der Dichte  in diesem Volumenelement: D  d  / dm  (1 /  ) d  / dV [QUELLE: DIN 6814-3:2001-01 und ICRU 60:1998]" },
+    "symbol": "H",
+    "formula": "H = D · Q",
+    "dimensions": "L^2 * T^-2",
+    "has_unit": "unit:Sv"
+  },
+  {
+    "URI": "qty:qchem_rate",
+    "label": { "en": "catalitical activity", "de": "katalytische Aktivität", "fr": "Activité catalytique", "es": "actividad catalítica", "pt": "atividade catalítica", "it": "attività catalitica", "ro": "activitate catalitică", "sl": "katalitična aktivnost", "cs": "Katalytická aktivita", "pl": "aktywność katalityczna", "ru": "Активность катализатора", "hu": "katalitikus aktivitás", "tr": "katalitik aktivite", "el": "καταλυτική δραστικότητα", "he": "פעילות קטליטית", "ar": "النشاط التحفيزي", "fa": "فعالیت کاتالیزی/میزان کاتالیزوری", "hi": "उत्प्रेरण क्रिया", "zh": "催化活度", "ja": "酵素活性・触媒活性", "ms": "Aktiviti mangkin" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "a",
+    "dimensions": "T^-1 * N^1",
+    "has_unit": "unit:kat"
+  },
+  {
+    "URI": "qty:number_particles",
+    "label": { "en": "particle number", "de": "Teilchenzahl; Partikelzahl", "fr": "nombre des particules", "es": "Número de partículas", "it": "numero di particelle; numero di costituenti elementari", "cs": "Částicové číslo", "tr": "molekül numarası", "ar": "عدد الجسيمات", "fa": "تعداد ذره", "zh": "粒子數", "ja": "粒子数", "ms": "Nombor zarah" },
+    "definition": { "de": "Anzahl an Teilchen in einem System" },
+    "remarks": { "de": "Als Teilchen können verschiedne Objekte gelten,z. B. Molekülanzahl, Atomanzahl.Ein Index hinter dem Formelzeichen gibt ein bestimmtes Objekt an, z. B. NB für Anzahl der Moleküle des Stoffs B." },
+    "symbol": "N_B",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:nr_protons",
+    "label": { "en": "proton number; atomic number", "de": "Kernladungszahl; Protonenzahl; Ordnungszahl", "fr": "nombre atomique", "es": "número atómico", "pt": "número atómico", "it": "numero atomico", "ro": "număr atomic", "cs": "Protonové číslo", "pl": "Liczba atomowa", "ru": "Зарядовое число", "tr": "Atom numarası", "ar": "عدد ذري", "fa": "عدد اتمی", "hi": "परमाणु क्रमांक", "zh": "原子序数", "ja": "原子番号", "ms": "Nombor proton; nombor atom" },
+    "definition": { "de": "Anzahl der Protonen in einem Atomkern" },
+    "remarks": { "de": "Die Ordnungszahl im Periodensystem ist gleich der Protonenzahl. Ein Nuklid ist eine Atomart, die durch die Anzahl ihrer Protonen und die Anzahl ihrer Neutronen gekennzeichnet ist. Nuklide mit dem gleichen Wert von Z, aber unterschiedlichem Wert von N, werden als Isotope eines chemischen Elements bezeichnet. Die Ordnungszahl eines chemischen Elements im Periodensystem entspricht der Kernladungszahl. Die Kernladungszahl entspricht der Ladung des Atomkerns als Vielfaches der Elementarladung (Nr. 10-5.1)" },
+    "symbol": "Z",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:nr_neutrons",
+    "label": { "en": "neutron number", "de": "Neutronenzahl", "fr": "Nombre de neutrons", "es": "número neutrónico", "pt": "número de neutrons", "it": "numero neutronico", "cs": "Neutronové číslo", "pl": "liczba neutronowa", "ru": "число нейтронов", "tr": "nötron snumarası", "ar": "عدد النيوترونات", "fa": "عدد نوترون", "zh": "中子數", "ms": "Nombor neutron" },
+    "definition": { "de": "Anzahl der Neutronen in einem Atomkern" },
+    "remarks": { "de": "Nuklide mit dem gleichen Wert von N, aber unterschiedlichem Wert von Z werden als Isotone bezeichnet. N - Z wird als Neutronenüberschuss bezeichnet." },
+    "symbol": "N",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:nr_mass",
+    "label": { "en": "nucleon number; mass number", "de": "Nukleonenzahl; Massenzahl", "fr": "nombre de masse", "es": "número másico", "pt": "número de massa", "it": "numero di massa; numero di nucleoni", "cs": "Nukleové číslo", "pl": "liczba masowa", "tr": "nükleon numarası; kütle numarası", "ar": "عدد كتلي", "fa": "عدد جرمی", "zh": "质量数", "ja": "質量数", "ms": "Nombor nukleon; nombor jisim" },
+    "definition": { "de": "Anzahl der Nukleonen in einem Atomkern" },
+    "remarks": { "de": "A  Z  N Nuklide mit dem gleichen Wert von A werden als Isobare bezeichnet." },
+    "symbol": "A",
+    "formula": "A = Z + N",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:nr_oxidation_state",
+    "label": { "en": "oxidation state", "de": "Oxidationszustand", "fr": "nombre d'oxydation", "es": "estado de oxidación", "pt": "estado de oxidação", "it": "Stato di ossidazione", "ro": "Număr de oxidare", "cs": "Oxidační číslo", "pl": "stopień utlenienia", "ru": "степень окисления", "tr": "Yükseltgenme seviyesi", "ar": "حالة الأكسدة", "fa": "عدد اکسایش", "hi": "ऑक्सीकरण संख्या", "zh": "氧化数", "ja": "酸化数", "ms": "Keadaan pengoksidaan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "OS",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:coefficient_stoichiometric",
+    "label": { "en": "stoichiometric coefficient", "de": "Stöchiometriezahl des Stoffs B", "fr": "coefficient stœchiométrique", "es": "coeficiente estequiométrico", "pt": "coeficiente estequiométrico", "it": "coefficiente stechiometrico", "pl": "współczynnik stechiometryczny", "zh": "化学计量系数", "ja": "化学量論係数" },
+    "definition": { "de": "Zahl oder Bruch in der Gleichung für eine chemische Reaktion: 0 =  vB B, dabei steht das Zeichen B für die Reaktionsteilnehmer und -produkte bei der Reaktion" },
+    "remarks": { "de": "BEISPIEL (1/2) N2 + (3/2) H2 = NH3v(N2) = –1/2v(H2) = –3/2" },
+    "symbol": "ν_B",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:electronegativity",
+    "label": { "en": "electronegativity", "de": "Elektronegativität", "fr": "électronégativité", "es": "electronegatividad", "pt": "eletronegatividade", "it": "elettronegatività", "ro": "Electronegativitate", "cs": "elektronegativita", "pl": "elektroujemność", "ru": "электроотрицательность", "tr": "Elektronegatiflik", "ar": "كهرسلبية", "fa": "الکترونگاتیوی", "hi": "विद्युत्-ऋणात्मकता", "zh": "电负性", "ja": "電気陰性度", "ms": "Keelektronegatifan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["χ", "χ_P"],
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:susceptibility_electric",
+    "label": { "en": "electric susceptibility", "de": "elektrische Suszeptibilität", "fr": "susceptibilité électrique", "es": "susceptibilidad eléctrica", "pt": "susceptibilidade eléctrica", "it": "suscettività elettrica", "pl": "podatność elektryczna; susceptywność elektryczna", "ru": "электрическая восприимчивость; диэлектрическая восприимчивость", "ar": "المتأثرية الكهربائية، سرعة التأثر الكهربائية", "ja": "電気感受率" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["χ", "χ_e"],
+    "formula": "χ = ε_r - 1",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:susceptibility_magnetic",
+    "label": { "en": "magnetic susceptibility", "de": "magnetische Suszeptibilität", "fr": "susceptibilité magnétique", "es": "susceptibilidad magnética", "pt": "susceptibilidade magnética", "it": "suscettività magnetica", "pl": "podatność magnetyczna; susceptywność magnetyczna", "ru": "магнитная восприимчивость", "ar": "المتأثريَة المغناطيسية", "zh": "磁化率", "ja": "磁化率" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["ϰ", "(χ)"],
+    "formula": "ϰ = µ_r - 1",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:exponent_isoentropic",
+    "label": { "en": "isentropic exponent", "de": "Isentropenexponent", "fr": "exposant isoentropique; indice adiabatique", "es": "Coeficiente de dilatación adiabática", "pt": "Coeficiente de expansão adiabática", "it": "Coefficiente di dilatazione adiabatica; indice adiabatico", "ro": "Coeficient de transformare adiabatică", "sl": "adiabatni eksponent", "cs": "Poissonova konstanta", "pl": "Wykładnik adiabaty", "ru": "Показатель адиабаты", "tr": "ısı sığası oranı; adyabatik indeks", "ar": "نسبة السعة الحرارية", "zh": "绝热指数", "ja": "比熱比" },
+    "definition": { "en": "κ = - V/p · (dV/dp)S where V is volume (ISO 80000-3:2006, item 3-4), p is pressure (ISO 80000-4:2006, item 4-15.1), and S is entropy (item 5-18)", "de": "κ = - V/p · (dV/dp) dabei bezeichnet V das Volumen (ISO 80000-3:2006, Nr. 3-4), p den Druck (ISO 80000-4:2006, Nr. 4-15.1) und S die Entropie (Nr. 5-18)" },
+    "remarks": { "en": "For an ideal gas, κ is equal to γ.", "de": "Für ein ideales Gas ist κ gleich γ." },
+    "symbol": "κ",
+    "formula": "κ = – (∂\\ln p / ∂\\ln V)_S",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:equilibrium_constant",
+    "label": { "en": "thermodynamic equilibrium constant", "de": "thermodynamische Gleichgewichtskonstante; Standardgleichgewichtskonstante", "fr": "Constante d'équilibre thermodynamique", "es": "Constante de equilibrio", "pt": "constante de equilíbrio", "it": "Costante di equilibrio termodinamico", "ro": "Constantă de echilibru", "cs": "rovnovážná konstanta", "pl": "stała równowagi", "ru": "Константа равновесия", "tr": "termodinamik denge sabiti", "ar": "ثابت التوازن", "fa": "ثابت تعادل ترمودینامیکی", "hi": "साम्य स्थिरांक", "zh": "平衡常数", "ja": "平衡定数", "ms": "Pemalar keseimbangan termodinamik" },
+    "definition": { "de": "für eine chemische Reaktion gilt:K Θ =  Θ  BB Bdabei stehtB für das Produkt aller Stoffe B,Θ bezichnet die absolute Stan-Bdardaktivität des Stoffs B (Nr. '9-25) undvB bezichnet die Stöchiometriezahl des Stoffs B (Nr. '9-31)" },
+    "remarks": { "de": "Diese Größe ist nur eine Funktion der Temperatur." },
+    "symbol": "K^Θ",
+    "formula": "K^Θ = ∏_B (λ_B^Θ)^{-ν_B}",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:constant_dissociation_acid",
+    "label": { "en": "acid dissociation constant", "de": "Säurekonstante", "fr": "constante de dissociation acide", "es": "constante de disociación ácida", "pt": "constante de acidez", "it": "Costante di dissociazione acida", "ro": "Constantă de aciditate", "cs": "Disociační konstanta kyselin", "pl": "Moc kwasu", "ru": "константа диссоциации кислоты", "tr": "asit çözünme sabiti", "ar": "ثابت تفكك الحمض", "fa": "ثابت تفکیک اسیدی", "zh": "酸度系数", "ja": "酸解離定数", "ms": "Pemalar penceraian asid" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "K_a",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:albedo",
+    "label": { "en": "albedo", "de": "Albedo", "fr": "albédo", "es": "albedo", "pt": "albedo", "it": "albedo", "sl": "albedo", "pl": "albedo", "zh": "中子反照率", "ja": "アルベド" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "α",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:efficiency",
+    "label": { "en": "efficiency", "de": "Wirkungsgrad", "fr": "rendement", "es": "rendimiento", "pt": "eficiência", "it": "efficienza; rendimento", "pl": "sprawność", "ru": "коэффициент полезного действия", "ar": "كفاءة", "zh": "效率", "ja": "効率" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "η",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:factor_power_electric",
+    "label": { "en": "power factor", "de": "Leistungsfaktor", "fr": "facteur de puissance", "es": "factor de potencia", "pt": "fator de potência", "it": "fattore di potenza", "ro": "factor de putere", "cs": "Účiník", "pl": "Współczynnik mocy", "ru": "Коэффициент_мощности", "tr": "güç faktörü", "ar": "معامل القدرة", "fa": "ضریب توان", "hi": "शक्ति गुणांक", "zh": "功率因数", "ja": "力率", "ms": "faktor kuasa" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "λ",
+    "formula": "λ = P / S = \\cos φ",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:factor_coupling",
+    "label": { "en": "coupling factor", "fr": "constante de couplage", "es": "constante de acoplamiento", "it": "fattore di accoppiamento", "ro": "Constantă de cuplaj", "pl": "stała sprzężenia", "ru": "Константа взаимодействия", "tr": "Çiftlenim sabiti", "zh": "耦合常數", "ja": "結合定数" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["k", "(ϰ)"],
+    "formula": "k = |L_{mn}| / \\sqrt{L_m · L_n}",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:refractiveIndex",
+    "label": { "en": "refractive index", "de": "Brechzahl; Brechungsindex", "fr": "indice de réfraction", "es": "índice de refracción", "pt": "índice refrativo", "it": "indice di rifrazione", "ro": "Indice de refracție", "cs": "Index lomu", "pl": "Współczynnik załamania", "ru": "Показатель преломления", "tr": "kırılma indeksi", "ar": "معامل الانكسار", "fa": "ضریب شکست", "hi": "अपवर्तनांक", "zh": "折射率", "ja": "屈折率", "ms": "Indeks biasan" },
+    "definition": { "en": "n = c0/c where c0 is the speed of light in vacuum (item 7-4.1) and c is the phase speed (ISO 80000-3:2006, item 3-8.2) in a given direction of electromagnetic radiation of a specified frequency in a medium" },
+    "remarks": { "en": "In a medium, c depends upon the frequency ν of light used thus n = n(ν). For a medium with absorption, complex refractive index k= nk0 may be defined where k0 is the wave vector in vacuum and k is the complex wave vector in a medium. Then, n = n + ik = n + iα/4π˜ν where α is the linear absorption coefficient (item 7-25.2) and i is the imaginary 21.T11148/unit. For an anisotropic medium, n is a tensor." },
+    "symbol": "n",
+    "formula": "n = c_0 / c",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:constant_Madelung",
+    "label": { "en": "Madelung constant", "de": "Madelung-Konstante", "fr": "Constante de Madelung", "es": "Constante de Madelung", "pt": "constante de Madelung", "it": "Costante di Madelung", "pl": "Stała Madelunga", "ru": "постоянная Маделунга", "ar": "ثابت مادلونك", "fa": "ثابت مادلونگ", "zh": "馬德隆常數", "ja": "マーデルングエネルギー" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "M",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:nrch_Mach",
+    "label": { "en": "Mach number", "de": "Mach-Zahl", "fr": "nombre de Mach", "es": "número de Mach", "pt": "número de Mach", "it": "numero di Mach", "ro": "număr Mach", "sl": "Machovo število", "cs": "Machovo číslo", "pl": "liczba Macha", "ru": "число Маха", "tr": "Mach sayısı", "ar": "عدد ماخ", "fa": "عدد ماخ", "hi": "मैक संख्या", "zh": "马赫", "ja": "マッハ数n", "ms": "Nombor Mach" },
+    "definition": { "de": "dabei bezeichnet v die Geschwindigkeit (ISO 80000-3:2006, r. 3-8.1) und c die Schallgeschwindigkeit ISO 80000-8:2007, Nr. 8-14.1)" },
+    "remarks": {},
+    "symbol": "Ma",
+    "formula": "Ma = v / c",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:level_pH",
+    "label": { "en": "pH value", "de": "pH-Wert", "fr": "pH", "es": "pH", "pt": "pH", "it": "pH", "ro": "pH", "bg": "Водороден показател", "sl": "pH", "cs": "pH", "pl": "pH", "ru": "Водородный показатель", "tr": "pH", "el": "pH", "he": "pH", "ar": "معامل أو قرينة الإنكسار", "fa": "پی‌اچ", "zh": "PH值", "ja": "屈折率", "ms": "Nilai pH" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "pH",
+    "formula": "pH = –\\lg a_H^+ = –\\lg(m_H^+·γ_{m,H}^+ / m^Θ)",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "qty:level_power",
+    "label": { "en": "level of a power quantity", "de": "Leistungspegel", "fr": "niveau de puissance", "es": "nivel de potencia", "pt": "nível de potência", "it": "livello di potenza", "pl": "pomiar hatasu", "tr": "güç oranı", "ar": "شدة الصوت", "fa": "سطح یک کمیت توان", "zh": "声强", "ja": "利得", "ms": "Tahap kuasa" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "L_P",
+    "formula": "L_P = ½ · \\lg P/P_0",
+    "dimensions": "1",
+    "has_unit": "unit:Np"
+  },
+  {
+    "URI": "qty:level_pressure_sound",
+    "label": { "en": "sound pressure level", "de": "Schalldruckpegel", "fr": "niveau de pression acoustique", "es": "nivel de presión sonora", "pt": "nível de pressão acústica", "it": "livello di pressione sonora", "cs": "Hladina akustického tlaku", "pl": "miary wielkości ilorazowych", "ru": "уровень звукового давления", "tr": "gerilim veya akım oranı", "ar": "كمية جذر الطاقة", "fa": "سطح یک کمیت توان-ریشه", "zh": "声压级", "ja": "利得", "ms": "Tahap medan; Tahap tekanan bunyi" },
+    "definition": {},
+    "remarks": { "de": "p_0 = 2*10^-5 Pa" },
+    "symbol": "L_p",
+    "formula": "L_p = \\lg (p/p_0)^2",
+    "dimensions": "1",
+    "has_unit": "unit:B"
+  },
+  {
+    "URI": "qty:level_frequency",
+    "label": { "en": "logarithmic frequency interval", "de": "Frequenzmaßintervall", "fr": "intervalle de fréquence logarithmique", "pt": "intervalo logarítmico de frequência", "it": "intervallo logaritmico di frequenza", "cs": "Interval měření frekvence ?", "ru": "частотный интервал", "tr": "logaritmik frekans aralığı", "fa": "فاصله فرکانس لگاریتمی", "zh": "对数频率间隔", "ms": "Selang kekerapan logaritma" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "G",
+    "formula": "G = \\log_2 f_2/f_1",
+    "dimensions": "1",
+    "has_unit": "unit:oct"
+  },
+  {
+    "URI": "qty:area",
+    "label": { "en": "area", "de": "Fläche", "fr": "aire; superficie", "es": "área", "pt": "área", "it": "area", "ro": "arie", "bg": "Площ", "sl": "površina", "cs": "plocha", "pl": "pole powierzchni", "ru": "Площадь", "tr": "alan", "el": "Ταχύτητα", "he": "שטח", "ar": "مساحة", "fa": "مساحت", "hi": "क्षेत्रफल", "zh": "面积", "ja": "面積", "ms": "Keluasan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["A", "S"],
+    "formula": "A = ∫ d^2r",
+    "dimensions": "L^2",
+    "has_unit": "unit:m2"
+  },
+  {
+    "URI": "qty:area_crosssection",
+    "label": { "en": "cross section", "de": "Wirkungsquerschnitt", "fr": "section efficace", "es": "sección eficaz", "pt": "seção transversal", "it": "sezione d'urto", "cs": "Průřez", "fa": "سطح مقطع", "zh": "横截面", "ms": "Bahagian silang" },
+    "definition": { "de": "für ein festgelegtes Target und für eine festgelegte Reaktion oder einen festgelegten Prozess, die durch einfallende geladene oder ungeladene Teilchen einer bestimmten Art und Energie erzeugt wurden, die mittlere Anzahl derartiger Reaktionen oder Prozesse, dividiert durch die Teilchenfluenz (Nr. 10-44) der einfallenden Teilchen" },
+    "remarks": { "de": "Die Art des Prozesses wird durch Indizes gekennzeichnet, z. B. Absorptionsquerschnitt s, Streuquerschnitt a, Spaltungsquerschnitt f." },
+    "symbol": "σ",
+    "dimensions": "L^2",
+    "has_unit": "unit:m2"
+  },
+  {
+    "URI": "qty:volume",
+    "label": { "en": "volume", "de": "Volumen", "fr": "volume", "es": "volumen", "pt": "volume", "it": "volume", "ro": "volum", "bg": "Обем", "sl": "prostornina", "cs": "Objem", "pl": "objętość", "ru": "Объём", "tr": "hacim", "el": "Επιτάχυνση", "he": "נפח", "ar": "حجم", "fa": "حجم", "hi": "आयतन", "zh": "体积", "ja": "体積", "ms": "Isipadu" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "V",
+    "formula": "V = ∫ d^3r",
+    "dimensions": "L^3",
+    "has_unit": "unit:m3"
+  },
+  {
+    "URI": "qty:number_volumic",
+    "label": { "en": "numeric density", "de": "volumenbezogene Anzahl an Einzelteilchen; Anzahldichte von Molekülen oder anderen Elementarobjekten", "fr": "densité numérique", "es": "densidad numérica", "pt": "densidade numérica", "it": "densità numerica", "ro": "Densitate numerică", "cs": "Hustota počtu částic", "pl": "gęstość liczbowa", "ru": "концентрация частиц", "tr": "sayısal yoğunluk", "fa": "چگالی عددی", "zh": "數密度", "ja": "数密度", "ms": "Angka ketumpatan" },
+    "definition": { "de": "n = N / Vdabei bezeichnetN die Teilchenzahl (Nr. '9-03) undV das Volumen (ISO 80000-3:2006, Nr. 3-4)" },
+    "remarks": {},
+    "symbol": ["n", "(C)"],
+    "formula": "N = N / V",
+    "dimensions": "L^-3",
+    "has_unit": "unit:m-3"
+  },
+  {
+    "URI": "qty:wavenumber",
+    "label": { "en": "wavenumber", "de": "Repetenz; Wellenzahl", "fr": "nombre d'onde", "es": "número de ola", "pt": "número de onda", "it": "numero d'onda", "sl": "valovno število", "cs": "Vlnové číslo", "pl": "Liczba falowa", "ru": "Волновое число", "tr": "dalga sayısı", "ar": "عدد الموجة", "fa": "عدد موج", "zh": "波数", "ja": "波数", "ms": "Bilangan gelombang" },
+    "definition": { "en": "σ = ν/c where ν is the frequency (item 7-1) and c is the speed of light in medium (item 7-4.2)" },
+    "remarks": { "en": "See also ISO 80000-3:2006, item 3-18. σ = ˜ν/n in a medium with refractive index n (item 7-5). σ = 1/λ where λ is the wavelength in medium (item 7-3.2). Light passing through different media keeps its frequency, but not its wavelength or wavenumber." },
+    "symbol": "σ",
+    "formula": "σ = 1 / λ = ν / c",
+    "dimensions": "L^-1",
+    "has_unit": "unit:m-1"
+  },
+  {
+    "URI": "qty:velocity",
+    "label": { "en": "velocity", "de": "Geschwindigkeit", "fr": "vitesse", "es": "velocidad; rapidez", "pt": "velocidade", "it": "velocità", "ro": "viteză", "sl": "hitrost", "cs": "Rychlost", "pl": "prędkość", "ru": "Ско́рость", "tr": "hız", "el": "Επιφάνεια", "he": "מהירות", "ar": "السرعة", "fa": "سرعت/تندی", "hi": "गति; वेग", "zh": "速度", "ja": "速力", "ms": "Halaju", "la": "velocitas" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["v", "c", "(u,v,w)"],
+    "formula": "v = ds / dt",
+    "dimensions": "L^1 * T^-1",
+    "has_unit": "unit:m.s-1"
+  },
+  {
+    "URI": "qty:velocity_group",
+    "label": { "en": "group velocity", "de": "Gruppengeschwindigkeit", "fr": "vitesse de groupe", "es": "velocidad de grupo", "pt": "velocidade de grupo", "it": "velocità di gruppo", "cs": "Grupová rychlost", "pl": "prędkość grupowa", "tr": "grup hızı", "ar": "سرعة المجموعة", "fa": "سرعت گروه صوت", "zh": "群速度", "ja": "群速度", "ms": "Halaju kumpulan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["c_g", "v_g"],
+    "formula": "c_g = dω / dk",
+    "dimensions": "L^1 * T^-1",
+    "has_unit": "unit:m.s-1"
+  },
+  {
+    "URI": "qty:velocity_phase",
+    "label": { "en": "phase velocity", "de": "Phasengeschwindigkeit", "fr": "vitesse de phase", "es": "velocidad de fase", "pt": "velocidade de fase", "it": "velocità di fase", "cs": "Fázová rychlost", "pl": "prędkość fazowa", "tr": "faz hızı", "ar": "السرعة الزاوية", "fa": "سرعت فاز صوت", "zh": "相速", "ja": "位相速度", "ms": "Halaju fasa" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["c", "v", "c_φ", "v_φ"],
+    "formula": "c = ω / k = λ · f",
+    "dimensions": "L^1 * T^-1",
+    "has_unit": "unit:m.s-1"
+  },
+  {
+    "URI": "qty:velocity_light",
+    "label": { "en": "speed of light", "de": "Lichtgeschwindigkeit", "fr": "vitesse de la lumière", "es": "velocidad de la luz", "pt": "Velocidade da luz", "it": "velocità della luce", "ro": "Viteza luminii", "sl": "Hitrost svetlobe", "cs": "Rychlost světla", "pl": "Prędkość światła", "ru": "Скорость света", "tr": "Işık hızı", "ar": "سرعة الضوء", "fa": "سرعت نور", "hi": "प्रकाश का वेग", "zh": "光速", "ja": "光速", "ms": "Kelajuan cahaya" },
+    "definition": { "en": "in a medium, the phase speed (ISO 80000-3:2006, item 3-8.2) of electromagnetic radiation in a given direction and of a specified frequency" },
+    "remarks": {},
+    "symbol": "c",
+    "dimensions": "L^1 * T^-1",
+    "has_unit": "unit:m.s-1"
+  },
+  {
+    "URI": "qty:velocity_sound",
+    "label": { "en": "speed of sound", "de": "Schallgeschwindigkeit; Schallausbreitungsgeschwindigkeit", "fr": "vitesse du son; célérité du son", "es": "velocidad del sonido", "pt": "velocidade do som", "it": "velocità del suono", "ro": "viteza sunetului", "sl": "Hitrost zvoka", "cs": "rychlost zvuku", "pl": "prędkość dźwięku", "ru": "скорость звука", "tr": "Ses hızı", "ar": "سرعة الصوت", "fa": "سرعت صوت", "hi": "ध्वनि का वेग", "zh": "音速", "ja": "音速", "ms": "Kelajuan bunyi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "c",
+    "dimensions": "L^1 * T^-1",
+    "has_unit": "unit:m.s-1"
+  },
+  {
+    "URI": "qty:velocity_soundparticles",
+    "label": { "en": "sound particle velocity", "de": "Schallschnelle", "fr": "vitesse  acoustique d‘une particule", "es": "velocidad acústica de una partícula", "pt": "velocidade acústica de uma partícula", "it": "velocità di spostamento", "pl": "prędkość akustyczna; prędkość cząstki", "ar": "سرعة جسيم", "ja": "粒子速度" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["v", "u"],
+    "formula": "v = dδ / dt",
+    "dimensions": "L^1 * T^-1",
+    "has_unit": "unit:m.s-1"
+  },
+  {
+    "URI": "qty:acceleration",
+    "label": { "en": "acceleration", "de": "Beschleunigung", "fr": "accélération", "es": "aceleración", "pt": "aceleração", "it": "accelerazione", "ro": "accelerație", "sl": "pospešek", "cs": "Zrychlení", "pl": "przyspieszenie", "ru": "Ускоре́ние", "tr": "ivme", "el": "Όγκος", "ar": "التسارع", "fa": "شتاب", "hi": "त्वरण", "zh": "加速度", "ja": "加速度", "ms": "Pecutan", "la": "acceleratio" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "a",
+    "formula": "a = dv / dt",
+    "dimensions": "L^1 * T^-2",
+    "has_unit": "unit:m.s-2"
+  },
+  {
+    "URI": "qty:wavenumber_angular",
+    "label": { "en": "angular wavenumber; angular repetency", "de": "Kreisrepetenz; Kreiswellenzahl", "fr": "nombre d'onde angulaire; répétence angulaire", "es": "número de onda angular", "pt": "número de onda angular; repetência angular", "it": "numero d'onda angolare", "pl": "liczba falowa kątowa; repetencja kątowa", "ar": "عدد موجى زاوى; تكرار زاوى", "zh": "角波数", "ja": "角波数" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "k",
+    "formula": "k = ω / c",
+    "dimensions": "L^-1",
+    "has_unit": "unit:rad.m-1"
+  },
+  {
+    "URI": "qty:frequency_angular",
+    "label": { "en": "angular frequency; pulsatance", "de": "Kreisfrequenz; Pulsatanzpulsation", "fr": "Pulsación", "es": "pulsación", "pt": "frequência angular; pulsação", "it": "frequenza angolare; pulsazione", "pl": "pulsacja", "ar": "تردد زاوى; نابض", "zh": "角频率; 角速度", "ja": "角振動数; 角周波数" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "ω",
+    "formula": "ω = 2π · f",
+    "dimensions": "T^-1",
+    "has_unit": "unit:rad.s-1"
+  },
+  {
+    "URI": "qty:velocity_angular",
+    "label": { "en": "angular velocity; angular speed", "de": "Winkelgeschwindigkeit", "fr": "vitesse angulaire", "es": "velocidad angular", "pt": "velocidade angular", "it": "velocità angolare", "ro": "Viteză unghiulară", "sl": "kotna hitrost", "cs": "Úhlová rychlost", "pl": "Prędkość kątowa", "ru": "Угловая скорость", "tr": "Açısal hız", "ar": "سرعة زاوية", "fa": "سرعت زاویه‌ای", "hi": "कोणीय वेग", "zh": "角速度", "ja": "角速度", "ms": "Halaju bersudut; kelajuan bersudut" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "ω",
+    "formula": "ω = ​dφ /dt",
+    "dimensions": "T^-1",
+    "has_unit": "unit:rad.s-1"
+  },
+  {
+    "URI": "qty:acceleration_angular",
+    "label": { "en": "angular acceleration", "de": "Winkelbeschleunigung", "fr": "accélération angulaire", "es": "aceleración angular", "pt": "aceleração angular", "it": "accelerazione angolare", "ro": "Accelerație unghiulară", "cs": "Úhlové zrychlení", "pl": "Przyspieszenie kątowe", "ru": "Угловое ускорение", "tr": "Açısal ivme", "ar": "تسارع زاوي", "fa": "شتاب زاویه‌ای", "hi": "कोणीय त्वरण", "zh": "角加速度", "ja": "角加速度", "ms": "Pecutan bersudut" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "α",
+    "formula": "α =​ dω / dt",
+    "dimensions": "T^-2",
+    "has_unit": "unit:rad.s-2"
+  },
+  {
+    "URI": "qty:inertia",
+    "label": { "en": "moment of inertia", "de": "Massenträgheitsmoment", "fr": "moment d'inertie", "es": "momento de inercia", "pt": "momento de inércia", "it": "momento di inerzia", "ro": "Moment de inerție", "cs": "Moment setrvačnosti", "pl": "Moment bezwładności", "ru": "Момент инерции", "tr": "Eylemsizlik momenti", "ar": "عزم القصور الذاتي", "fa": "گشتاور لختی", "hi": "जड़त्वाघूर्ण", "zh": "轉動慣量", "ja": "慣性モーメント", "ms": "Momen inersia" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["I", "J"],
+    "formula": "I = ∫ r^2 dm",
+    "dimensions": "L^2 * M^1",
+    "has_unit": "unit:kg.m2"
+  },
+  {
+    "URI": "qty:inertia_area",
+    "label": { "en": "second moment of area", "de": "Flächenträgheitsmoment", "fr": "moment quadratique", "es": "segundo momento de érea", "pt": "Segundo momento de área; momento de inércia de área", "it": "secondo momento di area", "pl": "Geometryczny moment bezwładności", "fa": "گشتاور دوم سطح", "hi": "क्षेत्रफल का द्वितीय आघूर्ण", "zh": "截面二次轴矩", "ja": "断面二次モーメント" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["I_a", "(I)"],
+    "formula": "I = ∫ r^2 dA",
+    "dimensions": "L^4",
+    "has_unit": "unit:m4"
+  },
+  {
+    "URI": "qty:momentum",
+    "label": { "en": "momentum", "de": "Impuls", "fr": "quantité de mouvement", "es": "cantidad de movimiento", "pt": "momento linear", "it": "quantità di moto", "ro": "impuls", "sl": "gibalna količina", "cs": "hybnost", "pl": "pęd", "ru": "импульс", "tr": "Momentum", "ar": "زخم الحركة", "fa": "تکانه", "zh": "动量", "ja": "運動量", "ms": "Momentum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "p",
+    "formula": "p = m · v",
+    "dimensions": "L^1 * M^1 * T^-1",
+    "has_unit": "unit:kg.m.s-1"
+  },
+  {
+    "URI": "qty:momentum_angular",
+    "label": { "en": "moment of momentum; angular momentum", "de": "Drehimpuls", "fr": "moment cinétique; moment angulaire", "es": "momento angular", "pt": "momento angular", "it": "momento angolare; momento della quantità di moto", "ro": "Moment cinetic", "sl": "vrtilna količina", "cs": "moment hybnosti", "pl": "moment pędu", "ru": "Момент импульса", "tr": "Açısal momentum", "fa": "تکانه زاویه‌ای", "hi": "कोणीय संवेग", "zh": "角动量", "ja": "角運動量", "ms": "Momen momentum; momentum bersudut" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "L",
+    "formula": "L = r × p",
+    "dimensions": "L^2 * M^1 * T^-1",
+    "has_unit": "unit:kg.m2.s-1"
+  },
+  {
+    "URI": "qty:momentum_angular_spin",
+    "label": { "en": "spin", "de": "Spin", "fr": "spin", "es": "espín", "pt": "spin", "it": "spin", "ro": "Spin", "sl": "spin", "cs": "spin", "pl": "spin", "ru": "Спин", "tr": "Spin", "ar": "لف مغزلي", "fa": "اسپین/چرخش", "zh": "自旋", "ja": "スピン角運動量", "ms": "Spin" },
+    "definition": { "de": "Eigendrehimpuls (ISO 80000-4:2006, Nr. 4-12) eines Teilchens oder eines Teilchensystems" },
+    "remarks": { "de": "Der Spin ist eine additive Vektorgröße. N9) Nationale Fußnote: Dabei bezeichnet ħ die reduzierte Planck-Konstante (10-6.2)." },
+    "symbol": "s",
+    "dimensions": "L^2 * M^1 * T^-1",
+    "has_unit": "unit:kg.m2.s-1"
+  },
+  {
+    "URI": "qty:torque_force",
+    "label": { "en": "moment of a force", "de": "Drehmoment; Kraftmoment", "fr": "moment d'une force", "es": "momento de una fuerza", "pt": "momento de força; torque", "it": "momento di una forza", "ro": "momentul unei forțe", "sl": "navor sile", "cs": "Moment síly; Kroutící moment; torque", "pl": "moment siły", "ru": "Момент силы", "el": "Ροπή", "ar": "عزم القوة", "fa": "گشتاور/ممان", "hi": "बलाघूर्ण", "zh": "力矩", "ja": "力のモーメント", "ms": "Momen daya" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "M",
+    "formula": "M = r × F",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:N.m"
+  },
+  {
+    "URI": "qty:torque_couple",
+    "label": { "en": "moment of a couple", "de": "Kräftepaarmoment; Drehmoment eines Kräftepaares", "fr": "moment d'un couple", "es": "momento de un par", "pt": "momento de um binário", "it": "momento di una coppia", "pl": "moment pary sił", "ar": "عزم الإزدواج", "zh": "力偶矩", "ja": "偶力モーメント" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "M",
+    "formula": "M = r × F",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:N.m"
+  },
+  {
+    "URI": "qty:torque",
+    "label": { "en": "torque", "de": "Torsionmoment; Drillmoment", "fr": "couple; moment de torsion", "es": "par; momento de torsión", "pt": "momento de torção; binârio", "it": "coppia; momento torcente", "pl": "moment obrotowy", "ar": "عزم محورى", "zh": "转矩", "ja": "トルク" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["M", "T"],
+    "formula": "T = M · ê",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:N.m"
+  },
+  {
+    "URI": "qty:impulse",
+    "label": { "en": "impulse", "de": "Kraftstoß", "fr": "percussion", "es": "impulso", "pt": "impulso", "it": "impulso", "cs": "Impuls síly", "pl": "Popęd", "ru": "импульс силы", "tr": "İmpuls", "ar": "اندفاع", "fa": "ضربه", "hi": "आवेग", "zh": "冲量", "ja": "力積", "ms": "Impuls" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "I",
+    "formula": "I = ∫ F dt",
+    "dimensions": "L^1 * M^1 * T^-1",
+    "has_unit": "unit:N.s"
+  },
+  {
+    "URI": "qty:impulse_angular",
+    "label": { "en": "angular impulse", "de": "Drehstoß; Drehmomentstoß", "fr": "impulsion angulaire", "es": "impulso angular", "pt": "impulsão angular", "it": "impulso angolare", "pl": "popęd kątowy", "ar": "نبضة دفعية زاوية", "zh": "角冲量;冲量矩", "ja": "角力積" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "H",
+    "formula": "H = ∫ M dt",
+    "dimensions": "L^2 * M^1 * T^-1",
+    "has_unit": "unit:N.m.s"
+  },
+  {
+    "URI": "qty:mass_volumic",
+    "label": { "en": "mass density; volumic mass", "de": "Massendichte; volumenbezogene Masse", "fr": "densité", "es": "densidad", "pt": "densidade", "it": "densità; massa volumica", "ro": "densitate", "sl": "Gostôta", "cs": "hustota", "pl": "gęstość", "ru": "плотность", "tr": "yoğunluk", "ar": "الكثافة", "fa": "چگالی", "hi": "घनत्व; भार घनत्व", "zh": "密度", "ja": "密度", "ms": "Ketumpatan jisim;  jisim isipadu" },
+    "definition": { "de": "Ρ = m / Vdabei bezeichnetm die Masse (ISO 80000-4:2006,Nr. 4-1) und" },
+    "remarks": {},
+    "symbol": ["ρ", "(γ)"],
+    "formula": "ρ = m / V",
+    "dimensions": "L^-3 * M^1",
+    "has_unit": "unit:kg.m-3"
+  },
+  {
+    "URI": "qty:mass_molar",
+    "label": { "en": "molar mass", "de": "Molmasse; molare Masse; stoffmengenbezogene Masse", "fr": "masse molaire", "es": "masa molar", "pt": "massa molar", "it": "massa molare", "ro": "Masă molară", "sl": "molska masa", "cs": "Molární hmotnost", "pl": "Masa molowa", "ru": "Молярная масса", "tr": "molar kütle", "ar": "كتلة مولية", "fa": "جرم مولی", "hi": "मोलर द्रव्यमान", "zh": "摩尔质量", "ja": "モル質量", "ms": "Jisim molar" },
+    "definition": { "de": "für eine reine Probe gilt:M = m / ndabei bezeichnetm die Masse (ISO 80000-4:2006,Nr. 4-1) undn die Stoffmenge (Nr. '9-01)" },
+    "remarks": {},
+    "symbol": "M",
+    "formula": "M = m / n",
+    "dimensions": "M^1 * N^-1",
+    "has_unit": "unit:kg.mol-1"
+  },
+  {
+    "URI": "qty:volume_molar",
+    "label": { "en": "molar volume", "de": "Molvolumen; molares Volumen; stoffmengenbezogenes Volumen", "fr": "volume molaire", "es": "volumen molar", "pt": "volume molar", "it": "volume molare", "ro": "volum molar", "sl": "molski volumen", "cs": "molární objem", "pl": "volume molar", "ru": "Молярный объём", "tr": "molar hacim", "ar": "حجم مولي", "fa": "حجم مولی", "zh": "摩尔体积", "ja": "モル体積", "ms": "Isipadu molar" },
+    "definition": { "de": "für eine reine Probe gilt:Vm = V / ndabei bezeichnetV das Volumen (ISO 80000-3:2006,Nr. 3-4) undn die Stoffmenge (Nr. '9-01)" },
+    "remarks": { "de": "Für das Molvolumen eines idealen Gases gilt bei 273.15 K und 101 325 PaVm = 0.022 413 996 (39) m3/molund bei 273.15 K und 100 000 PaVm = 0.022 710 981 (40) m3/mol.[CODATA 2006] N2)" },
+    "symbol": "V_m",
+    "formula": "V_m = V / n",
+    "dimensions": "L^3 * N^-1",
+    "has_unit": "unit:m3.mol-1"
+  },
+  {
+    "URI": "qty:potential_chemical",
+    "label": { "en": "chemical potential", "de": "chemisches Potential des Stoffs B", "fr": "potential chimique", "es": "potencial químico", "pt": "potencial químico", "it": "potenziale chimico", "ro": "Potențial chimic", "cs": "Chemický potenciál", "pl": "Potencjał chemiczny", "ru": "Химический потенциал", "tr": "kimyasal potansiyel", "ar": "جهد كيميائي", "fa": "پتانسیل شیمیایی", "zh": "化学势", "ja": "化学ポテンシャル", "ms": "Keupayaan kimia" },
+    "definition": { "de": "bei einem Gemisch von i Stoffen gilt:μB = (G / nB)T,p,nidabei bezeichnetG die Gibbs-Energie (ISO 80000-5:2007, Nr. 5-20.5) undnB die Stoffmenge (Nr. '9-01) des Stoffs B" },
+    "remarks": { "de": "Bei einer Reinsubstanz gilt: = G / n = Gmdabei bezeichnetGm die molare Gibbs-Energie. In einem Gemisch ist B die partielle molare Gibbs-Energie." },
+    "symbol": "μ_B",
+    "formula": "μ_B = (dG / dn_B)_{T,p,n_i}",
+    "dimensions": "L^2 * M^1 * T^-2 * N^-1",
+    "has_unit": "unit:J.mol-1"
+  },
+  {
+    "URI": "qty:entropy",
+    "label": { "en": "entropy", "de": "Entropie", "fr": "entropie", "es": "entropía", "pt": "entropia", "it": "entropia", "ro": "entropie", "sl": "entropija", "cs": "entropie", "pl": "entropia", "ru": "Энтропия", "tr": "entropi", "ar": "إنتروبيا", "fa": "آنتروپی", "hi": "एन्ट्रॉपी", "zh": "熵", "ja": "エントロピー", "ms": "Entropi" },
+    "definition": { "en": "when a small amount of heat (item 5-6) dQ is received by a system whose thermodynamic temperature (item 5-1) is T, the entropy of the system increases by dQ/T, provided that no irreversible change takes place in the system", "de": "wenn eine kleine Wärmemenge (Nr. 5-6) von einem System aufgenommen wird, dessen thermodynamische Temperatur (Nr. 5-1) T ist, erhöht sich die Entropie des Systems um dQ / T, vorausgesetzt, dass keine irreversible Änderung im System auftritt" },
+    "remarks": {},
+    "symbol": "S",
+    "dimensions": "L^2 * M^1 * T^-2 * Θ^-1",
+    "has_unit": "unit:J.K-1"
+  },
+  {
+    "URI": "qty:capacity_thermic",
+    "label": { "en": "heat capacity", "de": "Wärmekapazität", "fr": "capacité thermique", "es": "capacidad calorífica", "pt": "capacidade térmica", "it": "capacità termica", "ro": "capacitate termică", "sl": "toplotna kapaciteta", "cs": "tepelná kapacita", "pl": "pojemność cieplna", "ru": "теплоёмкость", "tr": "isı kapasitesi", "ar": "سعة حرارية", "fa": "ظرفیت گرمایی", "hi": "ऊष्मा धारिता", "zh": "热容", "ja": "熱容量", "ms": "muatan haba" },
+    "definition": { "en": "when the thermodynamic temperature of a system is increased by dT as a result of the addition of a small amount of heat dQ, C = dQ / dT, where is amount of heat (item 5-6) and is thermodynamic temperature (item 5-1)", "de": "wenn sich die thermodynamische Temperatur eines Systems als Folge einer zugeführten kleinen Wärmemenge erhöht, gilt: C = dQ / dT dabei bezeichnet Q die Wärmemenge (Nr. 5-6) und T die thermodynamische Temperatur (Nr. 5-1)" },
+    "remarks": { "en": "Heat capacity is not completely defined unless the type of change is specified.", "de": "Die Wärmekapazität ist nicht vollständig definiert, solange die Art der Änderung nicht spezifiziert ist. Zu den entsprechenden molaren Größen siehe ISO 80000-9:2009." },
+    "symbol": "C",
+    "formula": "C = dQ / dT",
+    "dimensions": "L^2 * M^1 * T^-2 * Θ^-1",
+    "has_unit": "unit:J.K-1"
+  },
+  {
+    "URI": "qty:expansion_lineic",
+    "label": { "en": "linear expansion coefficient", "de": "linearer Ausdehnungskoeffizient", "fr": "coefficient de dilatation linéique", "es": "coeficiente de expansión térmica lineal", "pt": "coeficiente de dilatação térmica linear", "it": "coefficiente di dilatazione lineare", "pl": "współczynnik liniowej rozszerzalności cieplnej", "ar": "معدل التمدد الحراري الخطي", "zh": "线性热膨胀系数", "ja": "線熱膨張係数" },
+    "definition": { "en": "1 dl αl = l dT where l is length (ISO 80000-3:2006, item 3-1.1) and T is thermodynamic temperature (item 5-1)", "de": "αl = 1/l · dl/dT dabei bezeichnet l die Länge (ISO 80000-3:2006, Nr. 3-1.1) und T die thermodynamische Temperatur (Nr. 5-1)" },
+    "remarks": { "en": "The subscripts in the symbols for items 5-3.3 to 5-5.2 may be …", "de": "Die Indizes in den Formelzeichen für Nr. 5-3.3 bis Nr. 5-5.2 können weggelassen werden, wenn kein Verwechslungsrisiko besteht." },
+    "symbol": "α_l",
+    "formula": "α_l = ∂\\ln l / ∂T",
+    "dimensions": "Θ^-1",
+    "has_unit": "unit:K-1"
+  },
+  {
+    "URI": "qty:expansion_volumic",
+    "label": { "en": "cubic expansion coefficient", "de": "Volumenausdehnungskoeffizient", "fr": "coefficient de dilatation volumique", "es": "coeficiente de dilatación cúbica", "pt": "coeficiente de dilatação volúmica", "it": "coefficiente di dilatazione volumica", "bg": "Вълново число", "pl": "współczynnik rozszerzalności objętościowej", "ru": "Температурный коэффициент", "hu": "Hullámszám", "tr": "kübik genleşme katsayısı", "el": "Κυματαριθμός", "he": "מספר גל", "ar": "معامل التمدد الحجمى", "fa": "ضریب انبساط گرمایی", "zh": "体膨胀系数", "ja": "線膨張係数" },
+    "definition": { "en": "1 dV αV = V dT where V is volume (ISO 80000-3:2006, item 3-4) and T is thermodynamic temperature (item 5-1)", "de": "αV = 1/V · dV/dT dabei bezeichnet V das Volumen (ISO 80000-3:2006, Nr. 3-4) und T die thermodynamische Temperatur (Nr. 5-1)" },
+    "remarks": {},
+    "symbol": ["α_V", "α", "γ"],
+    "formula": "α_V = (∂\\ln V / ∂T)_p",
+    "dimensions": "Θ^-1",
+    "has_unit": "unit:K-1"
+  },
+  {
+    "URI": "qty:compressibility_isoenthropic",
+    "label": { "en": "isoenthropic compressibility", "de": "isentrope Kompressibilität", "fr": "compressibilité isoenthropique", "es": "compresibilidad isoentrópica", "pt": "compressibilidade isentrópica", "it": "comprimibilità isoentropica", "sl": "Adiabatna stisljivost", "pl": "ściśliwość izoentropiczna", "ru": "адиабатический коэффициент сжимаемости", "ar": "الانضغاطية عند ثبوت درجة الحرارة", "zh": "等熵压缩率", "ja": "等エントロピー圧縮率", "ms": "Ketermampatan adiabatik" },
+    "definition": { "en": "κ = 1 . V Σ S V p S where V is volume (ISO 80000-3:2006, item 3-4), p is pressure (ISO 80000-4:2006, item 3-1.1)", "de": "κT = 1/S · (dV/dp)S dabei bezeichnet V das Volumen (ISO 80000-3:2006, Nr. 3-4) und p den Druck (ISO 80000-4:2006, Nr. 4-15.1)" },
+    "remarks": { "en": "S is entropy (item 5-18).", "de": "S ist die Entropie (Nr. 5-18)." },
+    "symbol": "κ_S",
+    "formula": "κ_S = - (∂\\ln V / ∂p)_S = (∂\\ln ρ / ∂p)_S",
+    "dimensions": "L^1 * M^-1 * T^2",
+    "has_unit": "unit:Pal-1"
+  },
+  {
+    "URI": "qty:compressibility_isothermal",
+    "label": { "en": "isothermal compressibility", "de": "isotherme Kompressibilität", "fr": "compressibilité isotherme", "es": "compresibilidad isotérmica", "pt": "compressibilidade isotérmica", "it": "comprimibilità isotermica", "sl": "Izotermna stisljivost", "cs": "objemová stlačitelnost", "pl": "ściśliwość izotermiczna", "ru": "изотермический коэффициент сжимаемости", "ar": "معامل الانضغاط عند ثبوت درجة الحرارة", "fa": "ضریب تراکم‌پذیری همدما", "zh": "等温压缩率", "ja": "等温圧縮率", "ms": "Ketermampatan isotermik" },
+    "definition": { "en": "κ = 1 . V Σ T V p T where V is volume (ISO 80000-3:2006, item 3-4), p is pressure (ISO 80000-4:2006, item 4-15.1)", "de": "κT = 1/V · (dV/dp)T dabei bezeichnet V das Volumen (ISO 80000-3:2006, Nr. 3-4) und p den Druck (ISO 80000-4:2006, Nr. 3-1.1)" },
+    "remarks": { "en": "T is thermodynamic temperature (item 5-1).", "de": "T ist die thermodynamische Temperatur (Nr. 5-1)." },
+    "symbol": "κ_T",
+    "formula": "κ_T = - (∂\\ln V / ∂p)_T = (∂\\ln ρ / ∂p)_T",
+    "dimensions": "L^1 * M^-1 * T^2",
+    "has_unit": "unit:Pal-1"
+  },
+  {
+    "URI": "qty:surfaceTension",
+    "label": { "en": "surface tension", "de": "Oberflächenspannung", "fr": "tension superficielle; tension de surface", "es": "tensión superficial", "pt": "tensão superficial", "it": "tensione superficiale", "ro": "Tensiune superficială", "sl": "površinska napetost", "cs": "povrchové napětí", "pl": "napięcie powierzchniowe", "ru": "поверхностное натяжение", "tr": "Yüzey gerilimi", "ar": "توتر سطحي", "fa": "کشش سطحی", "hi": "पृष्ठ तनाव", "zh": "表面张力", "ja": "表面張力", "ms": "Tegangan permukaan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["γ", "σ"],
+    "dimensions": "M^1 * T^-2",
+    "has_unit": "unit:N.m-1"
+  },
+  {
+    "URI": "qty:irradiance",
+    "label": { "en": "irradiance", "de": "Bestrahlungsstärke", "fr": "éclairement énergétique", "es": "irradiancia", "pt": "irradiância", "it": "irradianza", "cs": "Intenzita záření", "ru": "Поверхностная плотность потока энергии", "tr": "yoğunluk; koyuluk", "ar": "الطاقة الهلامية", "fa": "پرتو افکنی/چگالی تابش", "zh": "辐照度", "ja": "熱流束", "ms": "Kepenyinaran" },
+    "definition": { "en": "at a point on a surface, dΦ E = dA where dΦ is the radiant flux (item 7-13) incident on an element of the surface with area dA (ISO 80000-3:2006, item 3-6)" },
+    "remarks": { "en": "E = ∞∫ Eλ(λ) dλ 0 where Eλ(λ) is spectral irradiance. See the Introduction, 0.5.1, and the Remarks in item 7-13. Visible irradiance is called illuminance (item 7-36). Photonic irradiance may be expressed by photon numbers (see item 7-54)." },
+    "symbol": ["E", "(E_e)"],
+    "formula": "E = dΦ / dA",
+    "dimensions": "M^1 * T^-3",
+    "has_unit": "unit:W.m-2"
+  },
+  {
+    "URI": "qty:irradiance_radiation",
+    "label": { "en": "Poynting vector", "de": "Poynting-Vektor", "fr": "vecteur de Poynting", "es": "vector de Poynting", "pt": "vector de Poynting", "it": "vettore di Poynting", "pl": "wektor Poyntinga", "ru": "вектор Пойнтинга", "ar": "متجَه بوينتنج", "ja": "ポインティングベクトル" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "S",
+    "formula": "S = E × H",
+    "dimensions": "M^1 * T^-3",
+    "has_unit": "unit:W.m-2"
+  },
+  {
+    "URI": "qty:current_electric_areic",
+    "label": { "en": "electric current density; areic electric current", "de": "elektrische Stromdichte", "fr": "densité de courant", "es": "densidad de corriente", "pt": "densidade de corrente elétrica", "it": "densità di corrente elettrica", "ro": "Densitate de curent", "sl": "gostota električnega toka", "cs": "Hustota elektrického proudu", "pl": "Gęstość prądu elektrycznego", "ru": "плотность тока", "tr": "Akım yoğunluğu", "ar": "كثافة التيار", "fa": "چگالی جریان الکتریکی", "hi": "धारा घनत्व", "zh": "电流密度", "ja": "電流密度", "ms": "Ketumpatan arus elektrik; keluasan arus elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["J", "(S)"],
+    "formula": "J = dI / dA",
+    "dimensions": "L^-2 * I^1",
+    "has_unit": "unit:A.m-2"
+  },
+  {
+    "URI": "qty:qchem_volumic_rate",
+    "label": { "en": "reaction rate", "de": "Reaktionsgeschwindigkeit", "fr": "taux de réaction", "es": "velocidad de reacción", "pt": "taxa de reação", "it": "velocità di reazione", "ro": "viteză de reacție", "cs": "reakční rychlost", "pl": "szybkość reakcji chemicznej", "ru": "скорость химической реакции", "tr": "tepkime hızı", "ar": "معدل التفاعل", "fa": "سرعت واکنش", "hi": "अभिक्रिया की दर", "zh": "化學反應速率", "ja": "反応速度", "ms": "kadar tindak balas" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "v",
+    "dimensions": "L^-3 * T^-1 * N^1",
+    "has_unit": "unit:mol.m-3.s-1"
+  },
+  {
+    "URI": "qty:coefficient_diffusion",
+    "label": { "en": "diffusion coefficient", "de": "Diffusionskoeffizient", "fr": "coefficient de diffusion", "es": "coeficiente de difusión", "pt": "coeficiente de difusão", "it": "coefficiente di diffusione", "sl": "difuzijski koeficient" },
+    "definition": { "de": "CBvB = –D grad CBdabei bezeichnetCB die örtliche Molekülkonzentration des Stoffs B (Nr. '9-10.2) im Gemisch undvB die örtliche mittlereGeschwindigkeit (ISO 80000-3:2006, Nr. 3-8.1) der Moleküle von B" },
+    "remarks": {},
+    "symbol": "D",
+    "formula": "D = -〈v_B〉 / {∇\\ln C_B}",
+    "dimensions": "L^2 * T^-1",
+    "has_unit": "unit:m2.s-1"
+  },
+  {
+    "URI": "qty:viscosity_kinematic",
+    "label": { "en": "kinematic viscosity", "de": "kinematische Viskosität", "fr": "viscosité cinématique", "es": "viscosidad cinemática", "pt": "viscosidade cinemática", "it": "viscosità cinematica", "ro": "Viscozitate cinematică", "sl": "kinematična viskoznost", "cs": "viskozita", "pl": "lepkość kinematyczna", "ru": "кинематическую вязкость", "tr": "Kinematik akmazlık", "ar": "لزوجة", "fa": "گرانروی جنبشی/ویسکوزیته جنبشی", "hi": "श्यानता", "zh": "运动粘度", "ja": "粘度", "ms": "Kelikatan kinematik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "ν",
+    "formula": "ν = η / ϱ",
+    "dimensions": "L^2 * T^-1",
+    "has_unit": "unit:m2.s-1"
+  },
+  {
+    "URI": "qty:viscosity_dynamic",
+    "label": { "en": "dynamic viscosity", "de": "dynamische Viskosität", "fr": "viscosité dynamique", "es": "viscosidad dinámica", "pt": "viscosidade dinâmica", "it": "viscosità dinamica; viscosità di taglio", "ro": "Viscozitate dinamică", "sl": "dinamična viskoznost", "cs": "viskozita", "pl": "lepkość dynamiczna", "ru": "динамическую вязкость", "tr": "dinamik akmazlık", "ar": "لزوجة", "fa": "گرانروی دینامیکی/ویسکوزیته دینامیکی", "hi": "श्यानता", "zh": "动力粘度", "ja": "粘度", "ms": "Kelikatan dinamik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["η", "(µ)"],
+    "formula": "η = -τ_{xz} · (∂V_x/∂z)^{1}",
+    "dimensions": "L^-1 * M^1 * T^-1",
+    "has_unit": "unit:Pal.s"
+  },
+  {
+    "URI": "qty:resistance_thermic",
+    "label": { "en": "thermal resistance", "de": "thermischer Widerstand; Wärmewiderstand", "fr": "résistance thermique", "es": "resistencia térmica", "pt": "resistência térmica", "it": "resistenza termica", "cs": "opór cieplny", "ar": "مقاومة حرارية", "zh": "热阻", "ja": "熱抵抗" },
+    "definition": { "en": "thermodynamic temperature (item 5-1) difference divided by heat flow rate (item 5-7)", "de": "Differenz der thermodynamischen Temperatur (Nr. 5-1), geteilt durch den Wärmestrom (Nr. 5-7)" },
+    "remarks": { "en": "See remark to 5-11.", "de": "Siehe Bemerkung zu 5-11." },
+    "symbol": "R",
+    "formula": "R = (T_s - T_r) / Φ",
+    "dimensions": "L^-2 * M^-1 * T^3 * Θ^1",
+    "has_unit": "unit:K.W-1"
+  },
+  {
+    "URI": "qty:impedance_sound",
+    "label": { "en": "acoustic impedance", "de": "Flussimpedanz; akustische Impedenz", "fr": "impédance acoustique", "es": "impedancia acústica", "pt": "impedância acústica", "it": "impedenza acustica", "pl": "impedancja akustyczna", "ar": "معاوقة صوتية", "ja": "音響インピーダンス" },
+    "definition": { "en": "at a surface, the complex quotient of the average sound pressure ... over that surface by the sound volume flow rate ... through that surface" },
+    "remarks": {},
+    "symbol": "Z_a",
+    "dimensions": "L^-4 * M^1 * T^-1",
+    "has_unit": "unit:Pal.s.m-3"
+  },
+  {
+    "URI": "qty:resistivity_electric",
+    "label": { "en": "electric resistivity", "de": "Spezifischer elektrischer Widerstand", "fr": "résistivité électrique", "es": "resistividad", "pt": "resistividade elétrica", "it": "resistività elettrica", "ro": "Rezistivitate electrică", "cs": "Rezistivita", "pl": "rezystywność", "ru": "удельное электрическое сопротивление", "tr": "Özdirenç", "ar": "مقاومية", "fa": "رسانندگی الکتریکی", "hi": "प्रतिरोधकता", "zh": "电阻率", "ja": "電気抵抗率", "ms": "Kerintangan elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "ϱ",
+    "dimensions": "L^3 * M^1 * T^-3 * I^-2",
+    "has_unit": "unit:Ohm.m"
+  },
+  {
+    "URI": "qty:conductivity_electric",
+    "label": { "en": "electric conductivity", "de": "elektrische Leitfähigkeit", "fr": "conductivité électrique", "es": "conductividad eléctrica", "pt": "condutividade elétrica", "it": "conducibilità elettrica", "sl": "električna prevodnost", "tr": "elektrik iletkenliği", "fa": "رسانايى الکتريکى/هدایت الکتریکی", "zh": "电导率", "ms": "Kekonduksian elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["γ", "σ"],
+    "formula": "γ = 1 / ϱ",
+    "dimensions": "L^-3 * M^-1 * T^3 * I^2",
+    "has_unit": "unit:Sie.m-1"
+  },
+  {
+    "URI": "qty:fieldStrength_electric",
+    "label": { "en": "electric field strength", "de": "elektrische Feldstärke", "fr": "intensité de champ électrique", "es": "intensidad de campo eléctrico", "pt": "intensidade de campo elétrico", "it": "intensità di campo elettrico", "ro": "câmp electric", "bg": "Електрично поле", "sl": "jakost električnega polja", "cs": "elektrické pole", "pl": "natężenie pola elektrycznego", "ru": "Напряженность электрического поля", "hu": "Elektromos mező", "tr": "elektriksel alan kuvveti", "el": "Ηλεκτρικό πεδίο", "he": "שדה חשמלי", "ar": "عدد الموجة", "fa": "شدت میدان الکتریکی", "hi": "विद्युत्-क्षेत्र", "zh": "電場", "ja": "電界強度", "ms": "Kekuatan medan elektrik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "E",
+    "dimensions": "L^1 * M^1 * T^-3 * I^-1",
+    "has_unit": "unit:V.m-1"
+  },
+  {
+    "URI": "qty:fieldStrength_magnetic",
+    "label": { "en": "magnetic field strength", "de": "magnetische Feldstärke", "fr": "intensité de champ magnétique", "es": "intensidad de campo magnético", "pt": "intensidade de campo magnético", "it": "intensità di campo magnetico", "ro": "Câmp magnetic", "sl": "jakost magnetnega polja", "cs": "Magnetické pole", "pl": "pole magnetyczne", "ru": "Магнитное поле", "tr": "Manyetik alan", "ar": "حقل مغناطيسي", "fa": "شدت میدان مغناطیسی", "zh": "磁場", "ja": "磁場", "ms": "Kekuatan medan magnetik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "H",
+    "dimensions": "L^-1 * I^1",
+    "has_unit": "unit:A.m-1"
+  },
+  {
+    "URI": "qty:dipole_magnetic",
+    "label": { "en": "magnetic moment; giromagnetic moment", "de": "magnetisches Dipolmoment", "fr": "moment magnétique; moment giromagnétique", "es": "momento de dipolo magnético", "pt": "momento de dipolo magnético", "it": "momento di dipolo magnetico", "cs": "Magnetický dipól", "pl": "dipol magnetyczny", "ru": "Магнитный момент", "tr": "Manyetik moment", "ar": "عزم مغناطيسي", "fa": "دوقطبی مغناطیسی", "hi": "चुम्बकीय द्विध्रुव", "zh": "磁偶极", "ja": "磁気双極子", "ms": "Momen magnetik; momen giromagnetik" },
+    "definition": { "de": "für ein Teilchen oder für einen Atomkern eine Vektorgröße, die in einem äußeren Magnetfeld mit einer magnetischen Flussdichte B (IEC 80000-6:2008, Nr. 6-21) eine Energieänderung (ISO 80000-5:2007, Nr. 5-20.1) W  -µ . B bewirkt. Em = –m · Bdabei bezeichnetEm die Wechselwirkungsenergie (ISO 80000-5:2007, Nr. 5-20.1) desMoleküls mit dem magnetischen Dipolmoment m und einem Magnetfeld mit der magnetischen Flussdichte B (IEC 80000-6:2008, Nr. 6-21)" },
+    "remarks": { "de": "Die Energie W ist bei einem Atom oder Atomkern quantisiert und kann dargestellt werden durch W  gµXM B dabei bezeichnet g den entsprechenden g-Faktor (Nr. 10-15.1 oder Nr. 10-15.2), µX meist das Bohrsche Magneton oder Kernmagneton (Nr. 10-10.2 oder Nr. 10-10.3), M die Magnetquantenzahl (Nr. 10-14.4) und B den Betrag der magnetischen Flussdichte. Siehe auch IEC 80000-6:2008, Nr. 6-23. Das Kraftmoment M, das in einem Magnetfeld B auf ein neutrales System mit dem Dipolmoment m wirkt, ist gegeben durch:M = m  B. Das Kraftmoment M, das in einem Magnetfeld B auf ein neutrales System mit dem Dipolmoment m wirkt, ist gegeben durch:M = m  B." },
+    "symbol": ["m", "µ"],
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:A.m2; unit:J.T-1"
+  },
+  {
+    "URI": "qty:dipole_electric",
+    "label": { "en": "electric dipole moment", "de": "elektrisches Dipolmoment", "fr": "moment dipolaire", "es": "momento de dipolo eléctrico", "pt": "momento do dipolo elétrico", "it": "momento di dipolo elettrico", "ro": "moment electric dipolar", "cs": "Dipólový moment", "pl": "elektryczny moment dipolowy", "ru": "Электрический дипольный момент", "tr": "elektrik dipol momenti", "ar": "عزم ثنائي قطب", "fa": "گشتاور دوقطبی الکتریکی", "hi": "विद्युत द्विध्रुव आघूर्ण", "zh": "电偶极矩", "ja": "電気双極子", "ms": "Momen dwikutub elektrik" },
+    "definition": { "de": "Ep = –p · Edabei bezeichnetEp die Wechselwirkungsenergie (ISO 80000-5:2007, Nr. 5-20.1) desMoleküls mit dem elektrischen Dipolmoment p und einem elektrischen Feld mit der elektrischen Feldstärke E (IEC 80000-6:2008, Nr. 6-10)" },
+    "remarks": { "de": "Das Kraftmoment M, das in einem elektrischen Feld E auf ein neutrales System mit dem Dipolmoment p wirkt, ist gegeben durch:M = p  E." },
+    "symbol": ["p", "(p_e)", "µ", "d"],
+    "dimensions": "L^1 * T^1 * I^1",
+    "has_unit": "unit:C.m"
+  },
+  {
+    "URI": "qty:quadrupole_electric",
+    "label": { "en": "electric quadrupole moment", "de": "elektrisches Quadrupolmoment", "fr": "moment quadrupolaire électrique", "es": "momento de cuadrupolo eléctrico", "pt": "momento de quadrupolo elétrico", "it": "momento di quadrupolo elettrico", "pl": "elektryczny moment kwadrupolowy", "ru": "Электрический квадрупольный момент", "tr": "elektrik kuadrupol momenti", "fa": "گشتاور چهار قطبی الکتریکی", "zh": "电四极矩", "ja": "四極子", "ms": "Momen kuadrupol elektrik" },
+    "definition": { "de": "Q  1 e 3z 2 - r 2  x, y, zdV im Quantenzustand mit dem Kernspin in Feldrichtung (z), dabei ist (x, y, z) die elektrische Kernladungsdichte (IEC 80000-6:2008, Nr. 6-3), e die Elementarladung (Nr. 10-5.1), r2  x2  y2  z2 und dV das Volumenelement dx dy dz" },
+    "remarks": { "de": "Das elektrische nukleare Quadrupolmoment ist eQ. Dieser Wert entspricht der z-Komponente des diagonalisierten Tensors des Quadrupolmoments." },
+    "symbol": ["Q", "Θ"],
+    "dimensions": "L^2 * T^1 * I^1",
+    "has_unit": "unit:C.m2"
+  },
+  {
+    "URI": "qty:fieldFluxDensity_electric",
+    "label": { "en": "electric flux density; displacement", "de": "elektrische Flussdichte; elektrische Induktion; elektrische Verschiebung", "fr": "Induction électrique; densité de flux électrique", "es": "Densidad de flujo eléctrico", "pt": "campo de deslocamento elétrico", "it": "spostamento elettrico; induzione elettrica", "ro": "Inducție electrică", "cs": "Elektrická indukce", "pl": "Indukcja elektryczna", "ru": "Электрическая индукция", "tr": "elektrik akı yoğunluğu; yer değiştirme", "ar": "إزاحة كهربائية", "fa": "چگالی شار الکتریکی", "zh": "電位移", "ja": "電束密度", "ms": "Ketumpatan fluks elektrik; anjakan" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "D",
+    "dimensions": "L^-2 * T^1 * I^1",
+    "has_unit": "unit:C.m-2"
+  },
+  {
+    "URI": "qty:dipole_electric_volumic",
+    "label": { "en": "electric polarization", "de": "elektrische Polarisation", "fr": "polarisation électrique", "es": "polarización eléctrica", "pt": "polarização eléctrica", "it": "polarizzazione elettrica", "pl": "polaryzacja elektryczna", "ru": "электрическая поляризация", "ar": "إستقطاب كهربائي", "ja": "電気分極" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "P",
+    "formula": "P = D – ε_0 · E",
+    "dimensions": "L^-2 * T^1 * I^1",
+    "has_unit": "unit:C.m-2"
+  },
+  {
+    "URI": "qty:dipole_magnetic_volumic",
+    "label": { "en": "magnetization", "de": "Magnetisierung", "fr": "aimantation", "es": "magnetización", "pt": "magnetização", "it": "magnetizzazione", "pl": "magnetyzacia", "ru": "намагниченность", "ar": "مغنطة", "ja": "磁化" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["M", "(H_i)"],
+    "formula": "M = B / µ_0 – H",
+    "dimensions": "L^-1 * I^1",
+    "has_unit": "unit:A.m-1"
+  },
+  {
+    "URI": "qty:polarizability_electric",
+    "label": { "en": "electric polarizability", "de": "elektrische Polarisierbarkeit", "fr": "Polarisabilité", "es": "Polarizabilidad", "pt": "polarizabilidade", "it": "polarizzabilità elettrica", "cs": "Polarizovatelnost", "pl": "Polaryzowalność", "ru": "Поляризуемость", "tr": "Kutuplanabilirlik", "ar": "قابلية استقطاب", "fa": "قطبیت پذیری الکتریکی", "zh": "極化性", "ja": "分極率", "ms": "Kepengkutuban elektrik" },
+    "definition": { "de": "ij = pi / Ejdabei bezeichnetpi die Komponente des elektrischen Dipolmoments (Nr. '9-37) entlang einer kartesischen Achse i, das von der anliegenden elektrischen Feldstärke (IEC 80000-6:2008,Nr. 6-10), induziert wird, undEj die Komponente der elektrischen Feldstärke entlang einer Achse j" },
+    "remarks": {},
+    "symbol": "α",
+    "formula": "α_{ij} = ∂p_i / ∂E_j",
+    "dimensions": "M^-1 * T^4 * I^2",
+    "has_unit": "unit:C.m2.V-1"
+  },
+  {
+    "URI": "qty:mobility",
+    "label": { "en": "mobility", "de": "Beweglichkeit; Mobilität", "fr": "mobilité", "es": "movilidad", "pt": "mobilidade", "it": "mobilità", "pl": "mobilność", "ar": "قابلية التحرك", "zh": "迁移率", "ja": "移動度" },
+    "definition": { "de": "mittlere Driftgeschwindigkeit (ISO 80000-3:2006, Nr. 3-8.1), die ein geladenes Teilchen in einem Medium durch die Wirkung eines elektrischen Feldes erhält, dividiert durch die elektrische Feldstärke (IEC 80000-6:2008, Nr. 6-10)" },
+    "remarks": {},
+    "symbol": "µ",
+    "dimensions": "M^-1 * T^2 * I^1",
+    "has_unit": "unit:m2.V-1.s-1"
+  },
+  {
+    "URI": "qty:activity_optical_massic",
+    "label": { "en": "specific optical activity", "de": "Spezifischer Drehwinkel", "fr": "pouvoir rotatoire", "es": "Actividad óptica", "pt": "rotatividade específica", "it": "potere rotatorio specifico", "ro": "Rotație specifică", "cs": "Optická otáčivost", "pl": "Skręcalność właściwa", "ru": "Вращение плоскости поляризации", "tr": "özgül optik aktivite", "ar": "تدوير ضوئي", "fa": "چرخش نوری", "zh": "比旋光度", "ja": "旋光", "ms": "Aktiviti optikal tertentu" },
+    "definition": { "de": "m =  A / mdabei bezeichnet den optischen Drehwinkel (Nr. '9-57) undm die Masse (ISO 80000-4:2006, Nr. 4-1) der optisch aktiven Komponente im Weg eines linear polarisierten Lichtstrahls mit der Querschnittsfläche A (ISO 80000-3:2006, Nr. 3-3)" },
+    "remarks": {},
+    "symbol": "α_m",
+    "formula": "α_m = α A / m",
+    "dimensions": "L^2 * M^-1 * N^-1",
+    "has_unit": "unit:rad.m2.kg-1"
+  },
+  {
+    "URI": "qty:potential_magnetic",
+    "label": { "en": "magnetic vector potential", "de": "magnetisches Potenzial", "fr": "potentiel magnétique", "es": "potencial magnético", "pt": "potencial magnético", "it": "potenziale vettore magnetico", "ro": "potențial magnetic", "cs": "magnetický potenciál", "pl": "potencjał magnetyczny", "ru": "Магнитний потенциал", "tr": "manyetik potansiyeli", "fa": "پتانسیل برداری مغناطیسی", "zh": "磁向量势", "ms": "Keupayaan vektor magnetik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "A",
+    "dimensions": "L^1 * M^1 * T^-2 * I^-1",
+    "has_unit": "unit:Wb.m-1"
+  },
+  {
+    "URI": "cnst:velocity_light_vacuum",
+    "label": { "en": "speed of light in vacuum; speed of electromagnetic waves in vacuum", "de": "Lichtgeschwindigkeit im Vakuum", "fr": "vitesse (f) de la lumière dans le vide; vitesse (f) des ondes électromagnétiques dans le vide", "es": "velocidad de la luz", "pt": "velocidade da luz", "it": "velocità della luce nel vuoto", "ro": "Viteza luminii", "sl": "hitrost svetlobe v praznem prostoruu", "cs": "rychlost světla", "pl": "prędkość światła", "ru": "скорость света", "tr": "Işık hızı", "ar": "سرعة الضوء", "fa": "سرعت نور در خلاء؛ سرعت امواج الکترومغناطیسی در خلاء", "hi": "प्रकाश का वेग", "zh": "光速", "ja": "光速", "ms": "Kelajuan cahaya dalam vakum; kelajuan gelombang elektromagnetik dalam vakum" },
+    "definition": { "en": "speed of electromagnetic waves in vacuum c0 := 299 792 458 m · s-1" },
+    "remarks": { "en": "The speed of light in vacuum is a fundamental constant used for definition of metre. See ISO 80000-3:2006, item 3-1.a and IEC 80000-6:2008, item 6-35.2. In relativity, the terms subluminal, luminal and superluminal speed are sometimes used for speed less than, equal to, or greater than the speed of light in vacuum." },
+    "symbol": ["c_0", "c"],
+    "dimensions": "L^1 * T^-1",
+    "has_unit": "unit:m.s-1"
+  },
+  {
+    "URI": "cnst:constant_Planck",
+    "label": { "en": "Planck constant", "de": "Plancksches Wirkungsquantum; Planck-Konstante", "fr": "constante de Planck", "es": "constante de Planck", "pt": "constante de Planck", "it": "costante di Planck", "ro": "Constanta Planck", "sl": "Planckova konstanta", "cs": "Planckova konstanta", "pl": "stała Plancka", "ru": "постоянная Планка", "tr": "Planck sabiti", "ar": "ثابت بلانك", "fa": "ثابت پلانک", "hi": "प्लैंक स्थिरांक", "zh": "普朗克常数", "ja": "プランク定数", "ms": "Pemalar Planck" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "h",
+    "dimensions": "L^2 * M^1 * T^-1",
+    "has_unit": "unit:J.s"
+  },
+  {
+    "URI": "cnst:constant_Avogadro",
+    "label": { "en": "Avogadro constant", "de": "Avogadro-Konstante", "fr": "constante d'Avogadro; nombre d'Avogadro", "es": "Número de Avogadro", "pt": "constante de Avogadro", "it": "costante di Avogadro", "ro": "Numărul lui Avogadro", "sl": "Avogadrovo število", "cs": "Avogadrova konstanta", "pl": "stała Avogadra", "ru": "число Авогадро", "tr": "Avogadro sayısı", "ar": "ثابت أفوجادرو", "fa": "عدد آووگادرو", "hi": "आवोगाद्रो संख्या", "zh": "阿伏伽德罗常数", "ja": "アボガドロ定数", "ms": "Pemalar Avogadro" },
+    "definition": { "de": "für eine reine Probe gilt:L = N / n dabei bezeichnetN die Teilchenzahl (Nr. '9-03) undn die Stoffmenge (Nr. '9-01)" },
+    "remarks": {},
+    "symbol": ["N_A", "L"],
+    "dimensions": "N^-1",
+    "has_unit": "unit:mol-1"
+  },
+  {
+    "URI": "cnst:constant_Boltzmann",
+    "label": { "en": "Boltzmann constant", "de": "Boltzmann-Konstante", "fr": "constante de Boltzmann", "es": "Constante de Boltzmann", "pt": "constante de Boltzmann", "it": "Costante di Boltzmann", "ro": "Constanta Boltzmann", "sl": "Boltzmannova konstanta", "cs": "Boltzmannova konstanta", "pl": "stała Boltzmanna", "ru": "постоянная Больцмана", "tr": "Boltzmann sabiti", "ar": "ثابت بولتزمان", "fa": "ثابت بولتزمن", "hi": "बोल्ट्समान नियतांक", "zh": "波茲曼常數", "ja": "ボルツマン定数", "ms": "Pemalar Boltzmann" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["k", "k_B"],
+    "dimensions": "L^2 * M^1 * T^-2 * Θ^-1",
+    "has_unit": "unit:J.K-1"
+  },
+  {
+    "URI": "cnst:charge_elementary",
+    "label": { "en": "elementary charge", "de": "Elementarladung", "fr": "charge élémentaire", "es": "carga eléctrica elemental", "pt": "carga elementar", "it": "carica elementare", "ro": "Sarcină elementară", "sl": "osnovni naboj", "cs": "elementární náboj", "pl": "ładunek elektryczny elementarny", "ru": "элементарный электрический заряд", "tr": "Temel yük", "ar": "شحنة أولية", "fa": "بار الکترون", "zh": "基本电荷", "ja": "電気素量", "ms": "Caj asas" },
+    "definition": { "de": "elektrische Ladung (IEC 80000-6:2008, Nr. 6-2) eines Protons; Betrag der elektrischen Ladung (IEC 80000-6:2008, Nr. 6-2) des Elektrons N6)" },
+    "remarks": {},
+    "symbol": "e",
+    "dimensions": "T^1 * I^1",
+    "has_unit": "unit:C"
+  },
+  {
+    "URI": "cnst:acceleration_gravity",
+    "label": { "en": "acceleration of free fall; acceleration due to gravity", "de": "Schwerebeschleunigung; Fallbeschleunigung", "fr": "Accélération normale de la pesanteur au niveau de la mer", "es": "aceleración de la gravedad", "pt": "aceleração da gravidade", "it": "accelerazione di gravità", "sl": "standardni pospešek prostega pada", "cs": "Gravitační zrychlení; zrychlení volného pádu, tíhové zrychlení", "tr": "serbest düşüş ivmesi; yer çekiminden kaynaklanan ivme", "fa": "شتاب گرانش", "zh": "重力加速度", "ms": "Pecutan jatuh bebas; pecutan disebabkan oleh graviti" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "g",
+    "dimensions": "L^1 * T^-2",
+    "has_unit": "unit:m.s-2"
+  },
+  {
+    "URI": "cnst:pressure_atmosphere",
+    "label": { "en": "standard atmosphere", "de": "physikalische Atmosphäre", "fr": "pression standard atmosphèrique", "es": "atmósfera estándar", "pt": "atmosfera padrão", "it": "atmosfera standard", "sl": "standardna atmosfera", "cs": "Standardní atmosféra", "tr": "standart atmosfer", "fa": "اتمسفر استاندارد", "zh": "标准大气", "ms": "Atmosfera piawai" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "p_0",
+    "dimensions": "L^-1 * M^1 * T^-2",
+    "has_unit": "unit:Pal"
+  },
+  {
+    "URI": "cnst:pressure_standard",
+    "label": { "en": "standard-state pressure", "de": "Standarddruck", "pt": "condição padrão de pressão", "it": "pressione di stato standard", "cs": "Atmosférický tlak", "tr": "standart durum basıncı", "fa": "فشار حالت استاندارد", "zh": "标准态压力", "ms": "Tekanan keadaan_piawai" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "p_0",
+    "dimensions": "L^-1 * M^1 * T^-2",
+    "has_unit": "unit:Pal"
+  },
+  {
+    "URI": "cnst:constant_gravitation",
+    "label": { "en": "Newtonian constant of gravitation", "de": "Gravitationskonstante", "fr": "constante gravitationnelle", "es": "constante de gravitación universal", "pt": "constante gravitacional universal", "it": "costante di gravitazione universale", "ro": "Constanta gravitațională", "sl": "gravitacijska konstanta", "cs": "gravitační konstanta", "pl": "stała grawitacji", "ru": "гравитационная постоянная", "tr": "Yerçekimi sabiti", "ar": "ثابت الجاذبية", "fa": "ثابت گرانش نیوتن", "hi": "गुरुत्वाकर्षक स्थिरांक", "zh": "万有引力常数", "ja": "万有引力定数", "ms": "Pemalar graviti Newtonian" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "G",
+    "dimensions": "L^3 * M^-1 * T^-2",
+    "has_unit": "unit:N.m2.kg-2"
+  },
+  {
+    "URI": "cnst:mass_atomic",
+    "label": { "en": "atomic mass constant", "de": "vereinheitlichte Massenkonstante", "pt": "constante de massa atômica", "it": "costante di massa atomica", "sl": "atomska masa", "cs": "Atomová hmotnostní konstanta", "tr": "atomik kütle sabiti", "fa": "ثابت جرم اتمی", "zh": "原子量常数", "ms": "Pemalar jisim atom" },
+    "definition": { "de": "1/12 der Ruhemasse (ISO 80000-4:2006, Nr. 4-1) eines neutralen Atoms des Kohlenstoff-Isotops 12 C im Grundzustand" },
+    "remarks": { "de": "mu  1.660 538 782(83) . 10-27 kg [2006 CODATA recommended values].N5)" },
+    "symbol": "m_u",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_electron",
+    "label": { "en": "electron rest mass", "de": "Ruhemasse des Elektrons", "fr": "masse au repos de l'électron", "es": "masa invariante del electrón", "pt": "massa de repouso do elétron", "it": "massa a riposo dell'elettrone", "ro": "masa electronului în repaus", "sl": "mirovna masa elektrona", "pl": "masa spoczynkowa elektronu", "tr": "elektron dinlenme kütlesi", "fa": "جرم سکون الکترون", "zh": "電子靜止質量", "ja": "電子の静止質量", "ms": "Jisim rehat elektron" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_e",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_muon",
+    "label": { "en": "muon rest mass", "de": "Ruhemasse des Myons", "fr": "masse au repos du muon", "es": "masa invariante del muón", "pt": "massa de repouso do múon", "it": "massa a riposo del muone", "cs": "Klidová hmotnost Mionu ?", "tr": "müon dinlenme kütlesi", "fa": "جرم سکون موئون", "zh": "介子静止质量", "ms": "Jisim rehat muon" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_µ",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_tau",
+    "label": { "en": "tau rest mass", "de": "Ruhemasse des Tauons", "fr": "masse au repos du tau", "es": "masa invariante del tau", "pt": "massa de repouso do tau", "it": "massa a riposo del tau", "cs": "Klidová hmotnost Tauonu?", "tr": "tau dinlenme kütlesi", "fa": "جرم سکون تاو", "zh": "t介子静止质量", "ms": "Jisim rehat tau" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_τ",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_proton",
+    "label": { "en": "proton rest mass", "de": "Ruhemasse des Protons", "fr": "masse au repos du proton", "es": "masa invariante del protón", "pt": "massa de repouso do próton", "it": "massa a riposo del protone", "sl": "mirovna masa protona", "tr": "proton dinlenme kütlesi", "fa": "جرم سکون پروتون", "zh": "质子静止质量", "ms": "Jisim rehat proton" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_p",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_neutron",
+    "label": { "en": "neutron rest mass", "de": "Ruhemasse des Neutrons", "fr": "masse au repos du neutron", "es": "masa invariante del neutrón", "pt": "massa de repouso do nêutron", "it": "massa a riposo del neutrone", "sl": "mirovna masa nevtrona", "tr": "nötron dinlenme kütlesi", "fa": "جرم سکون نوترون", "zh": "中子静止质量", "ms": "Jisim rehat neutron" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_n",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_deuteron",
+    "label": { "en": "deuteron rest mass", "de": "Ruhemasse des Deuterons", "fr": "masse au repos du deuteron", "es": "masa invariante del deuterón", "pt": "massa de repouso do dêuteron", "it": "massa a riposo del deuterone", "fa": "جرم سکون دوترون", "zh": "氘核静止质量", "ms": "Jisim rehat deuteron" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_d",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_triton",
+    "label": { "en": "triton rest mass", "de": "Ruhemasse des Tritons", "fr": "masse au repos du triton", "es": "masa invariante del tritón", "pt": "massa de repouso do trítio", "it": "massa a riposo del tritone", "tr": "triton dinlenme kütlesi", "fa": "جرم سکون تریتون", "zh": "氚核静止质量", "ms": "Jisim rehat triton" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_t",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_helion",
+    "label": { "en": "helion rest mass", "de": "Ruhemasse des Helions", "fr": "masse au repos de l'hélion", "es": "masa invariante del helión", "pt": "massa de repouso do hélio", "it": "massa a riposo dell'elione", "tr": "helis dinlenme kütlesi", "fa": "جرم سکون هلیوم", "zh": "氦核静止质量", "ms": "Jisim rehat helion" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_h",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:mass_alpha",
+    "label": { "en": "alpha particle rest mass", "de": "Ruhemasse des Alphateilchens", "fr": "masse au repos de l'alpha", "es": "masa invariante de la partícula alfa", "pt": "massa de repouso da partícula alfa", "it": "massa a riposo della particella alfa", "tr": "alfa parçacığı dinlenme kütlesi", "fa": "جرم سکون ذره آلفا", "zh": "α粒子静止质量", "ms": "Jisim rehat zarah alfa" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "m_α",
+    "dimensions": "M^1",
+    "has_unit": "unit:kg"
+  },
+  {
+    "URI": "cnst:radius_proton",
+    "label": { "en": "proton rms charge radius", "tr": "proton rms şarj yarıçapı", "fa": "شعاع آر ام اس بار پروتون", "zh": "质子电荷半径", "ms": "Jejari caj rms proton" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "r_p",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "cnst:radius_deuteron",
+    "label": { "en": "deuteron rms charge radius" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "r_d",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_electron",
+    "label": { "en": "electron magnetic moment", "de": "magnetisches Moment des Elektrons", "fr": "moment magnétique de l'électron", "es": "momento magnético del electrón", "pt": "momento magnético do elétron", "it": "momento magnetico dell'elettrone", "sl": "magnetni moment elektrona", "tr": "elektron manyetik momenti", "fa": "گشتاور مغناطیسی الکترون", "zh": "电子磁矩", "ms": "Momen magnetik elektron" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_e",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_muon",
+    "label": { "en": "muon magnetic moment", "de": "magnetisches Moment des Myons", "fr": "moment magnétique du muon", "es": "momento magnético del muón", "pt": "momento magnético do múon", "it": "momento magnetico del muone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_µ",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_proton",
+    "label": { "en": "proton magnetic moment", "de": "magnetisches Moment des Protons", "fr": "moment magnétique du proton", "es": "momento magnético del protón", "pt": "momento magnético do próton", "it": "momento magnetico del protone", "sl": "magnetni moment protona" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_p",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_neutron",
+    "label": { "en": "neutron magnetic moment", "de": "magnetisches Moment des Neutrons", "fr": "moment magnétique du neutron", "es": "momento magnético del neutrón", "pt": "momento magnético do nêutron", "it": "momento magnetico del neutrone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_n",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_deuteron",
+    "label": { "en": "deuteron magnetic moment", "de": "magnetisches Moment des Deuterons", "fr": "moment magnétique du deuteron", "es": "momento magnético del deuterón", "pt": "momento magnético do dêuteron", "it": "momento magnetico del deuterone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_d",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_triton",
+    "label": { "en": "triton magnetic moment", "de": "magnetisches Moment des Tritons", "fr": "moment magnétique du triton", "es": "momento magnético del tritón", "pt": "momento magnético do trítio", "it": "momento magnetico del tritone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_t",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_helion",
+    "label": { "en": "helion magnetic moment", "de": "magnetisches Moment des Helions", "fr": "moment magnétique de l'hélion", "es": "momento magnético del helión", "pt": "momento magnético do hélio", "it": "momento magnetico dell'elione" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_h",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_proton_shielded",
+    "label": { "en": "shielded proton magnetic moment", "it": "momento magnetico schermato del protone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ'_p",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_helion_shielded",
+    "label": { "en": "shielded helion magnetic moment", "it": "momento magnetico schermato dell'elione" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ'_h",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:permeability_magnetic_vacuum",
+    "label": { "en": "magnetic constant; permeability of vacuum", "de": "magnetische Feldkonstante", "fr": "Perméabilité magnétique du vide", "es": "Permeabilidad magnética del vacío", "pt": "permeabilidade do vácuo", "it": "permeabilità magnetica del vuoto", "ro": "permeabilitatea magnetică a vidului", "sl": "indukcijska konstanta", "cs": "permeabilita vakua", "ru": "магнитная постоянная", "tr": "manyetik sabit; vakum geçirgenliği", "ar": "نفاذية الفراغ", "fa": "ثابت گذردهی مغناطیسی خلأ", "zh": "真空磁导率", "ja": "磁気定数", "ms": "Pemalar magnetik; kebolehtelapan vakum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "µ_0",
+    "dimensions": "L^1 * M^1 * T^-2 * I^-2",
+    "has_unit": "unit:N.A-2"
+  },
+  {
+    "URI": "cnst:permittivity_electric_vacuum",
+    "label": { "en": "electric constant; permittivity of vacuum", "de": "elektrische Feldkonstante", "fr": "Permittivité diélectrique du vide", "es": "Permitividad eléctrica del vacío", "pt": "constante de permissividade do vácuo", "it": "Costante dielettrica del vuoto", "ro": "permitivitatea electrică a vidului", "sl": "influenčna konstanta", "cs": "permitivita vakua", "ru": "электрическая постоянная", "tr": "Vakum geçirgenliği", "ar": "ثابت الحقل الكهربي", "fa": "ثابت گذردهی الکتریکی خلأ", "zh": "真空电容率", "ja": "真空の誘電率", "ms": "Pemalar elektrik; ketelusan vakum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "ε_0",
+    "formula": "1 / (µ_0 · c_0^2)",
+    "dimensions": "L^-3 * M^-1 * T^4 * I^2",
+    "has_unit": "unit:F.m-1"
+  },
+  {
+    "URI": "cnst:impedance_vacuum",
+    "label": { "en": "characteristic impedance of vacuum", "de": "Wellenwiderstand des Vakuums", "fr": "Impédance caractéristique du vide", "es": "Impedancia característica del vacío", "pt": "impedância característica do vácuo", "it": "Impedenza caratteristica del vuoto", "sl": "prevodnost praznega prostora", "cs": "impedance vakua", "ru": "Волновое сопротивление вакуума", "tr": "Boşluğun empedansı", "ar": "معاوقة الفراغ", "fa": "امپدانس مشخصه خلاء", "zh": "真空特性阻抗", "ja": "特性インピーダンス", "ms": "Ciri impedans vakum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "Z_0",
+    "formula": "µ_0 · c_0",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-2",
+    "has_unit": "unit:Ohm"
+  },
+  {
+    "URI": "cnst:constant_Stefan-Boltzmann",
+    "label": { "en": "Stefan-Boltzmann constant", "de": "Stefan-Boltzmann-Konstante", "fr": "constante de Stefan-Boltzmann", "es": "constante de Stefan–Boltzmann", "pt": "constante de Stefan-Boltzmann", "it": "costante di Stefan-Boltzmann", "sl": "Stefanova konstanta", "cs": "Stefanova-Boltzmannova konstanta", "pl": "Stała Stefana-Boltzmanna", "ru": "постоянная Стефана — Больцмана", "tr": "Stefan-Boltzmann sabiti", "ar": "ثابت ستيفان-بولتزمان", "fa": "ثابت استفان-بولتزمن", "hi": "स्टेफ़ान-बोल्ट्ज़मान नियतांक", "zh": "斯特藩-玻爾茲曼常數", "ja": "シュテファン=ボルツマン定数", "ms": "Pemalar Stefan-Boltzmann" },
+    "definition": { "en": "constant σ in the expression for the radiant exitance (item 7-18) of a blackbody at thermodynamic temperature T (ISO 80000-5:2007, item 5-1), thus M = σT 4" },
+    "remarks": {},
+    "symbol": ["σ", "σ_{SB}"],
+    "formula": "(2 · π^5 · k^4) / (15 · h^3 · c_0^2)",
+    "dimensions": "M^1 * T^-3 * Θ^-4",
+    "has_unit": "unit:W.m-2.K-4"
+  },
+  {
+    "URI": "cnst:constant_radiation1",
+    "label": { "en": "first radiation constant", "de": "erste Strahlungskonstante", "fr": "première constante (f) de rayonnement", "es": "Primera constante de radiación", "pt": "primeira constante de radiação", "it": "prima costante di radiazione", "sl": "prva sevalna konstanta", "cs": "První radiační konstanta", "tr": "birinci radyasyon sabiti", "fa": "ثابت تشعشع اولیه", "zh": "第一辐射常数", "ms": "Pemalar radiasi pertama" },
+    "definition": { "en": "constants c1 and c2 in the expression for the spectral radiant exitance (item 7-18) of a blackbody at the thermodynamic temperature T (ISO 80000-5:2007, item 5-1), thus Mλ(λ) = c1f (λ, T ) = λ-5 c1 exp(c λ-1 T-1) - 1 2" },
+    "remarks": {},
+    "symbol": "c_1",
+    "formula": "2π · h · c_0^2",
+    "dimensions": "L^4 * M^1 * T^-3",
+    "has_unit": "unit:W.m2"
+  },
+  {
+    "URI": "cnst:constant_radiation2",
+    "label": { "en": "second radiation constant", "de": "zweite Strahlungskonstante", "fr": "seconde constante (f) de rayonnement", "es": "Segunda constante de radiación", "pt": "segunda constante de radiação", "it": "seconda costante di radiazione", "sl": "druga sevalna konstanta", "cs": "Druhá radiační konstanta", "tr": "ikinci radyasyon sabiti", "fa": "ثابت تشعشع ثانویه", "zh": "第二辐射常数", "ms": "Pemalar radiasi kedua" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "c_2",
+    "formula": "h · c_0 / k",
+    "dimensions": "L^1 * Θ^1",
+    "has_unit": "unit:m.K"
+  },
+  {
+    "URI": "cnst:displacement_Wien_wavelength",
+    "label": { "en": "Wien wavelength displacement law constant", "de": "Wien-Konstante", "fr": "Constante de Wien", "es": "Constante de la ley de desplazamiento de Wien", "pt": "constante de dispersão de Wien", "it": "Costante di spostamento di Wien", "cs": "Wienův posunovací zákon; Wienův zákon posunu ?", "pl": "Wienova konstanta", "tr": "Wien Kayma Yasası", "fa": "ثابت قانون جابجایی وین", "zh": "维恩波长位移定律常数", "ms": "Pemalar hukum anjakan gelombang Wien" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "b",
+    "formula": "c_2 / 4.965114231...",
+    "dimensions": "L^1 * Θ^1",
+    "has_unit": "unit:m.K"
+  },
+  {
+    "URI": "cnst:displacement_Wien_frequency",
+    "label": { "en": "Wien frequency displacement law constant" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "b'",
+    "formula": "2.821439372... · c_0 / c_2",
+    "dimensions": "T^-1 * Θ^-1",
+    "has_unit": "unit:Hz.K-1"
+  },
+  {
+    "URI": "cnst:volume_molar_idealGas_standard",
+    "label": { "en": "molar volume of ideal gas (273.15 K, 100 kPa)", "fr": "Volume molaire des gaz parfaits", "es": "Volumen molar de un gas ideal", "pt": "volume molar de gás ideal", "it": "volume molare di un gas ideale (100 kPa, 273.15 Pa)", "sl": "molarna prostornina idealnega plina (100 kPa, 273.15 K)", "tr": "ideal gazın molar hacmi (273.15 K, 100 kPa)", "fa": "حجم مولی گاز ایده آل", "zh": "理想气体下摩尔体积", "ms": "Isipadu molar gas ideal  (273.15 K, 100 kPa)" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "V_m",
+    "formula": "R · T / p_0",
+    "dimensions": "L^3 * N^-1",
+    "has_unit": "unit:m3.mol-1"
+  },
+  {
+    "URI": "cnst:constant_Loschmidt_standard",
+    "label": { "en": "Loschmidt constant (273.15 K, 100 kPa)", "de": "Loschmidt-Konstante", "fr": "constante de Loschmidt", "es": "constante de Loschmidt", "pt": "constante de Loschmidt", "it": "costante di Loschmidt", "cs": "Loschmidtova konstanta", "pl": "stała Loschmidta", "ru": "постоянная Лошмидта", "tr": "Loschmidt sabiti (273.15 K, 100 kPa)", "fa": "ثابت لوشمیدت", "zh": "洛施密特常量", "ja": "ロシュミット数", "ms": "Pemalar Loschmidt (273.15 K, 100 kPa)" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "n_0",
+    "formula": "N_A / V_m",
+    "dimensions": "L^-3",
+    "has_unit": "unit:m-3"
+  },
+  {
+    "URI": "cnst:constant_Sackur-Tetrode_standard",
+    "label": { "en": "Sackur-Tetrode constant (1 K, 100 kPa)", "de": "Sackur-Tetrode-Konstante", "fr": "constante de Sackur-Tetrode", "es": "constante de Sackur-Tetrode", "pt": "constante de Sackur-Tetrode", "it": "costante di Sackur-Tetrode", "tr": "Sackur-Tetrode sabiti (1 K, 100 kPa)", "fa": "ثابت ساکور-تترود", "zh": "Sackur-Tetrode常数", "ms": "Pemalar Sackur-Tetrode (1 K, 100 k Pa)" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "S_0/R",
+    "formula": "5/2 + \\ln[(2π·m_u·k·T_1/h^2)^{3/2}·k·T_1/p_0]",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_Bohr",
+    "label": { "en": "Bohr magneton", "de": "Bohrsches Magneton", "fr": "magnéton de Bohr", "es": "magnetón de Bohr", "pt": "magnetão de Bohr", "it": "Magnetone di Bohr", "ro": "Magnetonul Bohr-Procopiu", "sl": "Bohrov magneton", "cs": "Bohrův magneton", "pl": "magneton Bohra", "ru": "магнетон Бора", "tr": "Bohr magnetonu", "ar": "مغنطون بور", "fa": "مگنتون بور", "zh": "玻尔磁子", "ja": "ボーア磁子", "ms": "Magneton Bohr" },
+    "definition": { "de": "B    e 2me dabei bezeichnet e die Elementarladung (Nr. 10-5.1) und me die Ruhemasse des Elektrons (Nr. 10-2) N9)" },
+    "remarks": {},
+    "symbol": "µ_B",
+    "formula": "e · \\hbar / (2m_e)",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_nuclear",
+    "label": { "en": "nuclear magneton", "de": "Kernmagneton", "fr": "magnéton nucléaire", "es": "magnetón nuclear", "pt": "magnetão nuclear", "it": "magnetone nucleare", "ro": "magneton nuclear", "sl": "jedrski magneton", "cs": "Jaderný magneton", "pl": "magneton jądrowy", "ru": "ядерный магнетон", "tr": "nükleer magnetonu", "ar": "مغنطون نووي", "fa": "مگنتون هسته‌ای", "zh": "核磁子", "ja": "核磁子", "ms": "Magneton nuklear" },
+    "definition": { "de": "N    e 2mp dabei bezeichnet e die Elementarladung (Nr. 10-5.1) und mp die Ruhemasse des Protons (Nr. 10-2) N9)" },
+    "remarks": {},
+    "symbol": "µ_N",
+    "formula": "e · \\hbar / (2m_p)",
+    "dimensions": "L^2 * I^1",
+    "has_unit": "unit:J.T-1"
+  },
+  {
+    "URI": "cnst:constant_fineStructure",
+    "label": { "en": "fine-structure constant", "de": "Feinstrukturkonstante", "fr": "constante de structure fine", "es": "constante de estructura fina", "pt": "constante de estrutura fina", "it": "costante di struttura fine", "ro": "Constanta structurii fine", "sl": "konstanta fine strukture", "cs": "Konstanta jemné struktury", "pl": "stała struktury subtelnej", "ru": "постоянная тонкой структуры", "tr": "ince yapı sabiti", "ar": "ثابت البناء الدقيق", "fa": "ثابت ساختار ریز", "zh": "精细结构常数", "ja": "微細構造定数", "ms": "Pemalar struktur_halus" },
+    "definition": { "de": "  e+2 40c0 dabei bezeichnet e die Elementarladung (Nr. 10-5.1), 0 die elektrische Feldkonstante (IEC 80000-6:2008, Nr. 6-14.1), ħ die reduzierte Planck-Konstante (Nr. 10-6.2) und c0 die Vakuumlichtgeschwindigkeit (ISO 80000-7:2008, Nr. 7-4.1)" },
+    "remarks": {},
+    "symbol": "α",
+    "formula": "e^2 / (4πε_0 · \\hbar · c_0)",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:constant_Rydberg",
+    "label": { "en": "Rydberg constant", "de": "Rydberg-Konstante", "fr": "Constante de Rydberg", "es": "Constante de Rydberg", "pt": "constante de Rydberg", "it": "Costante di Rydberg", "sl": "Rydbergova konstanta", "cs": "Rydbergova konstanta", "pl": "stała Rydberga", "ru": "постоянная Ридберга", "tr": "Rydberg sabiti", "ar": "ثابت ريدبرغ", "fa": "ثابت ریدبرگ", "zh": "里德伯常量", "ja": "リュードベリ定数", "ms": "Pemalar Rydberg" },
+    "definition": { "de": "e+2 R  8 a hc 0 0 0 dabei bezeichnet e die Elementarladung (Nr. 10-5.1), ε0 die elektrische Feldkonstante (IEC 80000-6:2008, Nr. 6-14.1), a0 den Bohrschen Radius (Nr. 10-7), h die Planck-Konstante (Nr. 10-6.1) und c0 die Vakuumlichtgeschwindigkeit (ISO 80000-7:2008, Nr. 7-4.1)" },
+    "remarks": { "de": "R  10 973 731.568 527(73) m–1 [2006 CODATA recommended values].N8) Die Größe Ry  R . hc0 wird Rydberg-Energie genannt." },
+    "symbol": "R_\\infty",
+    "formula": "α^2 · m_e · c_0 / (2h)",
+    "dimensions": "L^-1",
+    "has_unit": "unit:m-1"
+  },
+  {
+    "URI": "cnst:radius_Bohr",
+    "label": { "en": "Bohr radius", "de": "Bohrscher Radius", "fr": "rayon de Bohr", "es": "Radio de Bohr", "pt": "raio de Bohr", "it": "Raggio atomico di Bohr", "sl": "Bohrov polmer", "cs": "Bohrův poloměr", "pl": "Promień atomu Bohra", "ru": "боровский радиус", "tr": "Bohr yarıçapı", "ar": "نصف قطر بور", "fa": "شعاع بور", "hi": "बोर त्रिज्या", "zh": "玻尔半径", "ja": "ボーア半径", "ms": "Jejari Bohr" },
+    "definition": { "de": "40h2 a0  m e+2 e dabei bezeichnet ε0 die elektrische Feldkonstante (IEC 80000-6:2008, Nr. 6-14.1), ħ die reduzierte PlanckKonstante (Nr. 10-6.2); me die Ruhemasse des Elektrons (Nr. 10-2), und e die Elementarladung (Nr. 10-5.1)" },
+    "remarks": { "de": "a0  0.529 177 208 59(36) . 10-10 m [2006 CODATA recommended values].N8) Im Rahmen des Bohrschen Atommodells bezeichnet a0 den Radius der Elektronenbahn im Wasserstoffatom im Grundzustand." },
+    "symbol": "a_0",
+    "formula": "α / (4π·R_\\infty) = 4πε_0·\\hbar^2 / (m_e·e^2)",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "cnst:energy_Hartree",
+    "label": { "en": "Hartree energy", "de": "Hartree-Energie", "fr": "Énergie de Hartree", "es": "Energía de Hartree", "pt": "energia de Hartree", "it": "Energia di Hartree", "sl": "Hartreejeva energija", "pl": "energia Hartree'go", "ru": "энергия Хартри", "tr": "Hartree enerjisi", "ar": "هارتري", "fa": "انرژی هارتری", "zh": "哈特里能量", "ja": "ハートリー", "ms": "Tenaga Hartree" },
+    "definition": { "de": "e+2 EH  4 a 0 0 dabei bezeichnet e die Elementarladung (Nr. 10-5.1), ε0 die elektrische Feldkonstante (IEC 80000-6:2008, Nr. 6-14.1) und a0 den Bohrschen Radius (Nr. 10-7)" },
+    "remarks": { "de": "EH  4.359 743 94(22) . 10–18 J [2006 CODATA recommended values].N8) Die Energie des Elektrons im Wasserstoffatom im Grundzustand ist -EH. EH  2 R . hc0." },
+    "symbol": "E_h",
+    "formula": "e^2/(4πε_0·a_0) = 2R_\\infty·h·c_0 = α^2·m_e·c_0^2",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "has_unit": "unit:J"
+  },
+  {
+    "URI": "cnst:radius_electron",
+    "label": { "en": "classical electron radius", "de": "klassischer Elektronenradius", "fr": "rayon classique de l'électron", "es": "Radio clásico del electrón", "pt": "raio clássico do elétron", "it": "Raggio classico dell'elettrone", "ro": "Raza clasică a electronului", "cs": "Klasický poloměr elektronu", "pl": "klasyczny promień elektronu", "ru": "классический радиус электрона", "tr": "klasik elektron yarıçapı", "ar": "نصف قطر تقليدي للإلكترون", "fa": "شعاع الکترونی کلاسیک", "zh": "古典電子半徑", "ja": "古典電子半径", "ms": "Jejari elektron klasik" },
+    "definition": { "de": "e+2 re  40 mec02 dabei bezeichnet e die Elementarladung (Nr. 10-5.1), 0 die elektrische Feldkonstante (IEC 80000-6:2008, Nr. 6-14.1), me die Ruhemasse des Elektrons (Nr. 10-2) und c0 die Vakuumlichtgeschwindigkeit (ISO 80000-7:2008, Nr. 7-4.1)" },
+    "remarks": { "de": "Diese Größe entspricht der elektrostatischen Energie E einer Ladung, die in einer Kugel vom Radius re verteilt ist, als wäredie gesamte Ruheenergie (Nr. 10-3) des Elektrons der Energie elektromagnetischen Ursprungs zuzuschreiben, entsprechend der Beziehung E  me c02. re  2.817 940 289 4(58) . 10–19 m [2006 CODATA recommended values].N16)" },
+    "symbol": "r_e",
+    "formula": "α^2 · a_0",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "cnst:gyromagRatio_electron",
+    "label": { "en": "electron gyromagnetic ratio", "de": "Gyromagnetisches Verhältnis des freien Elektrons", "fr": "ratio gyromagnétique de l'électron", "es": "relación giromagnética del electrón", "pt": "razão giromagnética do elétron", "it": "rapporto giromagnetico dell'elettrone", "tr": "elektron gyromanyetik oranı", "fa": "نسبت ژیرو مغناطیسی الکترون", "zh": "电子旋磁比", "ms": "Nisbah giromagnetik elektron" },
+    "definition": { "de": "µ  e J dabei bezeichnet µ das magnetische Dipolmoment (Nr. 10-10.1) und J den Gesamtdrehimpuls (Nr. 10-12)" },
+    "remarks": {},
+    "symbol": "γ_e",
+    "formula": "2 · |µ_e| / \\hbar",
+    "dimensions": "1",
+    "has_unit": "unit:s-1.T-1"
+  },
+  {
+    "URI": "cnst:gyromagRatio_proton",
+    "label": { "en": "proton gyromagnetic ratio", "de": "Gyromagnetisches Verhältnis des Protons", "fr": "ratio gyromagnétique du proton", "es": "relación giromagnética del protón", "pt": "razão giromagnética do próton", "it": "rapporto giromagnetico del protone", "sl": "magnetogiroskopsko razmerje protona" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "γ_p",
+    "formula": "2 · |µ_p| / \\hbar",
+    "dimensions": "1",
+    "has_unit": "unit:s-1.T-1"
+  },
+  {
+    "URI": "cnst:gyromagRatio_neutron",
+    "label": { "en": "neutron gyromagnetic ratio", "de": "Gyromagnetisches Verhältnis des Neutrons", "fr": "ratio gyromagnétique du neutron", "es": "relación giromagnética del neutrón", "pt": "razão giromagnética do nêutron", "it": "rapporto giromagnetico del neutrone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "γ_n",
+    "formula": "2 · |µ_n| / \\hbar",
+    "dimensions": "1",
+    "has_unit": "unit:s-1.T-1"
+  },
+  {
+    "URI": "cnst:gyromagRatio_proton_shielded",
+    "label": { "en": "shielded proton gyromagnetic ratio" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "γ'_p",
+    "formula": "2 · |µ'_p| / \\hbar",
+    "dimensions": "1",
+    "has_unit": "unit:s-1.T-1"
+  },
+  {
+    "URI": "cnst:gyromagRatio_helion_shielded",
+    "label": { "en": "shielded helion gyromagnetic ratio" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "γ'_h",
+    "formula": "2 · |µ'_h| / \\hbar",
+    "dimensions": "1",
+    "has_unit": "unit:s-1.T-1"
+  },
+  {
+    "URI": "cnst:gFactor_electron",
+    "label": { "en": "electron g factor", "de": "Landé-Faktor des freien Elektrons", "fr": "facteur g de l'électron", "es": "factor de Landé del electrón", "pt": "fator g do elétron", "it": "fattore g di Landé per l'elettrone libero", "sl": "Landejev faktor g za prosti elektron", "tr": "elektron g faktörü", "fa": "فاکتور جی الکترون", "zh": "电子g因素", "ms": "Faktor g elektron" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "g_e",
+    "formula": "2 · µ_e / µ_B",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:gFactor_muon",
+    "label": { "en": "muon g factor", "de": "Landé-Faktor des Myons", "fr": "facteur g du muon", "es": "factor de Landé del muón", "pt": "fator g do múon", "it": "fattore g di Landé per il muone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "g_µ",
+    "formula": "2 · µ_µ / [(e · \\hbar) / (2 · m_µ)]",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:gFactor_proton",
+    "label": { "en": "proton g factor", "de": "Landé-Faktor des Protons", "fr": "facteur g du proton", "es": "factor de Landé del protón", "pt": "fator g do próton", "it": "fattore g di Landé per il protone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["g_p", "g_N"],
+    "formula": "2 · µ_p / µ_N",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:gFactor_neutron",
+    "label": { "en": "neutron g factor", "de": "Landé-Faktor des Neutrons", "fr": "facteur g du neutron", "es": "factor de Landé del neutrón", "pt": "fator g do nêutron", "it": "fattore g di Landé per il neutrone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "g_n",
+    "formula": "2 · µ_n / µ_N",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:gFactor_deuteron",
+    "label": { "en": "deuteron g factor", "de": "Landé-Faktor des Deuterons", "fr": "facteur g du deuteron", "es": "factor de Landé del deuterón", "pt": "fator g do dêuteron", "it": "fattore g di Landé per il deuterone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "g_d",
+    "formula": "µ_d / µ_N",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:gFactor_triton",
+    "label": { "en": "triton g factor", "de": "Landé-Faktor des Tritons", "fr": "facteur g du triton", "es": "factor de Landé del tritón", "pt": "fator g do trítio", "it": "fattore g di Landé per il tritone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "g_t",
+    "formula": "2 · µ_t / µ_N",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:gFactor_helion",
+    "label": { "en": "helion g factor", "de": "Landé-Faktor des Helions", "fr": "facteur g de l'hélion", "es": "factor de Landé del helión", "pt": "fator g do hélio", "it": "fattore g di Landé per l'elione" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "g_h",
+    "formula": "2 · µ_h / µ_N",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_anomaly_electron",
+    "label": { "en": "electron magnetic moment anomaly", "it": "Anomalia del momento magnetico dell'elettrone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "a_e",
+    "formula": "|µ_e| / µ_B - 1",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:dipole_magnetic_anomaly_muon",
+    "label": { "en": "muon magnetic moment anomaly", "it": "Anomalia del momento magnetico del muone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "a_µ",
+    "formula": "|µ_µ| /({e·\\hbar}/{2·m_µ}) − 1",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:proton_magnetic_shielding_correction",
+    "label": { "en": "proton magnetic shielding correction", "it": "Correzione di schermatura diamagnetica per i protoni (H2O, campione sferico, 298.15 K)" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "σ'_p",
+    "formula": "1 − µ'_p / µ_p",
+    "dimensions": "1",
+    "has_unit": "unit:1"
+  },
+  {
+    "URI": "cnst:wavelength_Compton_electron",
+    "label": { "en": "electron Compton wavelength", "de": "Compton-Wellenlänge der Elektrons", "fr": "longueur d'onde de Compton pour l'électron", "es": "longitud de onda Compton del electrón", "pt": "comprimento de onda Compton do elétron", "it": "Lunghezza d'onda Compton dell'elettrone", "ro": "lungime de undă Compton electronului", "pl": "długość fali Comptona elektronu", "ru": "Комптоновская длина волны электрона", "tr": "elektron Compton dalgaboyu", "fa": "طول موج کامپتون الکترون", "zh": "电子康普顿波长", "ms": "Gelombang Compton elektron" },
+    "definition": {},
+    "remarks": {},
+    "symbol": ["λ_C", "λ_{C,e}"],
+    "formula": "h / (m_e · c_0)",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "cnst:wavelength_Compton_muon",
+    "label": { "en": "muon Compton wavelength", "de": "Compton-Wellenlänge des Myons", "fr": "longueur d'onde de Compton pour le muon", "es": "longitud de onda Compton del muón", "pt": "comprimento de onda Compton do múon", "it": "Lunghezza d'onda Compton del muone" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "λ_{C,µ}",
+    "formula": "h / (m_µ · c_0)",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  },
+  {
+    "URI": "cnst:wavelength_Compton_tau",
+    "label": { "en": "tau Compton wavelength", "de": "Compton-Wellenlänge der Tauons", "fr": "longueur d'onde de Compton pour le tau", "es": "longitud de onda Compton del tau", "pt": "comprimento de onda Compton do tau", "it": "Lunghezza d'onda Compton del tau" },
+    "definition": {},
+    "remarks": {},
+    "symbol": "λ_{C,τ}",
+    "formula": "h / (m_τ · c_0)",
+    "dimensions": "L^1",
+    "has_unit": "unit:m"
+  }
+]
