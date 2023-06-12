@@ -1,37 +1,44 @@
-{
+[
 	{"class": "GeneralQuantity", "subclass": "GeneralProperty", "entry":
 		{"chapter": 1, "item": 1,
 		"label": {"en": "quantity <general>", "fr": "grandeur <générelle>", "it": "grandezza <generale>"},
-		"definition": {"en": "property for which comparability by ratio, or by difference, or by order applies", "fr": "", "it": ""}}
+		"definition": {"en": "property for which comparability by ratio, or by difference, or by order applies", "fr": "", "it": ""}
+	}
 	},
 	{"class": "IndividualQuantity", "subclass": "IndividualProperty", "entry":
 		{"chapter": 1, "item": 1,
 		"label": {"en": "quantity <individual>", "fr": "grandeur <individuelle>", "it": "grandezza <individuale>"},
-		"definition": {"en": "property for which comparability by ratio, or by difference, or by order applies", "fr": "", "it": ""}}
+		"definition": {"en": "property for which comparability by ratio, or by difference, or by order applies", "fr": "", "it": ""}
+	}
 	},
 	{"class": "BaseQuantity", "subclass": "GeneralQuantity", "entry":
 		{"chapter": 1, "item": 3,
 		"label": {"en": "base quantity", "fr": "grandeur de base", "it": "grandezza di base"},
-		"definition": {"en": "la nuova definizione", "fr": "", "it": ""}}
+		"definition": {"en": "la nuova definizione", "fr": "", "it": ""}
+	}
 	},
 	{"class": "ReferenceQuantity", "subclass": "IndividualQuantity", "entry":
 		{"chapter": 1, "item": 11,
 		"label": {"en": "reference quantity", "fr": "", "it": ""},
-		"definition": {"en": "quantity identified and adopted by convention for empirically comparing it with other quantities of the same kind", "fr": "", "it": ""}}
+		"definition": {"en": "quantity identified and adopted by convention for empirically comparing it with other quantities of the same kind", "fr": "", "it": ""}
+	}
 	},
 	{"class": "MeasurementUnit", "subclass": "ReferenceQuantity", "entry":
 		{"chapter": 1, "item": 12,
 		"label": {"en": "measurement unit", "fr": "unité de mesure", "it": "unità di misura"},
-		"definition": {"en": "reference quantity with which any other quantity of the same kind can be compared by ratio, resulting in a number", "fr": "", "it": ""}}
+		"definition": {"en": "reference quantity with which any other quantity of the same kind can be compared by ratio, resulting in a number", "fr": "", "it": ""}
+	}
 	},
 	{"class": "BaseUnit", "subclass": "MeasurementUnit", "entry":
 		{"chapter": 1, "item": 13,
 		"label": {"en": "base unit", "fr": "unité de base", "it": "unità di base"},
-		"definition": {"en": "measurement unit that is adopted by convention for a base quantity", "fr": "unité de mesure adoptée par convention pour une grandeur de base", "it": "unità di misura adottata convenzionalmente per una grandezza di base"}}
+		"definition": {"en": "measurement unit that is adopted by convention for a base quantity", "fr": "unité de mesure adoptée par convention pour une grandeur de base", "it": "unità di misura adottata convenzionalmente per una grandezza di base"}
+	}
 	},
 	{"class": "DerivedUnit", "subclass": "MeasurementUnit", "entry":
 		{"chapter": 1, "item": 14,
 		"label": {"en": "derived unit", "fr": "unité dérivée", "it": "unità derivata"},
-		"definition": {"en": "measurement unit for a derived quantity", "fr": "unité de mesure d'une grandeur dérivée", "it": "unità di misura di una grandezza derivata"}}
+		"definition": {"en": "measurement unit for a derived quantity", "fr": "unité de mesure d'une grandeur dérivée", "it": "unità di misura di una grandezza derivata"}
 	}
-}
+	}
+]
