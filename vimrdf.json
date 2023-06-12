@@ -33,7 +33,7 @@
     {"class": "BaseUnit", "superclass": "MeasurementUnit", "chapter": 1, "item": 13,
         "label": {"en": "base unit", "fr": "unité de base", "it": "unità di base"},
         "definition": {"en": "measurement unit that is adopted by convention for a base quantity", "fr": "unité de mesure adoptée par convention pour une grandeur de base", "it": "unità di misura adottata convenzionalmente per una grandezza di base"}
-    }
+    },
 
     {"class": "DerivedUnit", "superclass": "MeasurementUnit", "chapter": 1, "item": 14,
         "label": {"en": "derived unit", "fr": "unité dérivée", "it": "unità derivata"},
