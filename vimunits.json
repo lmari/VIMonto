@@ -1,5 +1,805 @@
 [
-    {"unit": "metre", "symbol": "m", "kind": "length"},
-    {"unit": "kilogram", "symbol": "kg", "kind": "mass"},
-    {"unit": "second", "symbol": "s", "kind": "duration"}
+  {
+    "URI": "unit:m",
+    "label": { "en": "metre", "de": "Meter", "fr": "mètre", "es": "metro", "pt": "metro", "it": "metro", "ro": "metru", "bg": "метър", "sl": "meter", "cs": "metr", "pl": "metr", "ru": "метр", "hu": "méter", "tr": "metre", "el": "μέτρο", "he": "מטר", "ar": "متر", "fa": "متر", "hi": "मीटर", "zh": "米", "ja": "メートル", "ms": "meter", "la": "metrum" },
+    "definition": { "en": "The length of the path travelled by light in vacuum during a time interval of ​1⁄299 792 458 of a second." },
+    "remarks": {},
+    "symbol": { "Latn": "m", "Cyrl": "м", "Arab": "م", "siunitx": "\\metre" },
+    "formula": "1 m := (c_0/299792458) s = 30,663318 ∙ c_0/Δν_{Cs}",
+    "dimensions": "L^1",
+    "is_unit_for": ["qty:coordinates", "qty:distance", "qty:length", "qty:length_height", "qty:length_path", "qty:wavelength", "qty:wavelength_vacuum", "qty:distance_focal_image", "qty:distance_focal_object", "qty:distance_image", "qty:distance_object", "qty:length_breadth", "qty:length_diameter", "qty:length_path_diffusion", "qty:length_path_free", "qty:length_path_soundparticles", "qty:length_radius", "qty:length_radius_curvature", "qty:length_radius_nucleus", "qty:length_thickness", "qty:wavelength_Compton", "cnst:radius_Bohr", "cnst:radius_electron", "cnst:radius_proton", "cnst:radius_deuteron", "cnst:wavelength_Compton", "cnst:wavelength_Compton_muon", "cnst:wavelength_Compton_tau", "cnst:wavelength_Compton_proton", "cnst:wavelength_Compton_neutron"]
+  },
+  {
+    "URI": "unit:kg",
+    "label": { "en": "kilogram", "de": "Kilogramm", "fr": "kilogramme", "es": "kilogramo", "pt": "quilograma", "it": "chilogrammo", "ro": "kilogram", "bg": "килограм", "sl": "kilogram", "cs": "kilogram", "pl": "kilogram", "ru": "килограмм", "hu": "kilogramm*", "tr": "kilogram", "el": "χιλιόγραμμο", "he": "קילוגרם", "ar": "كيلوغرام", "fa": "کیلوگرم", "hi": "किलोग्राम", "zh": "公斤", "ja": "キログラム", "ms": "kilogram", "la": "chiliogramma" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "kg", "Cyrl": "кг", "Arab": "كغ", "siunitx": "\\kilogram" },
+    "formula": "1 kg := (h/6,62607015E–34) m⁻²∙s = 1,475521E40 ∙ h∙Δν_{Cs}/c_0^2",
+    "dimensions": "M^1",
+    "is_unit_for": ["qty:mass", "qty:mass_rest", "qty:mass_defect", "qty:mass_effective", "qty:mass_reduced", "qty:mass_surplus", "cnst:mass_atomic", "cnst:mass_electron", "cnst:mass_muon", "cnst:mass_tau", "cnst:mass_proton", "cnst:mass_neutron", "cnst:mass_deuteron", "cnst:mass_triton", "cnst:mass_helion", "cnst:mass_alpha", "cnst:mass_Planck"]
+  },
+  {
+    "URI": "unit:s",
+    "label": { "en": "second", "de": "Sekunde", "fr": "seconde", "es": "segundo", "pt": "segundo", "it": "secondo", "ro": "secundă", "bg": "секунда", "sl": "sekunda", "cs": "sekunda", "pl": "sekunda", "ru": "секунда", "hu": "másodperc", "tr": "saniye", "el": "δευτερόλεπτο", "he": "שנייה", "ar": "ثانية", "fa": "ثانیه", "hi": "सैकण्ड", "zh": "秒", "ja": "秒", "ms": "saat", "la": "secundum" },
+    "definition": { "en": "The duration of 9 192 631 770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium-133 atom." },
+    "remarks": {},
+    "symbol": { "Latn": "s", "Cyrl": "с", "Arab": "ث", "siunitx": "\\second" },
+    "formula": "1 s := 9192631770 / Δν_{Cs}",
+    "dimensions": "T^1",
+    "is_unit_for": ["qty:time", "qty:time_halflife", "qty:time_meanlife", "qty:time_meanlife_decay", "qty:time_period", "qty:time_reverberation", "cnst:time_Planck"]
+  },
+  {
+    "URI": "unit:A",
+    "label": { "en": "ampere", "de": "Ampere", "fr": "ampère", "es": "amperio", "pt": "ampere", "it": "ampere", "ro": "amper", "bg": "ампер", "sl": "amper", "cs": "ampér", "pl": "amper", "ru": "ампер", "hu": "amper", "tr": "amper", "el": "αμπέρ", "he": "אמפר", "ar": "أمبير", "fa": "آمپر", "hi": "एम्पीयर", "zh": "安培", "ja": "アンペア", "ms": "ampere", "la": "amperium" },
+    "definition": { "en": "The current produced by the transit of 1/(1.602 176 634 · 10⁻¹⁹) elementary charges in one second." },
+    "remarks": {},
+    "symbol": { "Latn": "A", "Cyrl": "А", "Arab": "أ", "siunitx": "\\ampere" },
+    "formula": "1 A := e / (1,602176634E–19) s⁻¹ = 6,789686E8 ∙ Δν_{Cs} ∙ e",
+    "dimensions": "I^1",
+    "is_unit_for": ["qty:current_electric", "qty:potential_magnetic_difference", "qty:potential_magnetic_magnetomotive"]
+  },
+  {
+    "URI": "unit:K",
+    "label": { "en": "kelvin", "de": "Kelvin", "fr": "kelvin", "es": "kelvin", "pt": "kelvin", "it": "kelvin", "ro": "kelvin", "bg": "келвин", "sl": "kelvin", "cs": "kelvin", "pl": "kelwin", "ru": "кельвин", "hu": "kelvin", "tr": "kelvin", "el": "κέλβιν", "he": "קלווין", "ar": "كلفن", "fa": "کلوین", "hi": "कैल्विन", "zh": "开尔文", "ja": "ケルビン", "ms": "kelvin", "la": "kelvin" },
+    "definition": { "en": "The thermodynamic temperature corresponding to a individual energy of 1.380 649 · 10⁻²³ joule." },
+    "remarks": {},
+    "symbol": { "Latn": "K", "Cyrl": "К", "Arab": "ك", "siunitx": "\\kelvin" },
+    "formula": "1 K := (1,380649E–23/k_B) kg∙m²∙s⁻² = 2,266665 ∙ Δν_{Cs}∙h/k_B",
+    "dimensions": "Θ^1",
+    "is_unit_for": ["qty:temperature", "qty:temperature_colour", "qty:temperature_Curie", "qty:temperature_Debye", "qty:temperature_dewpoint", "qty:temperature_Fermi", "qty:temperature_Neel", "qty:temperature_transition", "cnst:temperature_triplept_water", "cnst:temperature_Planck", "cnst:relationship_atomicMassUnit_kelvin"]
+  },
+  {
+    "URI": "unit:mol",
+    "label": { "en": "mole", "de": "Mol", "fr": "mole", "es": "mol", "pt": "mol", "it": "mole", "ro": "mol", "bg": "мол", "sl": "mol", "cs": "mol", "pl": "mol", "ru": "моль", "hu": "mól", "tr": "mol", "el": "μολ", "he": "מול", "ar": "مول", "fa": "مول", "hi": "मोल (इकाई)", "zh": "摩尔", "ja": "モル", "ms": "mole", "la": "moles" },
+    "definition": { "en": "The amount of substance containing exactly 6.022 140 76 · 10²³ elementary entities.", "de": "Stoffmenge in einem System, das soviele Elementarobjekte enthält, wie Atome in 0.012 kg Kohlenstoff 12 vorliegen" },
+    "remarks": {},
+    "symbol": { "Latn": "mol", "Cyrl": "моль", "Arab": "مول", "siunitx": "\\mole" },
+    "formula": "1 mol := 6,02214076E23 / N_A",
+    "dimensions": "N^1",
+    "is_unit_for": ["qty:qchem", "qty:qchem_difference"]
+  },
+  {
+    "URI": "unit:cd",
+    "label": { "en": "candela", "de": "Candela", "fr": "candela", "es": "candela", "pt": "candela", "it": "candela", "ro": "candelă", "bg": "кандела", "sl": "kandela", "cs": "kandela", "pl": "kandela", "ru": "кандела", "hu": "kandela", "tr": "candela", "el": "καντέλα", "he": "קנדלה", "ar": "قنديلة", "fa": "کاندلا", "hi": "कॅन्डेला", "zh": "坎德拉", "ja": "カンデラ", "ms": "kandela", "la": "candela" },
+    "definition": { "en": "The luminous intensity in a given direction of a monochromatic radiation of frequency 540 · 10¹² Hz that has a radiant intensity in that direction of 1/683 W/sr." },
+    "remarks": {},
+    "symbol": { "Latn": "cd", "Cyrl": "кн", "Arab": "قد", "siunitx": "\\candela" },
+    "formula": "1 cd := (K_{cd}/683)kg∙m²∙s⁻³∙sr⁻¹ = 2,614830E10∙Δν_{Cs}²∙h∙K_{cd}",
+    "dimensions": "J^1",
+    "is_unit_for": "qty:intensity_light"
+  },
+  {
+    "URI": "unit:rad",
+    "label": { "en": "radian", "de": "Radiant", "fr": "radian", "es": "radián", "pt": "radiano", "it": "radiante", "ro": "radian", "bg": "радиан", "sl": "radian", "cs": "radián", "pl": "radian", "ru": "радиан", "hu": "radián", "tr": "radyan", "el": "ακτίνιο", "he": "רדיאן", "ar": "راديان", "fa": "رادیان", "hi": "वर्ग मीटर", "zh": "弧度", "ja": "ラジアン", "ms": "radian", "la": "radian" },
+    "definition": { "en": "The plane angle corresponding to 1/(2π) of a full turn." },
+    "remarks": {},
+    "symbol": { "Latn": "rad", "Cyrl": "рад", "Arab": "راد", "siunitx": "\\radian" },
+    "formula": "1 rad := 1 m / m",
+    "dimensions": "1",
+    "is_unit_for": ["qty:angle_plane", "qty:angle_loss", "qty:angle_phase_difference", "qty:angle_rotation"]
+  },
+  {
+    "URI": "unit:sr",
+    "label": { "en": "steradian", "de": "Steradiant", "fr": "stéradian", "es": "estereorradián", "pt": "esterradiano", "it": "steradiante", "ro": "steradian", "bg": "стерадиан", "sl": "steradian", "cs": "steradián", "pl": "steradian", "ru": "стерадиан", "hu": "szteradián", "tr": "steradyan", "el": "στερακτίνιο", "he": "סטרדיאן", "ar": "ستراديان", "fa": "استرادیان", "hi": "घन मीटर", "zh": "球面度", "ja": "ステラジアン", "ms": "steradian", "la": "steradian" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "sr", "Cyrl": "ср", "Arab": "سر", "siunitx": "\\steradian" },
+    "formula": "1 sr := 1 m² / m²",
+    "dimensions": "1",
+    "is_unit_for": "qty:angle_solid"
+  },
+  {
+    "URI": "unit:Hz",
+    "label": { "en": "hertz", "de": "Hertz", "fr": "hertz", "es": "hercio", "pt": "hertz", "it": "hertz", "ro": "hertz", "bg": "херц", "sl": "hertz", "cs": "hertz", "pl": "herc", "ru": "герц", "hu": "hertz", "tr": "hertz", "el": "χερτζ", "he": "הרץ", "ar": "هرتز", "fa": "هرتز", "hi": "हर्ट्ज", "zh": "赫兹", "ja": "ヘルツ", "ms": "hertz", "la": "hertzium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Hz", "Cyrl": "Гц", "Arab": "هز", "siunitx": "\\hertz" },
+    "formula": "1 Hz := 1 s⁻¹",
+    "dimensions": "T^-1",
+    "is_unit_for": "qty:frequency"
+  },
+  {
+    "URI": "unit:N",
+    "label": { "en": "newton", "de": "Newton", "fr": "newton", "es": "newton", "pt": "newton", "it": "newton", "ro": "newton", "bg": "нютон", "sl": "newton", "cs": "newton", "pl": "niuton", "ru": "ньютон", "hu": "newton", "tr": "newton", "el": "νιούτον", "he": "ניוטון", "ar": "نيوتن", "fa": "نیوتن", "hi": "न्यूटन", "zh": "牛顿", "ja": "ニュートン", "ms": "newton", "la": "newtonium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "N", "Cyrl": "Н", "Arab": "ن", "siunitx": "\\newton" },
+    "formula": "1 N := 1 kg · m · s⁻²",
+    "dimensions": "L^1 * M^1 * T^-2",
+    "is_unit_for": ["qty:force", "qty:force_weight"]
+  },
+  {
+    "URI": "unit:Pal",
+    "label": { "en": "pascal", "de": "Pascal", "fr": "pascal", "es": "pascal", "pt": "pascal", "it": "pascal", "ro": "pascal", "bg": "паскал", "sl": "pascal", "cs": "pascal", "pl": "paskal", "ru": "паскаль", "hu": "pascal", "tr": "pascal", "el": "πασκάλ", "he": "פסקל", "ar": "باسكال", "fa": "پاسگال", "hi": "पास्कल", "zh": "帕斯卡", "ja": "パスカル", "ms": "pascal", "la": "pascalium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Pa", "Cyrl": "Па", "Arab": "با", "siunitx": "\\pascal" },
+    "formula": "1 Pa := 1 N / m²",
+    "dimensions": "L^-1 * M^1 * T^-2",
+    "is_unit_for": ["qty:fugacity", "qty:pressure", "qty:pressure_osmotic", "qty:modulus_bulk", "qty:modulus_elasticity", "qty:modulus_shear", "qty:pressure_gauge", "qty:pressure_partial", "qty:pressure_sound", "qty:pressure_static", "qty:stress_normal", "qty:stress_shear", "cnst:pressure_atmosphere", "cnst:pressure_standard"]
+  },
+  {
+    "URI": "unit:J",
+    "label": { "en": "joule", "de": "Joule", "fr": "joule", "es": "julio", "pt": "joule", "it": "joule", "ro": "joule", "bg": "джаул", "sl": "joule", "cs": "joule", "pl": "dżul", "ru": "джоуль", "hu": "joule", "tr": "joule", "el": "τζάουλ", "he": "ג'ול", "ar": "جول", "fa": "ژول", "hi": "जूल", "zh": "焦耳", "ja": "ジュール", "ms": "joule", "la": "joulium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "J", "Cyrl": "Дж", "Arab": "ج", "siunitx": "\\joule" },
+    "formula": "1 J := 1 kg · m^2 · s⁻²",
+    "dimensions": "L^2 * M^1 * T^-2",
+    "is_unit_for": ["qty:energy", "qty:energy_enthalpy", "qty:energy_Gibbs", "qty:energy_heat", "qty:energy_Helmholtz", "qty:energy_internal", "qty:energy_kinetic", "qty:energy_potential", "qty:energy_radiant", "qty:energy_work", "qty:energy_grandpotential", "qty:energy_reaction", "qty:energy_resonance", "qty:energy_rest", "qty:energy_sound", "cnst:energy_Hartree"]
+  },
+  {
+    "URI": "unit:W",
+    "label": { "en": "watt", "de": "Watt", "fr": "watt", "es": "vatio", "pt": "watt", "it": "watt", "ro": "watt", "bg": "ват", "sl": "watt", "cs": "watt", "pl": "wat", "ru": "ватт", "hu": "watt", "tr": "watt", "el": "βατ", "he": "ואט", "ar": "واط", "fa": "وات", "hi": "वाट", "zh": "瓦特", "ja": "ワット", "ms": "watt", "la": "wattium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "W", "Cyrl": "Вт", "Arab": "و", "siunitx": "\\watt" },
+    "formula": "1 W := 1 J / s",
+    "dimensions": "L^2 * M^1 * T^-3",
+    "is_unit_for": ["qty:power", "qty:power_electric_active", "qty:power_radiant", "qty:power_sound", "qty:power_thermic"]
+  },
+  {
+    "URI": "unit:C",
+    "label": { "en": "coulomb", "de": "Coulomb", "fr": "coulomb", "es": "culombio", "pt": "coulomb", "it": "coulomb", "ro": "coulomb", "bg": "кулон", "sl": "coulomb", "cs": "coulomb", "pl": "kulomb", "ru": "кулон", "hu": "coulomb", "tr": "coulomb", "el": "κουλόμπ", "he": "קולון", "ar": "كولوم", "fa": "کولمب/کولن", "hi": "कूलम्ब", "zh": "库伦", "ja": "クーロン", "ms": "coulomb", "la": "coulombium" },
+    "definition": { "en": "The charge corresponding exactly to 1/(1.602 176 634 · 10⁻¹⁹) = 6.241509074 · 10¹⁸ elementary charges." },
+    "remarks": {},
+    "symbol": { "Latn": "C", "Cyrl": "Кл", "Arab": "كل", "siunitx": "\\coulomb" },
+    "formula": "1 C := 1 A · s",
+    "dimensions": "T^1 * I^1",
+    "is_unit_for": ["qty:charge_electric", "qty:fieldFlux_electric", "cnst:charge_elementary"]
+  },
+  {
+    "URI": "unit:V",
+    "label": { "en": "volt", "de": "Volt", "fr": "volt", "es": "voltio", "pt": "volt", "it": "volt", "ro": "volt", "bg": "волт", "sl": "volt", "cs": "volt", "pl": "wolt", "ru": "вольт", "hu": "volt", "tr": "volt", "el": "βολτ", "he": "וולט", "ar": "فولت", "fa": "ولت", "hi": "वोल्ट", "zh": "伏特", "ja": "ボルト", "ms": "volt", "la": "voltium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "V", "Cyrl": "В", "Arab": "ف", "siunitx": "\\volt" },
+    "formula": "1 V := 1 J / C",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-1",
+    "is_unit_for": ["qty:potential_electric", "qty:potential_electric_difference", "qty:potential_electric_electromotive"]
+  },
+  {
+    "URI": "unit:F",
+    "label": { "en": "farad", "de": "Farad", "fr": "farad", "es": "faradio", "pt": "farad", "it": "farad", "ro": "farad", "bg": "фарад", "sl": "farad", "cs": "farad", "pl": "farad", "ru": "фарада", "hu": "farad", "tr": "farad", "el": "φαράντ", "he": "פאראד", "ar": "فاراد", "fa": "فاراد", "hi": "फैराड", "zh": "法拉", "ja": "ファラド", "ms": "farad", "la": "faradium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "F", "Cyrl": "Ф", "Arab": "فر", "siunitx": "\\farad" },
+    "formula": "1 F := 1 C / V",
+    "dimensions": "L^-2 * M^-1 * T^4 * I^2",
+    "is_unit_for": "qty:capacity_electric"
+  },
+  {
+    "URI": "unit:Ohm",
+    "label": { "en": "ohm", "de": "Ohm", "fr": "ohm", "es": "ohmio", "pt": "ohm", "it": "ohm", "ro": "ohm", "bg": "ом", "sl": "ohm", "cs": "ohm", "pl": "om", "ru": "ом", "hu": "ohm", "tr": "ohm", "el": "ωμ", "he": "אוהם", "ar": "أوم", "fa": "اهم", "hi": "ओह्म", "zh": "欧姆", "ja": "オーム", "ms": "ohm", "la": "ohmium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Ω", "Cyrl": "Ом", "Arab": "Ω", "siunitx": "\\ohm" },
+    "formula": "1 Ω := 1 V / A",
+    "dimensions": "L^2 * M^1 * T^-3 * I^-2",
+    "is_unit_for": ["qty:impedance_electric", "qty:reactance_electric", "qty:resistance_electric", "cnst:impedance_vacuum", "cnst:resistance_Klitzing", "cnst:quantum_conductance_inverse"]
+  },
+  {
+    "URI": "unit:Sie",
+    "label": { "en": "siemens", "de": "Siemens", "fr": "siemens", "es": "siemens", "pt": "siemens", "it": "siemens", "ro": "siemens", "bg": "сименс", "sl": "siemens", "cs": "siemens", "pl": "simens", "ru": "сименс", "hu": "siemens", "tr": "siemens", "el": "ζίμενς", "he": "סימנס", "ar": "سيمنز", "fa": "زیمنس", "hi": "सीमैन्स", "zh": "西门子", "ja": "ジーメンス", "ms": "siemens", "la": "siemens" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "S", "Cyrl": "См", "Arab": "سن", "siunitx": "\\siemens" },
+    "formula": "1 S := 1 Ω⁻¹",
+    "dimensions": "L^-2 * M^-1 * T^3 * I^2",
+    "is_unit_for": ["qty:admittance_electric", "qty:conductance_electric", "qty:susceptance_electric", "cnst:quantum_conductance"]
+  },
+  {
+    "URI": "unit:Wb",
+    "label": { "en": "weber", "de": "Weber", "fr": "weber", "es": "weber", "pt": "weber", "it": "weber", "ro": "weber", "bg": "вебер", "sl": "weber", "cs": "weber", "pl": "weber", "ru": "вебер", "hu": "weber", "tr": "weber", "el": "βέμπερ", "he": "ובר", "ar": "ويبر; فيبر", "fa": "وبر", "hi": "वैबर", "zh": "韦伯", "ja": "ウェーバ", "ms": "weber", "la": "weberium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Wb", "Cyrl": "Вб", "Arab": "فب", "siunitx": "\\weber" },
+    "formula": "1 Wb := 1 V · s",
+    "dimensions": "L^2 * M^1 * T^-2 * I^-1",
+    "is_unit_for": ["qty:fieldFlux_magnetic", "cnst:quantum_fieldFlux_magnetic"]
+  },
+  {
+    "URI": "unit:T",
+    "label": { "en": "tesla", "de": "Tesla", "fr": "tesla", "es": "tesla", "pt": "tesla", "it": "tesla", "ro": "tesla", "bg": "тесла", "sl": "tesla", "cs": "tesla", "pl": "tesla", "ru": "тесла", "hu": "tesla", "tr": "tesla", "el": "τέσλα", "he": "טסלה", "ar": "تسلا", "fa": "تسلا", "hi": "टैस्ला", "zh": "特斯拉", "ja": "テスラ", "ms": "tesla", "la": "tesla" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "T", "Cyrl": "Тл", "Arab": "ت", "siunitx": "\\tesla" },
+    "formula": "1 T := 1 Wb / m²",
+    "dimensions": "M^1 * T^-2 * I^-1",
+    "is_unit_for": ["qty:fieldFluxDensity_magnetic", "cnst:fluxDensity_magnetic_earth"]
+  },
+  {
+    "URI": "unit:H",
+    "label": { "en": "henry", "de": "Henry", "fr": "henry", "es": "henrio", "pt": "henry", "it": "henry", "ro": "henry", "bg": "хенри", "sl": "henry", "cs": "henry", "pl": "henr", "ru": "генри", "hu": "henry", "tr": "henry", "el": "χένρι", "he": "הנרי", "ar": "هنري", "fa": "هنری", "hi": "हेनरी", "zh": "亨利", "ja": "ヘンリー", "ms": "henry", "la": "henrium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "H", "Cyrl": "Гн", "Arab": "ھ", "siunitx": "\\henry" },
+    "formula": "1 H := 1 Ω ∙ s",
+    "dimensions": "L^2 * M^1 * T^-2 * I^-2",
+    "is_unit_for": ["qty:inductance", "qty:inductance_mutual", "qty:inductance_self", "qty:permeance_magnetic"]
+  },
+  {
+    "URI": "unit:Cel",
+    "label": { "en": "degree Celsius", "de": "Grad Celsius", "fr": "degré celsius", "es": "grado celsius", "pt": "grau celsius", "it": "grado celsius", "ro": "grad celsius", "bg": "градус Целзий", "sl": "stopinja Celzija", "cs": "stupně celsia", "pl": "stopień celsjusza", "ru": "градус Цельсия", "hu": "Celsius-fok", "tr": "celsius", "el": "βαθμός Κελσίου", "he": "צלזיוס", "ar": "درجة مئوية", "fa": "درجه سانتی گراد/سلسیوس", "hi": "सेल्सियस", "zh": "摄氏度", "ja": "セルシウス度", "ms": "darjah celsius", "la": "gradus celsii" },
+    "definition": { "en": "Special name for the kelvin for use in stating values of temperature referred to the melting point of water (273.15 K)." },
+    "remarks": {},
+    "symbol": { "Latn": "°C", "Cyrl": "°С", "Arab": "س°", "siunitx": "\\degreecelsius" },
+    "dimensions": "Θ^1",
+    "is_unit_for": ["qty:temperature_Celsius", "cnst:temperature_critical_air"]
+  },
+  {
+    "URI": "unit:lm",
+    "label": { "en": "lumen", "de": "Lumen", "fr": "lumen", "es": "lumen", "pt": "lumen", "it": "lumen", "ro": "lumen", "bg": "лумен", "sl": "lumen", "cs": "lumen", "pl": "lumen", "ru": "лумен", "hu": "lumen", "tr": "lümen", "el": "λούμεν", "he": "לומן", "ar": "لومن", "fa": "لومن", "hi": "ल्यूमैन", "zh": "流明", "ja": "ルーメン", "ms": "lumen", "la": "lumen" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "lm", "Cyrl": "лм", "Arab": "لم", "siunitx": "\\lumen" },
+    "formula": "1 lm := 1 cd · sr",
+    "dimensions": "J^1",
+    "is_unit_for": "qty:power_light"
+  },
+  {
+    "URI": "unit:lx",
+    "label": { "en": "lux", "de": "Lux", "fr": "lux", "es": "lux", "pt": "lux", "it": "lux", "ro": "lux", "bg": "лукс", "sl": "luks", "cs": "lux", "pl": "luks", "ru": "люкс", "hu": "lux", "tr": "lüks", "el": "lux", "he": "לוקס", "ar": "لكس", "fa": "لوکس", "hi": "लक्स", "zh": "勒克斯", "ja": "ルクス", "ms": "lux" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "lx", "Cyrl": "лк", "Arab": "لك", "siunitx": "\\lux" },
+    "formula": "1 lx := 1 lm · m⁻²",
+    "dimensions": "L^-2 * J^1",
+    "is_unit_for": ["qty:illuminance", "qty:radiance_light"]
+  },
+  {
+    "URI": "unit:Bq",
+    "label": { "en": "becquerel", "de": "Becquerel", "fr": "becquerel", "es": "becquerel", "pt": "becquerel", "it": "becquerel", "ro": "becquerel", "bg": "бекерел", "sl": "becquerel", "cs": "becquerel", "pl": "bekerel", "ru": "беккерель", "hu": "becquerel", "tr": "bekerel", "el": "μπεκερέλ", "he": "בקרל", "ar": "بيكريل", "fa": "بکرل", "hi": "बैक्वेरल", "zh": "贝克勒尔", "ja": "ベクレル", "ms": "becquerel", "la": "becquerelium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Bq", "Cyrl": "Бк", "Arab": "بك", "siunitx": "\\becquerel" },
+    "formula": "1 Bq := 1 s⁻¹",
+    "dimensions": "T^-1",
+    "is_unit_for": "qty:activity_radio"
+  },
+  {
+    "URI": "unit:Gy",
+    "label": { "en": "gray", "de": "Gray", "fr": "gray", "es": "gray", "pt": "gray", "it": "gray", "ro": "gray", "bg": "грей", "sl": "gray", "cs": "gray", "pl": "grej", "ru": "грэй", "hu": "gray", "tr": "gray", "el": "γκρέι", "he": "גריי", "ar": "جراي; غراي", "fa": "گری", "hi": "ग्रेय", "zh": "戈瑞", "ja": "グレイ", "ms": "gray", "la": "graium" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Gy", "Cyrl": "Гр", "Arab": "غي", "siunitx": "\\ggray" },
+    "formula": "1 Gy := 1 J / kg",
+    "dimensions": "L^2 * T^-2",
+    "is_unit_for": ["qty:dosis_absorbed", "qty:dosis_absorbed_specific", "qty:dosis_kerma"]
+  },
+  {
+    "URI": "unit:Sv",
+    "label": { "en": "sievert", "de": "Sievert", "fr": "sievert", "es": "sievert", "pt": "sievert", "it": "sievert", "ro": "sievert", "bg": "сиверт", "sl": "sievert", "cs": "sievert", "pl": "siwert", "ru": "зиверт", "hu": "sievert", "tr": "sievert", "el": "σίβερτ", "he": "זיוורט", "ar": "زيفرت", "fa": "سیورت", "hi": "सैवर्ट", "zh": "西弗", "ja": "シーベルト", "ms": "sievert", "la": "sievertum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Sv", "Cyrl": "Зв", "Arab": "سف", "siunitx": "\\sievert" },
+    "formula": "1 Sv := 1 J / kg",
+    "dimensions": "L^2 * T^-2",
+    "is_unit_for": "qty:dosis_equivalent"
+  },
+  {
+    "URI": "unit:kat",
+    "label": { "en": "katal", "de": "Katal", "fr": "katal", "es": "katal", "pt": "katal", "it": "katal", "ro": "katal", "bg": "катал", "sl": "katal", "cs": "katal", "pl": "katal", "ru": "катал", "hu": "katal", "tr": "katal", "el": "κατάλ", "he": "קטל", "ar": "كاتال", "fa": "کاتال", "hi": "कटल", "zh": "开特", "ja": "カタール", "ms": "katal" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "kat", "Cyrl": "кат", "Arab": "كت", "siunitx": "\\katal" },
+    "formula": "1 kat := 1 mol · s⁻¹",
+    "dimensions": "T^-1 * N^1",
+    "is_unit_for": "qty:qchem_rate"
+  },
+  {
+    "URI": "unit:1",
+    "label": { "en": "one", "de": "Eins", "fr": "un", "es": "uno", "pt": "um", "it": "uno", "ro": "unu", "bg": "едно", "cs": "jeden", "pl": "jeden", "ru": "один", "tr": "bir", "el": "ένα", "he": "אחד", "ar": "واحد", "fa": "بدون بعد", "hi": "एक", "zh": "一", "ja": "一", "ms": "satu", "la": "unum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "1", "Cyrl": "1", "Arab": "١", "siunitx": "\\one" },
+    "dimensions": "1",
+    "is_unit_for": ["qty:electronegativity", "qty:equilibrium_constant", "qty:level_pH", "qty:nr_mass", "qty:nr_neutrons", "qty:nr_oxidation_state", "qty:nr_protons", "qty:nrch_Mach", "qty:number_particles", "qty:refractiveIndex", "qty:constant_dissociation_acid", "qty:absorbance_decadic", "qty:absorbance_napierian", "qty:activity_chemical", "qty:activity_chemical_standard", "qty:albedo", "qty:charge_electric_relative", "qty:coefficient_activity", "qty:coefficient_stoichiometric", "qty:constant_Madelung", "qty:coordinates_color", "qty:efficacy_light", "qty:efficiency", "qty:factor_coupling", "qty:factor_Lande_atom", "qty:factor_Lande_nucleus", "qty:factor_leakage", "qty:factor_loss", "qty:factor_multiplication", "qty:factor_multiplication_effective", "qty:factor_multiplication_limit", "qty:factor_osmotic", "qty:factor_power_electric", "qty:factor_quality_electric", "qty:factor_quality_nuclear"]
+  },
+  {
+    "URI": "unit:B",
+    "label": { "en": "bel", "de": "Bel", "fr": "bel", "es": "belio", "pt": "bel", "it": "bel", "ro": "bel", "bg": "бел", "sl": "bel", "cs": "bel", "pl": "bel", "ru": "бел", "hu": "bel", "tr": "bel", "el": "μπέλ", "he": "בל", "ar": "بل", "fa": "بل", "hi": "बेल", "zh": "贝", "ja": "ベル", "ms": "bel" },
+    "definition": { "en": "The level difference corresponding to an energy (or power, or intensity) ratio of 10." },
+    "remarks": {},
+    "symbol": { "Latn": "B", "Cyrl": "Б", "Arab": "بل", "siunitx": "\\bel" },
+    "dimensions": "1",
+    "is_unit_for": ["qty:level_pressure_sound", "qty:absorbance_sound", "qty:level_energy_sound", "qty:level_exposure_sound", "qty:level_irradiance_sound", "qty:level_irradiance_sound", "qty:level_power_sound"]
+  },
+  {
+    "URI": "unit:var",
+    "label": { "en": "volt-ampere reactive", "de": "Voltampere Reaktiv", "fr": "voltampère réactif", "es": "voltiamperio reactivo", "pt": "voltampere reativo", "it": "voltampere reattivo", "ro": "volt-amper reactiv", "bg": "волт-ампер реактивен", "cs": "voltampér reaktanční", "pl": "wolt amper reaktancyjny", "ru": "вольт-ампер реактивный", "hu": "volt-amper-reaktiv", "tr": "reaktif volt amper", "el": "αντιδραστικό βολτ-αμπέρ", "he": "וולט-אמפר תגובתי", "ar": "الفولت أمبير ردي", "fa": "ولت-آمپر راکتیو", "hi": "प्रतिघाती वोल्ट-ऐम्पियर", "zh": "乏", "ja": "反応性ボルト - アンペア", "ms": "reaktif volt-ampere" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "var", "Cyrl": "вар", "Arab": "(?var)" },
+    "formula": "1 var := 1 V · A",
+    "dimensions": "L^2 * M^1 * T^-3",
+    "is_unit_for": "qty:power_electric_reactive"
+  },
+  {
+    "URI": "unit:m2",
+    "label": { "en": "square metre", "de": "Quadratmeter", "fr": "mètre carré", "es": "metro cuadrado", "pt": "metro quadrado", "it": "metro quadrato", "ro": "metru pătrat", "bg": "квадратен метър", "sl": "kvadratni meter", "cs": "čtvereční metr", "pl": "metr kwadratowy", "ru": "квадратный метр", "hu": "négyzetméter", "tr": "metrekare", "el": "τετραγωνικό μέτρο", "he": "מטר רבוע", "ar": "متر مربع", "fa": "متر مربع", "hi": "वर्ग मीटर", "zh": "平方米", "ja": "平方メートル", "ms": "meter persegi", "la": "metrum quadratum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m²", "Cyrl": "м²", "Arab": "م²", "siunitx": "\\metre\\tothe{2}" },
+    "dimensions": "L^2",
+    "is_unit_for": ["qty:area", "qty:area_crosssection", "qty:area_absorption", "qty:area_crosssection_total", "cnst:area_crosssection_Thomson"]
+  },
+  {
+    "URI": "unit:m3",
+    "label": { "en": "cubic metre", "de": "Kubikmeter", "fr": "mètre cube", "es": "metro cúbico", "pt": "metro cúbico", "it": "metro cubo", "ro": "metru cub", "bg": "кубичен метър", "sl": "kubični meter", "cs": "metr krychlový", "pl": "metr sześcienny", "ru": "кубический метр", "tr": "metreküp", "el": "κυβικό μετρο", "he": "מטר מעוקב", "ar": "متر مكعب", "fa": "متر مکعب", "hi": "घन मीटर", "zh": "立方米", "ja": "立方メートル", "ms": "meter kubik", "la": "metrum cubicum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m³", "Cyrl": "м³", "Arab": "م³", "siunitx": "\\metre\\tothe{3}" },
+    "dimensions": "L^3",
+    "is_unit_for": "qty:volume"
+  },
+  {
+    "URI": "unit:m4",
+    "label": { "en": "metre to the power four", "de": "Meter hoch vier", "fr": "mètre à la puissance quatre", "es": "metro elevado a cuatro", "pt": "metro elevado a quatro", "it": "metro alla quarta" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m⁴", "Cyrl": "м⁴", "Arab": "م⁴", "siunitx": "\\metre\\tothe{4}" },
+    "dimensions": "L^4",
+    "is_unit_for": ["qty:inertia_area", "qty:inertia_area_polar"]
+  },
+  {
+    "URI": "unit:m-3",
+    "label": { "en": "metre to the power minus three", "de": "Meter hoch minus drei", "fr": "mètre à la puissance moins trois", "es": "metro elevado a menos tres", "pt": "metro elevado a menos três", "it": "metro alla meno tre", "ru": "метр в минус третьей степени", "tr": "bir bölü metreküp", "fa": "بر متر مکعب", "zh": "立方米分之一", "ja": "毎立方メートル", "ms": "per meter kubik; meter kuasa negatif tiga" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m⁻³", "Cyrl": "м⁻³", "Arab": "م⁻³", "siunitx": "\\metre\\tothe{-3}" },
+    "dimensions": "L^-3",
+    "is_unit_for": ["qty:number_volumic", "qty:concentration_number_volume", "qty:number_volumic_ions", "qty:number_volumic_particles", "cnst:constant_Loschmidt_atmosphere", "cnst:constant_Loschmidt_standard"]
+  },
+  {
+    "URI": "unit:m-1",
+    "label": { "en": "metre to the power minus one", "de": "Meter hoch minus eins", "fr": "mètre à la puissance moins un", "es": "metro elevado a menos uno", "pt": "metro elevado a menos um", "it": "metro alla meno uno", "sl": "meter na minus ena", "ru": "метр в минус первой степени", "tr": "bir bölü metre", "fa": "بر متر", "zh": "米分之一", "ja": "毎メートル", "ms": "per meter; meter kuasa negatif satu" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m⁻¹", "Cyrl": "м⁻¹", "Arab": "م⁻¹", "siunitx": "\\metre\\tothe{-1}" },
+    "dimensions": "L^-1",
+    "is_unit_for": ["qty:wavenumber", "qty:area_crosssection_total_volumic", "qty:area_crosssection_volumic", "qty:curvature", "qty:lensPower", "qty:wavenumber_vacuum", "cnst:constant_Rydberg"]
+  },
+  {
+    "URI": "unit:K-1",
+    "label": { "en": "kelvin to the power minus one", "de": "Kelvin hoch minus eins", "fr": "kelvin à la puissance moins un", "es": "kelvin elevado a menos uno", "pt": "kelvin elevado a menos um", "it": "kelvin alla meno uno", "ru": "кельвин в минус первой степени", "tr": "bir bölü kelvin", "fa": "بر کلوین", "zh": "开尔文分之一", "ja": "毎ケルビン", "ms": "per kelvin" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "K⁻¹", "Cyrl": "К⁻¹", "Arab": "ك⁻¹", "siunitx": "\\kelvin\\tothe{-1}" },
+    "dimensions": "Θ^-1",
+    "is_unit_for": ["qty:expansion_lineic", "qty:expansion_pressure", "qty:expansion_volumic"]
+  },
+  {
+    "URI": "unit:mol-1",
+    "label": { "en": "mole to the power minus one", "de": "Mol hoch minus eins", "fr": "mole à la puissance moins un", "es": "mol elevado a menos uno", "pt": "mol elevado a menos um", "it": "mole alla meno uno", "ru": "моль в минус первой степени", "tr": "bir bölü mol", "fa": "بر مول", "zh": "摩尔分之一", "ja": "毎モル", "ms": "per mol" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "mol⁻¹", "Cyrl": "моль⁻¹", "Arab": "مول⁻¹", "siunitx": "\\mole\\tothe{-1}" },
+    "dimensions": "N^-1",
+    "is_unit_for": "cnst:constant_Avogadro"
+  },
+  {
+    "URI": "unit:A.m-1",
+    "label": { "en": "ampere per metre", "de": "Ampere je Meter", "fr": "ampère par mètre", "es": "amperio por metro", "pt": "ampere por metro", "it": "ampere al metro", "ro": "ampere pe metru", "sl": "amper na meter", "cs": "ampérů na metr", "pl": "amper na metr", "ru": "ампер на метр", "tr": "amper bölü metre", "ar": "مقياس التبادل، الأس السالب للمتر", "fa": "آمپر بر متر", "hi": "प्रति मीटर एम्पीयर", "zh": "安培每米", "ja": "アンペア毎メートル", "ms": "ampere per meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "A/m", "Cyrl": "А/м", "Arab": "أ\\م", "siunitx": "\\ampere\\per\\metre" },
+    "dimensions": "L^-1 * I^1",
+    "is_unit_for": ["qty:fieldStrength_magnetic", "qty:current_electric_lineic", "qty:dipole_magnetic_volumic"]
+  },
+  {
+    "URI": "unit:A.m-2",
+    "label": { "en": "ampere per square metre", "de": "Ampere je Quadratmeter", "fr": "ampère par mètre carré", "es": "amperio por metro cuadrado", "pt": "ampere por metro quadrado", "it": "ampere al metro quadrato", "ro": "ampere pe metru pătrat", "sl": "amper na kvadratni meter", "cs": "ampér na metr čtvereční", "pl": "amper na metr kwadratowy", "ru": "ампер на квадратный метр", "tr": "amper bölü metre kare", "ar": "أمبير في المتر المربع", "fa": "آمپر بر مترمربع", "hi": "एम्पीयर प्रति वर्ग मीटर", "zh": "安培每平方米", "ja": "アンペア毎平方メートル", "ms": "ampere per meter persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "A/m²", "Cyrl": "А/м²", "Arab": "أ\\م²", "siunitx": "\\ampere\\per\\metre\\tothe{2}" },
+    "dimensions": "L^-2 * I^1",
+    "is_unit_for": "qty:current_electric_areic"
+  },
+  {
+    "URI": "unit:C.m",
+    "label": { "en": "coulomb metre", "de": "Coulombmeter", "fr": "coulomb-mètre", "es": "culombio metro", "pt": "coulomb-metro", "it": "coulomb per metro", "ro": "coulomb-metru", "cs": "coulomb metr", "ru": "кулон-метр", "tr": "coulomb metre", "ar": "كولوم متر", "fa": "نیوتون متر", "hi": "कूलम्ब मीटर", "zh": "库伦米", "ja": "クーロンメートル", "ms": "coulomb meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "C·m", "Cyrl": "Кл·м", "Arab": "كل·م", "siunitx": "\\coulomb\\metre" },
+    "dimensions": "L^1 * T^1 * I^1",
+    "is_unit_for": "qty:dipole_electric"
+  },
+  {
+    "URI": "unit:C.m-2",
+    "label": { "en": "coulomb per square metre", "de": "Coulomb je Quadratmeter", "fr": "coulomb par mètre carré", "es": "culombio por metro cuadrado", "pt": "coulomb por metro quadrado", "it": "coulomb al metro quadrato", "ro": "coulomb pe metru pătrat", "cs": "coulomb na metr čtvereční", "pl": "kulomb na metr kwadratowy", "ru": "кулон на квадратный метр", "tr": "coulomb bölü metre kare", "ar": "كولوم في المتر المربع", "fa": "کولمب/کولن بر مترمربع", "hi": "कूलम्ब प्रति वर्ग मीटर", "zh": "库伦每平方米", "ja": "クーロン毎平方メートル", "ms": "coulomb per meter persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "C/m²", "Cyrl": "Кл/м²", "Arab": "كل\\م²", "siunitx": "\\coulomb\\per\\metre\\tothe{2}" },
+    "dimensions": "L^-2 * T^1 * I^1",
+    "is_unit_for": ["qty:fieldFluxDensity_electric", "qty:charge_electric_areic", "qty:dipole_electric_volumic"]
+  },
+  {
+    "URI": "unit:C.m2",
+    "label": { "en": "coulomb square metre", "de": "Coulomb mal Quadratmeter", "it": "coulomb per metro quadrato", "fa": "کولن متر مربع", "zh": "库仑平方米", "ms": "coulomb meter persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "C·m²", "Cyrl": "Кл·м²", "Arab": "كل·م²", "siunitx": "\\coulomb\\metre\\tothe{2}" },
+    "dimensions": "L^2 * T^1 * I^1",
+    "is_unit_for": "qty:quadrupole_electric"
+  },
+  {
+    "URI": "unit:C.m2.V-1",
+    "label": { "en": "coulomb square metre per volt", "de": "Coulomb mal Quadratmeter je Volt", "it": "coulomb per metro quadrato al volt", "fa": "کولن متر مربع بر ولت", "zh": "库伦平方米每伏特" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "C·m²/V", "Cyrl": "Кл·м²/В", "Arab": "كل·م²\\ف", "siunitx": "\\coulomb\\metre\\tothe{2}\\per\\volt" },
+    "dimensions": "M^-1 * T^4 * I^2",
+    "is_unit_for": "qty:polarizability_electric"
+  },
+  {
+    "URI": "unit:F.m-1",
+    "label": { "en": "farad per metre", "de": "Farad je Meter", "fr": "farad par mètre", "es": "faradio por metro", "pt": "farad por metro", "it": "farad al metro", "ro": "farad pe metru", "sl": "farad na meter", "cs": "faradů na metr", "pl": "farad na metr", "ru": "фарада на метр", "tr": "farad bölü metre", "ar": "مقياس التبادل، الأس السالب للمتر", "fa": "فاراد بر متر", "hi": "प्रति मीटर फैराड", "zh": "法拉每米", "ja": "ファラド毎メートル", "ms": "farad per meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "F/m", "Cyrl": "Ф/м", "Arab": "فر\\م", "siunitx": "\\farad\\per\\metre" },
+    "dimensions": "L^-3 * M^-1 * T^4 * I^2",
+    "is_unit_for": ["qty:permittivity_electric", "cnst:permittivity_electric_vacuum"]
+  },
+  {
+    "URI": "unit:Hz.K-1",
+    "label": { "en": "hertz per kelvin", "de": "Hertz je Kelvin", "fr": "hertz par kelvin", "es": "hercio por kelvin", "pt": "hertz por kelvin", "it": "hertz al kelvin", "ro": "hertz pe kelvin", "cs": "hertz na kelvin", "pl": "herc na kelwin", "ru": "герц на кельвин", "tr": "hertz bölü kelvin", "ar": "هرتز لكل كلفن", "fa": "هرتز بر کلوین", "hi": "हर्ट्ज प्रति कैल्विन", "ja": "ヘルツ毎立方メートル", "ms": "hertz per kelvin" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Hz/K", "Cyrl": "Гц/К", "Arab": "هز\\ك", "siunitx": "\\hertz\\per\\kelvin" },
+    "dimensions": "T^-1 * Θ^-1",
+    "is_unit_for": "cnst:displacement_Wien_frequency"
+  },
+  {
+    "URI": "unit:J.K-1",
+    "label": { "en": "joule per kelvin", "de": "Joule je Kelvin", "fr": "joule par kelvin", "es": "julio por kelvin", "pt": "joule por kelvin", "it": "joule al kelvin", "ro": "joule pe kelvin", "sl": "joule na kelvin", "cs": "joule na kelvin", "pl": "dżul na kelwin", "ru": "джоуль на кельвин", "tr": "joule bölü kelvin", "ar": "جول لكل كلفن", "fa": "ژول بر کلوین", "hi": "जूल प्रति कैल्विन", "zh": "焦耳每开尔文", "ja": "ジュール毎立方メートル", "ms": "joule per kelvin" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "J/K", "Cyrl": "Дж/К", "Arab": "ج\\ك", "siunitx": "\\joule\\per\\kelvin" },
+    "dimensions": "L^2 * M^1 * T^-2 * Θ^-1",
+    "is_unit_for": ["qty:capacity_thermic", "qty:entropy", "cnst:constant_Boltzmann"]
+  },
+  {
+    "URI": "unit:J.mol-1",
+    "label": { "en": "joule per mole", "de": "Joule je Mol", "fr": "joule par mole", "es": "julio por mol", "pt": "joule por mol", "it": "joule alla mole", "ro": "joule pe mol", "sl": "joule na mol", "cs": "joule na mol", "pl": "dżul na mol", "ru": "джоуль на моль", "tr": "joule bölü metre küp", "ar": "جول لكل مول", "fa": "ژول بر مول", "hi": "जूल प्रति मोल (इकाई)", "zh": "焦耳每摩尔", "ja": "ジュール毎立方メートル", "ms": "joule per mole" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "J/mol", "Cyrl": "Дж/моль", "Arab": "ج\\مول", "siunitx": "\\joule\\per\\mole" },
+    "dimensions": "L^2 * M^1 * T^-2 * N^-1",
+    "is_unit_for": ["qty:potential_chemical", "qty:affinity_chemical", "qty:energy_internal_molar", "qty:potential_chemical_standard"]
+  },
+  {
+    "URI": "unit:J.s",
+    "label": { "en": "joule second", "de": "Joulesekunde", "fr": "joule-seconde", "es": "julio segundo", "pt": "joule-segundo", "it": "joule per secondo", "ro": "joule-secundă", "sl": "joule sekunda", "cs": "joule sekunda", "pl": "dżulosekunda", "ru": "джоуль-секунда", "tr": "joule saniye", "ar": "جول ثانية", "fa": "ژول ثانیه", "hi": "जूल सैकण्ड", "zh": "焦耳秒", "ja": "ジュール秒", "ms": "joule saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "J·s", "Cyrl": "Дж·с", "Arab": "ج·ث", "siunitx": "\\joule\\second" },
+    "dimensions": "L^2 * M^1 * T^-1",
+    "is_unit_for": ["qty:momentum_angular_total", "cnst:constant_Planck", "cnst:constant_Planck_reduced"]
+  },
+  {
+    "URI": "unit:J.T-1",
+    "label": { "en": "joule per tesla", "de": "Joule je Tesla", "fr": "joule par tesla", "es": "julio por tesla", "pt": "joule por tesla", "it": "joule al tesla", "ro": "joule pe tesla", "cs": "joule na tesla", "pl": "dżul na tesla", "ru": "джоуль на тесла", "tr": "joule bölü tesla", "ar": "جول لكل تسلا", "fa": "ژول بر تسلا", "hi": "जूल प्रति टैस्ला", "zh": "焦耳每特斯拉", "ja": "ジュール毎立方メートル", "ms": "joule per tesla" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "J/T", "Cyrl": "Дж/Тл", "Arab": "ج\\ت", "siunitx": "\\joule\\per\\tesla" },
+    "dimensions": "L^2 * I^1",
+    "is_unit_for": ["cnst:dipole_magnetic_Bohr", "cnst:dipole_magnetic_nuclear", "cnst:dipole_magnetic_electron", "cnst:dipole_magnetic_muon", "cnst:dipole_magnetic_proton", "cnst:dipole_magnetic_neutron", "cnst:dipole_magnetic_deuteron", "cnst:dipole_magnetic_triton", "cnst:dipole_magnetic_helion", "cnst:dipole_magnetic_proton_shielded", "cnst:dipole_magnetic_helion_shielded"]
+  },
+  {
+    "URI": "unit:K.W-1",
+    "label": { "en": "kelvin per watt", "de": "Kelvin je Watt", "it": "kelvin al watt" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "K/W", "Cyrl": "К/Вт", "Arab": "ك\\و", "siunitx": "\\kelvin\\per\\watt" },
+    "dimensions": "L^-2 * M^-1 * T^3 * Θ^1",
+    "is_unit_for": "qty:resistance_thermic"
+  },
+  {
+    "URI": "unit:kg.m-3",
+    "label": { "en": "kilogram per cubic metre", "de": "Kilogramm je Kubikmeter", "fr": "kilogramme par mètre cube", "es": "kilogramo por metro cúbico", "pt": "quilograma por metro cúbico", "it": "chilogrammo al metro cubo", "ro": "kilogram pe metru cub", "bg": "килограм на кубичен метър", "sl": "kilogram na kubični meter", "cs": "kilogram na metr krychlový", "pl": "kilogram na metr sześcienny", "ru": "килограмм на кубический метр", "tr": "kilogram bölü metre küp", "el": "χιλιόγραμμο ανά κυβικό μέτρο", "ar": "كيلوغرام لكل متر مكعب", "fa": "کیلوگرم بر متر مکعب", "hi": "किलोग्राम प्रति घन मीटर", "zh": "千克每立方米", "ja": "キログラム毎立方メートル", "ms": "kilogram per meter kubik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "kg/m³", "Cyrl": "кг/м³", "Arab": "كغ\\م³", "siunitx": "\\kilogram\\per\\metre\\tothe{3}" },
+    "dimensions": "L^-3 * M^1",
+    "is_unit_for": ["qty:mass_volumic", "qty:concentration_mass_volume"]
+  },
+  {
+    "URI": "unit:kg.m.s-1",
+    "label": { "en": "kilogram metre per second", "de": "Kilogramm mal Meter je Sekunde", "it": "chilogrammo per metro al secondo", "sl": "kilogram meter na sekundo", "fa": "کیلوگرم متر بر ثانیه", "zh": "千克米每秒", "ms": "kilogram meter per saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "kg·m/s", "Cyrl": "кг·м/с", "Arab": "كغ·م\\ث", "siunitx": "\\kilogram\\metre\\per\\second" },
+    "dimensions": "L^1 * M^1 * T^-1",
+    "is_unit_for": "qty:momentum"
+  },
+  {
+    "URI": "unit:kg.m2",
+    "label": { "en": "kilogram square metre", "de": "Kilogramm mal Quadratmeter", "fr": "kilogramme-mètre carré", "es": "kilogramo metro cuadrado", "pt": "quilograma-metro quadrado", "it": "chilogrammo metro quadrato", "ro": "kilogram-metru pătrat", "cs": "kilogram čtvereční metr", "ru": "килограмм-квадратный метр", "tr": "kilogram metrekare", "ar": "كيلوغرام متر مربع", "fa": "نیوتون متر مربع", "hi": "किलोग्राम वर्ग मीटर", "zh": "千克平方米", "ja": "キログラム平方メートル", "ms": "kilogram meter persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "kg·m²", "Cyrl": "кг·м²", "Arab": "كغ·م²", "siunitx": "\\kilogram\\metre\\tothe{2}" },
+    "dimensions": "L^2 * M^1",
+    "is_unit_for": "qty:inertia"
+  },
+  {
+    "URI": "unit:kg.m2.s-1",
+    "label": { "en": "kilogram metre squared per second", "de": "Kilogramm mal Quadratmeter je Sekunde", "it": "chilogrammo per metro quadrato al secondo", "fa": "کیلوگرم متر مربع بر ثانیه", "zh": "千克平方米每秒", "ms": "kilogram meter persegi per saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "kg·m²/s", "Cyrl": "кг·м²/с", "Arab": "كغ·م²\\ث", "siunitx": "\\kilogram\\metre\\tothe{2}\\per\\second" },
+    "dimensions": "L^2 * M^1 * T^-1",
+    "is_unit_for": ["qty:momentum_angular", "qty:momentum_angular_spin"]
+  },
+  {
+    "URI": "unit:kg.mol-1",
+    "label": { "en": "kilogram per mole", "de": "Kilogramm je Mol", "fr": "kilogramme par mole", "es": "kilogramo por mol", "pt": "quilograma por mol", "it": "chilogrammo alla mole", "ro": "kilogram pe mol", "cs": "kilogram na mol", "pl": "kilogram na mol", "ru": "килограмм на моль", "tr": "kilogram bölü metre küp", "ar": "كيلوغرام لكل مول", "fa": "کیلوگرم بر مول", "hi": "किलोग्राम प्रति मोल (इकाई)", "zh": "千克每摩尔", "ja": "キログラム毎立方メートル", "ms": "kilogram per mole" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "kg/mol", "Cyrl": "кг/моль", "Arab": "كغ\\مول", "siunitx": "\\kilogram\\per\\mole" },
+    "dimensions": "M^1 * N^-1",
+    "is_unit_for": ["qty:mass_molar", "cnst:mass_electron_molar", "cnst:mass_muon_molar", "cnst:mass_tau_molar", "cnst:mass_proton_molar", "cnst:mass_neutron_molar", "cnst:mass_deuteron_molar", "cnst:mass_triton_molar", "cnst:mass_helion_molar", "cnst:mass_alpha_molar", "cnst:mass_molar_atomic", "cnst:mass_molar_carbon12"]
+  },
+  {
+    "URI": "unit:m.K",
+    "label": { "en": "metre kelvin", "de": "Meter mal Kelvin", "it": "metro per kelvin", "fa": "متر کلوین", "zh": "米开尔文", "ms": "meter kelvin" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m·K", "Cyrl": "м·К", "Arab": "م·ك", "siunitx": "\\metre\\kelvin" },
+    "dimensions": "L^1 * Θ^1",
+    "is_unit_for": ["cnst:constant_radiation2", "cnst:displacement_Wien_wavelength", "cnst:displacement_Bonal_wavelength"]
+  },
+  {
+    "URI": "unit:m.s-1",
+    "label": { "en": "metre per second", "de": "Meter je Sekunde", "fr": "mètre par seconde", "es": "metro por segundo", "pt": "metro por segundo", "it": "metro al secondo", "ro": "metru pe secundă", "bg": "метър в секунда", "sl": "meter na sekundo", "cs": "metr za sekundu", "pl": "metr na sekundę", "ru": "метр в секунду", "tr": "metre bölü saniye", "el": "μέτρο ανά δευτερόλεπτο", "he": "מטרים לשנייה", "ar": "متر في الثانية", "fa": "متر بر ثانیه", "hi": "मीटर प्रति सैकिण्ड", "zh": "米每秒", "ja": "メートル毎秒", "ms": "meter per saat", "la": "metra per secundum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m/s", "Cyrl": "м/с", "Arab": "م\\ث", "siunitx": "\\metre\\per\\second" },
+    "dimensions": "L^1 * T^-1",
+    "is_unit_for": ["qty:velocity", "qty:velocity_group", "qty:velocity_phase", "qty:velocity_light", "qty:velocity_sound", "qty:velocity_soundparticles", "cnst:velocity_light_vacuum", "cnst:velocity_sound_air"]
+  },
+  {
+    "URI": "unit:m.s-2",
+    "label": { "en": "metre per second squared", "de": "Meter je Quadratsekunde", "fr": "mètre par seconde au carré", "es": "metro por segundo al cuadrado", "pt": "metro por segundo ao quadrado", "it": "metro al segundo quadrato", "ro": "metru pe secundă la pătrat", "bg": "метра в секунда на квадрат", "sl": "meter na kvadratno sekundo", "cs": "metr za sekundu čtvereční", "pl": "metr na sekundę do kwadratu", "ru": "метр в секунду в квадрате", "tr": "metre bölü saniye kare", "el": "μέτρο ανά δευτερόλεπτο στο τετράγωνο", "ar": "متر في الثانية المربعة", "fa": "متر بر مجذور ثانیه", "hi": "मीटर प्रति सैकिण्ड वर्ग", "zh": "米每平方秒", "ms": "meter per saat persegi", "la": "metra per secundum quadratum" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m/s²", "Cyrl": "м/с²", "Arab": "م\\ث²", "siunitx": "\\metre\\per\\second\\tothe{2}" },
+    "dimensions": "L^1 * T^-2",
+    "is_unit_for": ["qty:acceleration", "qty:acceleration_soundparticles", "cnst:acceleration_gravity"]
+  },
+  {
+    "URI": "unit:m2.s-1",
+    "label": { "en": "square metre per second", "de": "Quadratmeter je Sekunde", "fr": "mètre carré par seconde", "es": "metro cuadrado por segundo", "pt": "metro quadrado por segundo", "it": "metro quadrato al secondo", "ro": "metru pătrat pe secundă", "sl": "kvadratni meter na sekundo", "cs": "čtvereční metr za sekundu", "pl": "metr kwadratowy na sekundę", "ru": "квадратный метр в секунду", "tr": "metrekare bölü saniye", "ar": "متر مربع في الثانية", "fa": "متر مربع بر ثانیه", "hi": "वर्ग मीटर प्रति सैकिण्ड", "zh": "平方米每秒", "ja": "平方メートル毎秒", "ms": "meter persegi per saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m²/s", "Cyrl": "м²/с", "Arab": "م²\\ث", "siunitx": "\\metre\\tothe{2}\\per\\second" },
+    "dimensions": "L^2 * T^-1",
+    "is_unit_for": ["qty:viscosity_kinematic", "qty:coefficient_diffusion", "cnst:quantum_circulation", "cnst:quantum_circulation_times_2"]
+  },
+  {
+    "URI": "unit:m2.V-1.s-1",
+    "label": { "en": "square metre per volt second", "de": "Quadratmeter je Volt und Sekunde", "it": "metro quadrato al volt e al secondo" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m²/(V·s)", "Cyrl": "м²/(В·с)", "Arab": "م²\\(ف·ث)", "siunitx": "\\metre\\tothe{2}\\per\\volt\\per\\second" },
+    "dimensions": "M^-1 * T^2 * I^1",
+    "is_unit_for": "qty:mobility"
+  },
+  {
+    "URI": "unit:m3.mol-1",
+    "label": { "en": "cubic metre per mole", "de": "Kubikmeter je Mol", "fr": "mètre cube par mole", "es": "metro cúbico por mol", "pt": "metro cúbico por mol", "it": "metro cubo alla mole", "ro": "metru cub pe mol", "sl": "kubični meter na mol", "cs": "metr krychlový na mol", "pl": "metr sześcienny na mol", "ru": "кубический метр на моль", "tr": "metreküp bölü metre küp", "ar": "متر مكعب لكل مول", "fa": "متر مکعب بر مول", "hi": "घन मीटर प्रति मोल (इकाई)", "zh": "立方米每摩尔", "ja": "立方メートル 毎立方メートル", "ms": "meter kubik per mole" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "m³/mol", "Cyrl": "м³/моль", "Arab": "م³\\مول", "siunitx": "\\metre\\tothe{3}\\per\\mole" },
+    "dimensions": "L^3 * N^-1",
+    "is_unit_for": ["qty:volume_molar", "cnst:volume_molar_idealGas_atmosphere", "cnst:volume_molar_idealGas_standard", "cnst:volume_molar_silicon"]
+  },
+  {
+    "URI": "unit:mol.m-3.s-1",
+    "label": { "en": "mole per cubic metre per second", "de": "Radian je Sekunde", "fr": "mole par mètre cube par seconde", "es": "mol por metro cúbico por segundo", "pt": "mol por metro cúbico por segundo", "it": "mole al metro cubo al secondo", "ro": "mol pe metru cub pe secundă", "cs": "mol na metr krychlový za sekundu", "pl": "mol na metr sześcienny na sekundę", "ru": "моль на кубический метр в секунду", "tr": "mol bölü metre küp bölü saniye", "ar": "مول لكل متر مكعب في الثانية", "fa": "مول بر متر مکعب بر ثانیه", "hi": "मोल (इकाई) प्रति घन मीटर प्रति सैकिण्ड", "zh": "摩尔每立方米每秒", "ja": "モル毎立方メートル毎秒", "ms": "mole per meter kubik per saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "mol/(m³·s)", "Cyrl": "моль/(м³·с)", "Arab": "مول\\(م³·ث)", "siunitx": "\\mole\\per\\metre\\tothe{3}\\per\\second" },
+    "dimensions": "L^-3 * T^-1 * N^1",
+    "is_unit_for": "qty:concentration_qchem_volume_rate"
+  },
+  {
+    "URI": "unit:N.A-2",
+    "label": { "en": "newton per ampere squared", "de": "Newton je Ampere hoch zwei", "it": "newton all‘ampere quadrato", "fa": "نیوتون بر مجذور آمپر", "zh": "牛每平方安培" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "N/A²", "Cyrl": "Н/А²", "Arab": "ن\\أ²", "siunitx": "\\newton\\per\\ampere\\tothe{2}" },
+    "dimensions": "L^1 * M^1 * T^-2 * I^-2",
+    "is_unit_for": "cnst:permeability_magnetic_vacuum"
+  },
+  {
+    "URI": "unit:N.m",
+    "label": { "en": "newton metre", "de": "Newtonmeter", "fr": "newton-mètre", "es": "newton metro", "pt": "newton-metro", "it": "newton per metro", "ro": "newton-metru", "bg": "нютон-метър", "sl": "newton meter", "cs": "newton metr", "pl": "niutonometr; dżul na radian", "ru": "ньютон-метр", "tr": "newton metre", "el": "νιούτον επί μέτρο; νιουτόμετρο", "ar": "نيوتن متر", "fa": "نیوتون متر", "hi": "न्यूटन मीटर", "zh": "牛米", "ja": "ニュートンメートル", "ms": "newton meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "N·m", "Cyrl": "Н·м", "Arab": "ن·م", "siunitx": "\\newton\\metre" },
+    "dimensions": "L^2 * M^1 * T^-2",
+    "is_unit_for": ["qty:torque_force", "qty:torque", "qty:torque_couple"]
+  },
+  {
+    "URI": "unit:N.m-1",
+    "label": { "en": "newton per metre", "de": "Newton je Meter", "fr": "newton par mètre", "es": "newton por metro", "pt": "newton por metro", "it": "newton al metro", "ro": "newton pe metru", "sl": "newton na meter", "cs": "newtonů na metr", "pl": "niuton na metr", "ru": "ньютон на метр", "tr": "newton bölü metre", "ar": "مقياس التبادل، الأس السالب للمتر", "fa": "نیوتن بر متر", "hi": "प्रति मीटर न्यूटन", "zh": "牛顿每米", "ja": "ニュートン毎メートル", "ms": "newton per meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "N/m", "Cyrl": "Н/м", "Arab": "ن\\م", "siunitx": "\\newton\\per\\metre" },
+    "dimensions": "M^1 * T^-2",
+    "is_unit_for": "qty:surfaceTension"
+  },
+  {
+    "URI": "unit:N.m.s",
+    "label": { "en": "newton metre second", "de": "Newtonmetersekunde", "fr": "newton-mètre-seconde", "es": "newton metro segundo", "pt": "newton-metro-segundo", "it": "newton per metro per secondo", "ro": "newton-metru-secundă", "cs": "newton metr sekunda", "pl": "niutonometrosekunda", "ru": "ньютон-метр-секунда", "tr": "newton metre saniye", "ar": "نيوتن متر ثانية", "fa": "نیوتون ثانیه", "hi": "न्यूटन मीटर सैकण्ड", "zh": "牛秒", "ja": "ニュートンメートル秒", "ms": "newton meter saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "N·m·s", "Cyrl": "Н·м·с", "Arab": "ن·م·ث", "siunitx": "\\newton\\metre\\second" },
+    "dimensions": "L^2 * M^1 * T^-1",
+    "is_unit_for": "qty:impulse_angular"
+  },
+  {
+    "URI": "unit:N.m2.kg-2",
+    "label": { "en": "newton metre squared per kilogram squared", "de": "Newton mal Quadratmeter je Kilogramm hoch zwei", "it": "newton per metro quadrato al chilogrammo al quadrato", "fa": "نیوتون مترمربع بر مجذور کیلوگرم", "zh": "牛平方米每平方千克", "ms": "newton meter persegi per kilogram persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "N·m²/kg²", "Cyrl": "Н·м²/кг²", "Arab": "ن·م²\\كغ²", "siunitx": "\\newton\\metre\\tothe{2}\\per\\kilogram\\tothe{2}" },
+    "dimensions": "L^3 * M^-1 * T^-2",
+    "is_unit_for": "cnst:constant_gravitation"
+  },
+  {
+    "URI": "unit:N.s",
+    "label": { "en": "newton second", "de": "Newtonsekunde", "fr": "newton-seconde", "es": "newton segundo", "pt": "newton-segundo", "it": "newton per secondo", "ro": "newton-secundă", "cs": "newton sekunda", "pl": "niutonosekunda", "ru": "ньютон-секунда", "tr": "newton saniye", "ar": "نيوتن ثانية", "fa": "نیوتون ثانیه", "hi": "न्यूटन सैकण्ड", "zh": "牛秒", "ja": "ニュートン秒", "ms": "newton saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "N·s", "Cyrl": "Н·с", "Arab": "ن·ث", "siunitx": "\\newton\\second" },
+    "dimensions": "L^1 * M^1 * T^-1",
+    "is_unit_for": "qty:impulse"
+  },
+  {
+    "URI": "unit:Ohm.m",
+    "label": { "en": "ohm metre", "de": "Ohmmeter", "fr": "ohm-mètre", "es": "ohmio metro", "pt": "ohm-metro", "it": "ohm per metro", "ro": "ohm-metru", "cs": "ohm metr", "ru": "ом-метр", "tr": "ohm metre", "ar": "أوم متر", "fa": "اهم متر", "hi": "ओह्म मीटर", "zh": "欧姆米", "ja": "オームメートル", "ms": "ohm meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Ω·m", "Cyrl": "Ом·м", "Arab": "م·Ω", "siunitx": "\\ohm\\metre" },
+    "dimensions": "L^3 * M^1 * T^-3 * I^-2",
+    "is_unit_for": "qty:resistivity_electric"
+  },
+  {
+    "URI": "unit:Pal-1",
+    "label": { "en": "pascal to the power minus one", "de": "Pascal hoch minus eins", "fr": "pascal à la puissance moins un", "es": "pascal elevado a menos uno", "pt": "pascal elevado a menos um", "it": "pascal alla meno uno", "ru": "паскаль в минус первой степени", "tr": "bir bölü pascal", "fa": "پاسگال به توان منفی / منهای یک", "zh": "帕斯卡分之一", "ja": "毎パスカル" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Pa⁻¹", "Cyrl": "Па⁻¹", "Arab": "با⁻¹", "siunitx": "\\pascal\\tothe{-1}" },
+    "dimensions": "L^1 * M^-1 * T^2",
+    "is_unit_for": ["qty:compressibility", "qty:compressibility_isoenthropic", "qty:compressibility_isothermal"]
+  },
+  {
+    "URI": "unit:Pal.s",
+    "label": { "en": "pascal second", "de": "Pascalsekunde", "fr": "pascal-seconde", "es": "pascal segundo", "pt": "pascal-segundo", "it": "pascal per secondo", "ro": "pascal-secundă", "sl": "pascal sekunda", "cs": "pascal sekunda", "pl": "paskalosekunda", "ru": "паскаль-секунда", "tr": "pascal saniye", "ar": "باسكال ثانية", "fa": "نیوتون ثانیه", "hi": "पास्कल सैकण्ड", "zh": "帕斯卡秒", "ja": "パスカル秒", "ms": "pascal saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Pa·s", "Cyrl": "Па·с", "Arab": "با·ث", "siunitx": "\\pascal\\second" },
+    "dimensions": "L^-1 * M^1 * T^-1",
+    "is_unit_for": ["qty:viscosity_dynamic", "qty:viscosity_mass"]
+  },
+  {
+    "URI": "unit:Pal.s.m-3",
+    "label": { "en": "pascal second per cubic metre", "de": "Pascalsekunde je Kubikmeter", "fr": "pascal-seconde par mètre cube", "es": "pascal segundo por metro cúbico", "pt": "pascal-segundo por metro cúbico", "it": "pascal per secondo al metro cubo", "ro": "pascal-secundă pe metru cub", "cs": "pascal sekunda na metr krychlový", "pl": "paskalosekunda na metr sześcienny", "ru": "паскаль-секунда на кубический метр", "tr": "pascal saniye bölü metre küp", "ar": "باسكال ثانية لكل متر مكعب", "fa": "نیوتون ثانیه بر متر مکعب", "hi": "पास्कल सैकण्ड प्रति घन मीटर", "ja": "パスカル秒毎立方メートル", "ms": "pascal saat per meter kubik" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Pa·s/m³", "Cyrl": "Па·с/м³", "Arab": "با·ث\\م³", "siunitx": "\\pascal\\second\\per\\metre\\tothe{3}" },
+    "dimensions": "L^-4 * M^1 * T^-1",
+    "is_unit_for": "qty:impedance_sound"
+  },
+  {
+    "URI": "unit:rad.m-1",
+    "label": { "en": "radian per metre", "de": "Radiant je Meter", "fr": "radian par mètre", "es": "radián por metro", "pt": "radiano por metro", "it": "radiante al metro", "ro": "radiane pe metru", "cs": "radiánů na metr", "pl": "radian na metr", "ru": "радиан на метр", "tr": "radyan bölü metre", "ar": "مقياس التبادل، الأس السالب للمتر", "fa": "رادیان بر متر", "hi": "प्रति मीटर वर्ग मीटर", "zh": "弧度每米", "ja": "ラジアン毎メートル", "ms": "radian per meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "rad/m", "Cyrl": "рад/м", "Arab": "راد\\م", "siunitx": "\\radian\\per\\metre" },
+    "dimensions": "L^-1",
+    "is_unit_for": "qty:wavenumber_angular"
+  },
+  {
+    "URI": "unit:rad.m2.kg-1",
+    "label": { "en": "radian metre squared per kilogram", "de": "Radiant mal Quadratmeter je Kilogramm", "pt": "radiano metro quadrado por quilograma", "it": "radiante per metro quadrato al chilogrammo", "fa": "رادیان متر مربع بر کیلوگرم", "zh": "弧度平方米每千克" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "rad·m²/kg", "Cyrl": "рад·м²/кг", "Arab": "راد·م²\\كغ", "siunitx": "\\radian\\metre\\tothe{2}\\per\\kilogram" },
+    "dimensions": "L^2 * M^-1 * N^-1",
+    "is_unit_for": "qty:activity_optical_specific"
+  },
+  {
+    "URI": "unit:rad.s-1",
+    "label": { "en": "radian per second", "de": "Radian je Sekunde", "fr": "radian par seconde", "es": "radián por segundo", "pt": "radiano por segundo", "it": "radiante al secondo", "ro": "radian pe secundă", "sl": "radian na sekundo", "cs": "radián za sekundu", "pl": "radian na sekundę", "ru": "радиан в секунду", "tr": "radyan bölü saniye", "ar": "راديان في الثانية", "fa": "رادیان بر ثانیه", "hi": "वर्ग मीटर प्रति सैकिण्ड", "zh": "弧度每秒", "ja": "ラジアン毎秒", "ms": "radian per saat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "rad/s", "Cyrl": "рад/с", "Arab": "راد\\ث", "siunitx": "\\radian\\per\\second" },
+    "dimensions": "T^-1",
+    "is_unit_for": ["qty:velocity_angular", "qty:frequency_angular", "qty:frequency_angular_cyclotron", "qty:frequency_angular_Larmor", "qty:frequency_angular_precession"]
+  },
+  {
+    "URI": "unit:rad.s-2",
+    "label": { "en": "radian per second squared", "de": "Radian je Quadratsekunde", "fr": "radian par seconde carrée", "es": "radián por segundo al cuadrado", "pt": "radiano por segundo ao quadrado", "it": "radiante al secondo quadrato", "ro": "radian pe secundă la pătrat", "cs": "radián za sekundu čtvereční", "pl": "radian na sekundę do kwadratu", "ru": "радиан в секунду в квадрате", "tr": "radyan bölü saniye kare", "ar": "راديان في الثانية المربعة", "fa": "رادیان بر مجذور ثانیه", "hi": "वर्ग मीटर प्रति सैकिण्ड वर्ग", "zh": "弧度每平方秒", "ms": "radian per saat persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "rad/s²", "Cyrl": "рад/с²", "Arab": "راد\\ث²", "siunitx": "\\radian\\per\\second\\tothe{2}" },
+    "dimensions": "T^-2",
+    "is_unit_for": "qty:acceleration_angular"
+  },
+  {
+    "URI": "unit:s-1.T-1",
+    "label": { "en": "second to the power minus one per tesla", "de": "Sekunde hoch minus eins je Tesla", "fr": "seconde à la puissance moins un par tesla", "es": "segundo elevado a menos uno por tesla", "pt": "segundo elevado a menos um por tesla", "it": "secondo alla meno uno al tesla", "ru": "секунда в минус первой степени на тесла", "tr": "bir bölü saniye bölü tesla", "fa": "بر تسلا ثانیه", "zh": "米分之一每特斯拉" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "s⁻¹/T", "Cyrl": "с⁻¹/Тл", "Arab": "ث⁻¹\\ت", "siunitx": "\\second\\tothe{-1}\\per\\tesla" },
+    "dimensions": "M^-1 * T^1 * I^1",
+    "is_unit_for": ["cnst:gyromagRatio_electron", "cnst:gyromagRatio_proton", "cnst:gyromagRatio_neutron", "cnst:gyromagRatio_proton_shielded", "cnst:gyromagRatio_helion_shielded"]
+  },
+  {
+    "URI": "unit:Sie.m-1",
+    "label": { "en": "siemens per metre", "de": "Siemens je Meter", "fr": "siemens par mètre", "es": "siemens por metro", "pt": "siemens por metro", "it": "siemens al metro", "ro": "siemens pe metru", "sl": "siemens na meter", "cs": "siemensů na metr", "pl": "simens na metr", "ru": "сименс на метр", "tr": "siemens bölü metre", "ar": "مقياس التبادل، الأس السالب للمتر", "fa": "زیمنس بر متر", "hi": "प्रति मीटर सीमैन्स", "zh": "西门子每米", "ja": "ジーメンス毎メートル", "ms": "siemens per meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "S/m", "Cyrl": "См/м", "Arab": "سن\\م", "siunitx": "\\siemens\\per\\metre" },
+    "dimensions": "L^-3 * M^-1 * T^3 * I^2",
+    "is_unit_for": ["qty:conductivity_electric", "qty:conductivity_electrolytic"]
+  },
+  {
+    "URI": "unit:V.A",
+    "label": { "en": "volt ampere", "de": "Voltampere", "fr": "voltampère", "es": "voltiamperio", "pt": "volt-ampere", "it": "volt ampere", "ru": "вольт-ампер", "ar": "فولت. أمبير" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "V·A", "Cyrl": "В·А", "Arab": "ف·أ", "siunitx": "\\volt\\ampere" },
+    "dimensions": "L^2 * M^1 * T^-3",
+    "is_unit_for": "qty:power_electric_apparent"
+  },
+  {
+    "URI": "unit:V.m-1",
+    "label": { "en": "volt per metre", "de": "Volt je Meter", "fr": "volt par mètre", "es": "voltio por metro", "pt": "volt por metro", "it": "volt al metro", "ro": "volți pe metru", "sl": "volt na meter", "cs": "voltů na metr", "pl": "wolt na metr", "ru": "вольт на метр", "tr": "volt bölü metre", "ar": "مقياس التبادل، الأس السالب للمتر", "fa": "ولت بر متر", "hi": "प्रति मीटर वोल्ट", "zh": "伏特每米", "ja": "ボルト毎メートル", "ms": "volt per meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "V/m", "Cyrl": "В/м", "Arab": "ف\\م", "siunitx": "\\volt\\per\\metre" },
+    "dimensions": "L^1 * M^1 * T^-3 * I^-1",
+    "is_unit_for": "qty:fieldStrength_electric"
+  },
+  {
+    "URI": "unit:W.m-2",
+    "label": { "en": "watt per square metre", "de": "Watt je Quadratmeter", "fr": "watt par mètre carré", "es": "vatio por metro cuadrado", "pt": "watt por metro quadrado", "it": "watt al metro quadrato", "ro": "watt pe metru pătrat", "sl": "watt na kvadratni meter", "cs": "watt na metr čtvereční", "pl": "wat na metr kwadratowy", "ru": "ватт на квадратный метр", "tr": "watt bölü metre kare", "ar": "واط في المتر المربع", "fa": "وات بر مترمربع", "hi": "वाट प्रति वर्ग मीटर", "zh": "瓦特每平方米", "ja": "ワット毎平方メートル", "ms": "watt per meter persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "W/m²", "Cyrl": "Вт/м²", "Arab": "و\\م²", "siunitx": "\\watt\\per\\metre\\tothe{2}" },
+    "dimensions": "M^1 * T^-3",
+    "is_unit_for": ["qty:irradiance", "qty:irradiance_radiation", "qty:irradiance_sound", "qty:irradiance_sound_averaged", "qty:irradiance_thermic", "cnst:irradiance_sun"]
+  },
+  {
+    "URI": "unit:W.m-2.K-4",
+    "label": { "en": "watt per metre squared kelvin to the power four", "de": "Watt je Quadratmeter Kelvin hoch vier", "fr": "watt par mètre carré par kelvin à la puissance 4", "it": "watt al metro quadrato e al kelvin alla quarta", "cs": "watt na metr čtvereční a kelvin na čtvrtou", "ru": "ватт на квадратный метр-кельвин в четвёртой степени", "tr": "watt bölü (metre kare çarpı kelvinin 4.kuvveti)", "ja": "ワット毎メートル毎ケルビン", "ms": "watt per meter persegi kelvin kuasa empat" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "W/(m²·K⁴)", "Cyrl": "Вт/(м²·К⁴)", "Arab": "و\\(م²·ك⁴)", "siunitx": "\\watt\\per\\metre\\tothe{2}\\per\\kelvin\\tothe{4}" },
+    "dimensions": "M^1 * T^-3 * Θ^-4",
+    "is_unit_for": "cnst:constant_Stefan-Boltzmann"
+  },
+  {
+    "URI": "unit:W.m2",
+    "label": { "en": "watt square metre", "de": "Wattmeter", "fr": "watt-mètre carré", "es": "vatio metro cuadrado", "pt": "watt-metro quadrado", "it": "watt metro quadrato", "ro": "watt-metru pătrat", "cs": "watt čtvereční metr", "ru": "ватт-квадратный метр", "tr": "watt metrekare", "ar": "واط متر مربع", "fa": "وات متر مربع", "hi": "वाट वर्ग मीटर", "zh": "牛平方米", "ja": "ワット平方メートル", "ms": "watt meter persegi" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "W·m²", "Cyrl": "Вт·м²", "Arab": "و·م²", "siunitx": "\\watt\\metre\\tothe{2}" },
+    "dimensions": "L^4 * M^1 * T^-3",
+    "is_unit_for": "cnst:constant_radiation1"
+  },
+  {
+    "URI": "unit:Wb.m-1",
+    "label": { "en": "weber per metre", "de": "Weber je Meter", "fr": "weber par mètre", "es": "weber por metro", "pt": "weber por metro", "it": "weber al metro", "ro": "weber pe metru", "cs": "weberů na metr", "pl": "weber na metr", "ru": "вебер на метр", "tr": "weber bölü metre", "ar": "مقياس التبادل، الأس السالب للمتر", "fa": "وبر بر متر", "hi": "प्रति मीटर वैबर", "zh": "韦伯每米", "ja": "ウェーバ毎メートル", "ms": "weber per meter" },
+    "definition": {},
+    "remarks": {},
+    "symbol": { "Latn": "Wb/m", "Cyrl": "Вб/м", "Arab": "فب\\م", "siunitx": "\\weber\\per\\metre" },
+    "dimensions": "L^1 * M^1 * T^-2 * I^-1",
+    "is_unit_for": "qty:potential_magnetic"
+  }
 ]

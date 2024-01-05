@@ -1,38 +1,42 @@
 [
     {"class": "GeneralQuantity", "superclass": "GeneralProperty", "chapter": 1, "item": 1,
-		"term": {"en": "quantity <general>"},
-		"definition": {"en": "property for which comparability by ratio, or by difference, or by order applies"}},
+        "label": {"en": "quantity <general>", "fr": "", "it": ""},
+        "definition": {"en": "property for which comparability by ratio, or by difference, or by order applies", "fr": "", "it": ""}
+    },
 
     {"class": "IndividualQuantity", "superclass": "IndividualProperty", "chapter": 1, "item": 1,
-		"term": {"en": "quantity <individual>"},
-		"definition": {"en": "property for which comparability by ratio, or by difference, or by order applies"}},
+        "label": {"en": "quantity <individual>", "fr": "", "it": ""},
+        "definition": {"en": "property for which comparability by ratio, or by difference, or by order applies", "fr": "", "it": ""}
+    },
 
-	{"class": "BaseQuantity", "superclass": "GeneralQuantity", "chapter": 1, "item": 3,
-		"term": {"en": "base quantity", "fr": "grandeur de base", "it": "grandezza di base"},
-		"definition": {"en": "quantity that in a given system of quantities is not defined in terms of the others"}},
+    {"class": "BaseQuantity", "superclass": "GeneralQuantity", "chapter": 1, "item": 3,
+        "label": {"en": "base quantity", "fr": "grandeur de base", "it": "grandezza di base"},
+        "definition": {"en": "quantity that in a given system of quantities is not defined in terms of the others", "fr": "", "it": ""}
+    },
 
     {"class": "QuantityDimension", "superclass": "VIMEntity", "chapter": 1, "item": 7,
-        "term": {"en": "quantity dimension", "it": "dimensione di una grandezza"},
-        "admitted_terms": {"en": ["dimension of a quantity", "dimension"]},
-		"definition": {"en": "relation of a quantity to the base quantities of a system of quantities as a product of the base quantities each raised to a power, omitting any proportionality factor"}},
+        "label": {"en": "quantity dimension", "fr": "", "it": "dimensione di una grandezza"},
+        "label_alternative": {"en": ["dimension of a quantity", "dimension"]},
+        "definition": {"en": "relation of a quantity to the base quantities of a system of quantities as a product of the base quantities each raised to a power, omitting any proportionality factor", "fr": "", "it": ""}
+    },
 
     {"class": "ReferenceQuantity", "superclass": "IndividualQuantity", "chapter": 1, "item": 11,
-		"term": {"en": "reference quantity"},
-		"definition": {"en": "quantity identified and adopted by convention for empirically comparing it with other quantities of the same kind"}},
+        "label": {"en": "reference quantity", "fr": "", "it": ""},
+        "definition": {"en": "quantity identified and adopted by convention for empirically comparing it with other quantities of the same kind", "fr": "", "it": ""}
+    },
 
     {"class": "MeasurementUnit", "superclass": "ReferenceQuantity", "chapter": 1, "item": 12,
-		"term": {"en": "measurement unit", "fr": "unité de mesure", "it": "unità di misura"},
-		"definition": {"en": "reference quantity with which any other quantity of the same kind can be compared by ratio, resulting in a number"}},
+        "label": {"en": "measurement unit", "fr": "unité de mesure", "it": "unità di misura"},
+        "definition": {"en": "reference quantity with which any other quantity of the same kind can be compared by ratio, resulting in a number", "fr": "", "it": ""}
+    },
 
     {"class": "BaseUnit", "superclass": "MeasurementUnit", "chapter": 1, "item": 13,
-		"term": {"en": "base unit", "fr": "unité de base", "it": "unità di base"},
-		"definition": {"en": "measurement unit that is adopted by convention for a base quantity",
-            "fr": "unité de mesure adoptée par convention pour une grandeur de base",
-            "it": "unità di misura adottata convenzionalmente per una grandezza di base"}},
+        "label": {"en": "base unit", "fr": "unité de base", "it": "unità di base"},
+        "definition": {"en": "measurement unit that is adopted by convention for a base quantity", "fr": "unité de mesure adoptée par convention pour une grandeur de base", "it": "unità di misura adottata convenzionalmente per una grandezza di base"}
+    },
 
     {"class": "DerivedUnit", "superclass": "MeasurementUnit", "chapter": 1, "item": 14,
-        "term": {"en": "derived unit", "fr": "unité dérivée", "it": "unità derivata"},
-        "definition": {"en": "measurement unit for a derived quantity",
-            "fr": "unité de mesure d'une grandeur dérivée",
-            "it": "unità di misura di una grandezza derivata"}}    
+        "label": {"en": "derived unit", "fr": "unité dérivée", "it": "unità derivata"},
+        "definition": {"en": "measurement unit for a derived quantity", "fr": "unité de mesure d'une grandeur dérivée", "it": "unità di misura di una grandezza derivata"}
+    }
 ]
