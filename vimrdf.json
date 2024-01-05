@@ -16,7 +16,7 @@
 
     {"class": "QuantityDimension", "superclass": "VIMEntity", "chapter": 1, "item": 7,
         "label": {"en": "quantity dimension", "fr": "", "it": "dimensione di una grandezza"},
-        "admitted_terms": {"en": ["dimension of a quantity", "dimension"]},
+        "label_alternative": {"en": ["dimension of a quantity", "dimension"]},
         "definition": {"en": "relation of a quantity to the base quantities of a system of quantities as a product of the base quantities each raised to a power, omitting any proportionality factor", "fr": "", "it": ""}
     },
 
